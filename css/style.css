@@ -1,0 +1,949 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    font-family: 'Lato', sans-serif;
+    text-align: justify;
+    line-height: 2rem;
+    letter-spacing: 1px;
+    font-size: 16px;
+}
+
+header{
+    display: flex;
+    flex-wrap: wrap;
+    position: sticky;
+    top: 0px;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #000000bf;
+}
+
+header a{
+    color: #41b8f0;
+}
+
+header a:hover{
+    color: #A044C6;
+}
+
+.header__academia{
+    background-color: white;
+}
+
+ul{
+    list-style: none;
+    font-size: 0;
+}
+
+li{
+    display: inline;
+    padding: 8px;
+    position: relative;
+    font-size: 14px;
+}
+
+ul ul{
+    position: absolute;
+    display: none;
+}
+
+ul ul li{
+    display: block;
+}
+
+ul li:hover ul{
+    display: block;
+    background-color: #000000cf;
+}
+
+a{
+    text-decoration: none;
+}
+
+h1, h2, h3{
+    color: #A044C6;
+    font-weight: bold;
+    padding: 1rem;
+}
+
+p{
+    padding: 1rem;
+}
+
+button{
+    background-color: #A044C6;
+    color: white;
+    font-size: medium;
+    font-weight: bold;
+    border: 5px;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+}
+
+button:hover{
+    background-color: #41b8f0;
+    color: black;
+}
+
+.boton, .center{
+    grid-area: center;
+    align-items: center;
+    text-align: center;
+}
+
+.portada__inicio{
+    display: flex;
+    flex-wrap: wrap;
+    background-image: url("../recursos/img/pexels-cottonbro.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    justify-content: center;
+    align-items: center;
+    height: 60vh;
+}
+
+.portada__parrafo{
+    text-align: justify;
+    padding: 1rem;
+}
+
+.presentacion{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "presentacion__titulo presentacion__titulo"
+                        "rosa rosa__container";
+    align-items: center;
+    margin: 1rem;
+    justify-content: center;
+}
+
+.presentacion__titulo{
+    grid-area: presentacion__titulo;
+    text-align: center;
+}
+
+.presentacion__contacto{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "presentacion__iframe presentacion__boton";
+    margin: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+.presentacion__iframe{
+    grid-area: presentacion__iframe;
+    
+}
+
+.presentacion__boton{
+    grid-area: presentacion__boton;
+}
+
+.rosa{
+    grid-area: rosa;
+    align-items: center;
+    height: 60vh;
+    justify-self: center;
+}
+
+.rosa__container{
+    grid-area: rosa__container;
+}
+
+.servicios__container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+                        "servicios__uno servicios__dos servicios__tres" 
+                        "servicios__cuatro servicios__cinco servicios__seis";
+    justify-content: center;
+    align-items: center;
+    margin: 1rem;
+    gap: 1rem;
+}
+
+.servicios__uno{
+    grid-area: servicios__uno;
+    display: flex;
+    flex-flow: column wrap ;
+    align-content: center;
+    align-items: center;
+    padding: 1rem;
+    border: 5px solid #41b8f0;
+    gap: 0.63rem;
+}
+
+
+.servicios__dos{
+    grid-area: servicios__dos;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.servicios__tres{
+    grid-area: servicios__tres;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.servicios__cuatro{
+    grid-area: servicios__cuatro;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.servicios__cinco{
+    grid-area: servicios__cinco;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.servicios__seis{
+    grid-area: servicios__seis;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.descargable{
+    display: flex;
+    flex-wrap: wrap;
+    background-image: url("../recursos/img/rosa/rosa-office24.jpeg");
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size:cover;
+    align-items: center;
+}
+
+.descargable__container{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: "descargable__titulo"
+                        "descargable__img"
+                        "descargable__boton";
+    padding: 1rem;
+    justify-content: center;
+}
+
+.descargable__titulo{
+    grid-area: descargable__titulo;
+    background-color: #A044C6;
+    color: white;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.descargable__img{
+    grid-area: descargable__img;
+    margin-left: 2rem;
+}
+
+.descargable__boton{
+    grid-area: descargable__boton;
+}
+
+.collage{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    margin: 20px;
+    justify-content: center;
+    justify-self: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.fecha{
+    color: #41b8f0;
+}
+
+.obsequios__container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: "obsequios__uno obsequios__dos obsequios__tres"
+                        "obsequios__cuatro obsequios__cinco obsequios__seis"
+                        "obsequios__siete obsequios__ocho obsequios__nueve";
+    justify-content: center;
+    align-items: center;
+    margin: 1rem;
+    gap:1rem;
+}
+
+.obsequios__uno{
+    grid-area: obsequios__uno;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+}
+
+.obsequios__dos{
+    grid-area: obsequios__dos;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+}
+
+.obsequios__tres{
+    grid-area: obsequios__tres;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+}
+
+.obsequios__cuatro{
+    grid-area: obsequios__cuatro;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+}
+
+.obsequios__cinco{
+    grid-area: obsequios__cinco;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+}
+
+.obsequios__seis{
+    grid-area: obsequios__seis;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+}
+
+.obsequios__siete{
+    grid-area: obsequios__siete;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+}
+
+.obsequios__ocho{
+    grid-area: obsequios__ocho;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+}
+
+.obsequios__nueve{
+    grid-area: obsequios__nueve;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+}
+
+.recursos{
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    align-content: space-between;
+    justify-content: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    gap: 1rem;
+}
+
+.blog__container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: "blog__uno blog__dos blog__tres";
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin: 2rem;
+
+}
+
+.blog__uno{
+    grid-area: blog__uno;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+}
+
+.blog__dos{
+    grid-area: blog__dos;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+}
+
+.blog__tres{
+    grid-area: blog__tres;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+}
+
+.podcast__container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "podcast__uno podcast__dos";
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin: 2rem;
+}
+
+.podcast__uno{
+    grid-area: podcast__uno;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+}
+
+.podcast__dos{
+    grid-area: podcast__dos;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+}
+
+.video__container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin: 2rem;
+}
+
+.logos__container{
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    align-content: center;
+    justify-content: space-around;
+    gap: 1rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.cursos__container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: "cursos__uno cursos__dos cursos__tres";
+    gap: 1rem;
+    margin: 2rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.cursos__uno{
+    grid-area: cursos__uno;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cursos__dos{
+    grid-area: cursos__dos;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cursos__tres{
+    grid-area: cursos__tres;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+}
+
+.programas__container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: "programas__uno programas__dos programas__tres"
+                        "membresia membresia membresia ";
+    gap: 1rem;
+    margin: 2rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.programas__uno{
+    grid-area: programas__uno;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+}
+
+.programas__dos{
+    grid-area: programas__dos;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+}
+
+.programas__tres{
+    grid-area: programas__tres;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+}
+
+.membresia{
+    grid-area: membresia;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+}
+
+.servicios__uno, .servicios__dos, .servicios__tres, .servicios__cuatro, .servicios__cinco, .servicios__seis, .blog__uno, .blog__dos, .blog__tres, .podcast__uno, .podcast__dos, .cursos__uno, .cursos__dos, .cursos__tres, .programas__uno, .programas__dos, .programas__tres, .membresia{
+    padding: 1rem;
+    border: 5px solid #41b8f0;
+    gap: 0.63rem;
+}
+
+.contenedor{
+    display: flex;
+    flex-flow: row wrap ;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+    background-color: #c59fc9;
+    margin: 8%;
+    margin-top: 50px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.contenedor__cuadro{
+    padding: 10px;
+    height: 100%;
+    width: 300px;
+    background-color: white;
+    border: 10px solid #c59fc9;
+}
+
+.contenedor__mision{
+    color: #A044C6;
+    padding: 10px;
+}
+
+.contenedor__vision{
+    color: #41b8f0;
+    padding: 10px;
+}
+
+.contenedor__valores{
+    color: #A044C6;
+    padding: 10px;
+}
+
+.testimonios{
+    display: flex;
+    flex-flow: column wrap ;
+    justify-content: space-between;
+    align-content: center;
+    margin: 15%;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    text-align: center;
+    border: 5px solid #41b8f0;
+    gap: 0.63rem;
+}
+
+.testimonios__titulo{
+    text-align: center;
+    padding-top: 2rem;
+}
+
+.testimonios__persona{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:"testimonios__parrafo testimonios__parrafo" 
+                        "testimonios__img testimonios__nombre";
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.testimonios__img{
+    grid-area: testimonios__img;
+    align-self: center;
+    width: 100px;
+    padding: 20px;
+    border-radius: 50px;
+}
+
+.testimonios__parrafo{
+    grid-area: testimonios__parrafo;
+}
+
+.testimonios__nombre{
+    grid-area: testimonios__nombre;
+    text-align: right;
+    padding-right: 50px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    color: #A044C6;
+}
+
+.testimonios__nombre:hover{
+    color: #41b8f0 ;
+}
+
+.contactanos{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "center center"
+                        "contactanos__form contactanos__container"; 
+    align-items: center;
+    margin: 50px;
+    justify-content: center;
+}
+
+.contactanos__form, .registrate__form{
+    grid: contactanos__form;
+    display: flex;
+    flex-direction: column;
+    gap: 0.63rem;
+    align-items: center;
+}
+
+.contactanos__container{
+    grid: contactanos__container;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+footer .footer__container{
+    display: flex;
+    flex-flow: row wrap ;
+    justify-content: space-around;
+    background-color: black;
+    align-items: center;
+    color: #41b8f0;
+    
+}
+
+footer span{
+    display: flex;
+    flex-flow: column wrap ;
+    text-align: center;
+    padding: 1rem;
+}
+.footer__redes{
+    padding: 1rem;
+}
+
+.chat{
+    position: fixed;
+    bottom: 10px;
+    right: 20px;
+}
+
+/* TABLET */
+@media (min-width:541px) and (max-width:720px){
+    .presentacion{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas: "presentacion__titulo"
+                            "rosa" 
+                            "rosa__container";
+        align-items: center;
+        margin: 1rem;
+    }
+    
+    .presentacion__contacto{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas: "presentacion__iframe" 
+                            "presentacion__boton";
+        
+    }
+    
+    .collage{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin: 20px;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .servicios__container{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+                            "servicios__uno servicios__dos" 
+                            "servicios__tres servicios__cuatro " 
+                            "servicios__cinco servicios__seis";
+        justify-content: center;
+        align-items: center;
+        margin: 1rem;
+        gap: 1rem;
+    }
+
+    .obsequios__container{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas: "obsequios__uno" 
+                            "obsequios__dos"
+                            "obsequios__tres" 
+                            "obsequios__cuatro"
+                            "obsequios__cinco"
+                            "obsequios__seis"
+                            "obsequios__siete"
+                            "obsequios__ocho"
+                            "obsequios__nueve";
+        justify-content: center;
+        align-items: center;
+        margin: 1rem;
+        gap:1rem;
+    }
+
+    .blog__container{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: "blog__uno blog__dos"
+                            "blog__tres blog__tres";
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        margin: 2rem;
+    }
+
+    .video__container{
+        display: grid;
+        grid-template-columns: 1fr;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+        margin: 2rem;
+    }
+    
+    .cursos__container{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: "cursos__uno cursos__dos"
+                            "cursos__tres cursos__tres";
+        gap: 1rem;
+        margin: 2rem;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .programas__container{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: "programas__uno programas__dos"
+                            "programas__tres membresia ";
+        gap: 1rem;
+        margin: 2rem;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+/* celular */
+@media (min-width:320px) and (max-width:540px){
+    header{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        position: initial;
+        top: 0px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    header a{
+        display: flex;
+        flex-direction: column;
+    }
+    
+
+    .presentacion{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas: "presentacion__titulo"
+                            "rosa" 
+                            "rosa__container";
+        align-items: center;
+        margin: 1rem;
+    }
+
+    .parrafo__inicio{
+        margin: 1rem;
+    }
+    .testimonios__persona{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas:"testimonios__parrafo" 
+                            "testimonios__img"
+                            "testimonios__nombre";
+        align-items: center;
+        justify-content: center;
+        align-content: center;
+        
+    }
+
+    .presentacion__contacto{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas: "presentacion__iframe" 
+                            "presentacion__boton";
+    }
+    
+    iframe{
+        width: 90vw;
+        height: 30vh;
+    }
+
+    .descargable{
+        display: flex;
+        flex-wrap: wrap;
+        background-image: url("../recursos/img/pexels-cottonbro.jpg");
+        background-position: top;
+        background-repeat: no-repeat;
+        background-size: cover;
+        align-items: center;
+    }
+    
+    .collage{
+        display: grid;
+        grid-template-columns: 1fr;
+        margin: 3rem;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        align-content: center;
+    }
+
+    .servicios__container{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas:
+                            "servicios__uno"
+                            "servicios__dos" 
+                            "servicios__tres"
+                            "servicios__cuatro " 
+                            "servicios__cinco"
+                            "servicios__seis";
+        justify-content: center;
+        align-items: center;
+        margin: 2rem;
+        gap: 1rem;
+    }
+
+    .obsequios__container{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas: "obsequios__uno" 
+                            "obsequios__dos"
+                            "obsequios__tres" 
+                            "obsequios__cuatro"
+                            "obsequios__cinco"
+                            "obsequios__seis"
+                            "obsequios__siete"
+                            "obsequios__ocho"
+                            "obsequios__nueve";
+        justify-content: center;
+        align-items: center;
+        margin: 3rem;
+        gap:1rem;
+    }
+
+    .blog__container{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas: "blog__uno"
+                            "blog__dos"
+                            "blog__tres";
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        margin: 2rem;
+    }
+
+    .podcast__container{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas: "podcast__uno"
+                            "podcast__dos";
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        margin: 2rem;
+    }
+
+    .video__container{
+        display: grid;
+        grid-template-columns: 1fr;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+        margin: 2rem;
+    }
+    
+    .cursos__container{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas: "cursos__uno"
+                            "cursos__dos"
+                            "cursos__tres";
+        gap: 1rem;
+        margin: 2rem;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .programas__container{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas: "programas__uno"
+                            "programas__dos"
+                            "programas__tres"
+                            "membresia";
+        gap: 1rem;
+        margin: 2rem;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .contactanos{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas: "center"
+                            "contactanos__form"
+                            "contactanos__container"; 
+        align-items: center;
+        margin: 2rem;
+        justify-content: center;
+    }
+}
