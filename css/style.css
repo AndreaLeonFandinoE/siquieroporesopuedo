@@ -76,7 +76,7 @@ h1, h2, h3{
     font-size: 2em;
 }
 
-button{
+button, button a{
     color: white;
     font-size: medium;
     font-weight: bold;
@@ -86,17 +86,29 @@ button{
     margin: 10px;
     text-align: center;
     background-image: linear-gradient(to bottom, #a044c6, #9f44c6b6);
-}
-
-button:hover{
-    background-image: linear-gradient(to bottom, #c59fc9ee, #c59fc9);
     
 }
 
+button:hover, button a:hover{
+    background-image: linear-gradient(to bottom, #c59fc9ee, #c59fc9);
+    color: white;
+}
+
 .boton, .center{
-    grid-area: center;
     align-items: center;
     text-align: center;
+}
+
+.section{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    padding-top: 0.31rem;
+}
+
+.section__container{
+    width: 62.5rem;
+    margin: 2rem;
 }
 
 .portada__img{
@@ -122,11 +134,6 @@ button:hover{
 
 }
 
-.portada__parrafo{
-    text-align: justify;
-    padding: 1rem;
-}
-
 .presentacion{
     display: grid;
     grid-template-columns: 1fr 2fr;
@@ -138,13 +145,14 @@ button:hover{
 
 .presentacion__titulo{
     text-align: center;
+    margin: 2rem;
 }
 
 .presentacion__contacto{
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-areas: "presentacion__iframe presentacion__boton";
-    margin: 20px;
+    margin: 1.25rem;
     align-items: center;
     justify-content: center;
 }
@@ -176,12 +184,10 @@ button:hover{
     grid-template-areas:
                         "servicios__uno servicios__dos servicios__tres" 
                         "servicios__cuatro servicios__cinco servicios__seis";
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
+    align-items: stretch;
     background-color: #c59fc9;
     padding: 2rem;
-    margin: 2rem;
+    gap: 2rem;
 }
 
 .servicios__cuadro, .blog__cuadro, .podcast__cuadro, .obsequios__cuadro, .cursos__cuadro, .programas__cuadro, .membresia__cuadro{
@@ -191,10 +197,7 @@ button:hover{
     gap: 0.63rem;
     padding: 1rem;
     background-color: white;
-    border: 10px solid #c59fc9;
-    justify-content: center;
     text-align: center;
-    height: 600px;
 }
 
 .servicios__cuadro:hover, .blog__cuadro:hover, .podcast__cuadro:hover, .obsequios__cuadro:hover, .cursos__cuadro:hover, .programas__cuadro:hover, .membresia__cuadro:hover{
@@ -268,7 +271,7 @@ button:hover{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     margin: 2rem;
-    justify-content: center;
+    justify-items: center;
     justify-self: center;
     align-items: center;
     gap: 1rem;
@@ -317,12 +320,11 @@ button:hover{
     grid-template-areas: "obsequios__uno obsequios__dos obsequios__tres"
                         "obsequios__cuatro obsequios__cinco obsequios__seis"
                         "obsequios__siete obsequios__ocho obsequios__nueve";
-    justify-content: center;
-    align-items: center;
-    gap:1rem;
+    align-items: stretch;
     background-color: #c59fc9;
     padding: 2rem;
-    margin: 2rem;
+    gap: 2rem;
+    margin-bottom: 2rem;
 }
 
 .obsequios__uno{
@@ -367,13 +369,11 @@ button:hover{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas: "blog__uno blog__dos blog__tres";
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
-    margin: 2rem;
+    align-items: stretch;
     background-color: #c59fc9;
     padding: 2rem;
-    margin: 2rem;
+    gap: 2rem;
+    margin-bottom: 2rem;
 
 }
 
@@ -393,12 +393,11 @@ button:hover{
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-areas: "podcast__uno podcast__dos";
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
+    align-items: stretch;
     background-color: #c59fc9;
     padding: 2rem;
-    margin: 2rem;
+    gap: 2rem;
+    margin-bottom: 2rem;
 }
 
 .podcast__uno{
@@ -432,12 +431,11 @@ button:hover{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas: "cursos__uno cursos__dos cursos__tres";
-    gap: 1rem;
-    justify-content: center;
-    align-items: center;
+    align-items: stretch;
     background-color: #c59fc9;
     padding: 2rem;
-    margin: 2rem;
+    gap: 2rem;
+    margin-bottom: 2rem;
 }
 
 .cursos__uno{
@@ -454,15 +452,14 @@ button:hover{
 
 .programas__container{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-areas: "programas__uno programas__dos programas__tres"
-                        "membresia membresia membresia ";
-    gap: 1rem;
-    justify-content: center;
-    align-items: center;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas: "programas__uno programas__dos programas__tres membresia"
+                        ;
+    align-items: stretch;
     background-color: #c59fc9;
     padding: 2rem;
-    margin: 2rem;
+    gap: 2rem;
+    margin-bottom: 2rem;
 }
 
 .programas__uno{
@@ -523,41 +520,36 @@ button:hover{
 .testimonios{
     display: flex;
     flex-flow: column wrap ;
-    justify-content: space-between;
     align-content: center;
-    margin: 15%;
-    margin-top: 10px;
-    margin-bottom: 30px;
-    text-align: center;
-    border: 5px solid #41b8f0;
+    margin-top:  1.25rem;
+    margin-bottom: 1.25rem;
+    background: linear-gradient(to right, #41b9f03e, #41b9f040) ;
     gap: 0.63rem;
 }
 
 .testimonios__titulo{
-    text-align: center;
+    grid-area: testimonios__titulo;
     padding-top: 2rem;
 }
 
 .testimonios__persona{
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-areas:"testimonios__parrafo testimonios__parrafo" 
-                        "testimonios__img testimonios__nombre";
+    grid-template-areas:"testimonios__titulo testimonios__img"
+                        "testimonios__parrafo testimonios__img" 
+                        "testimonios__nombre testimonios__img ";
     align-items: center;
-    justify-content: center;
-    
+    justify-items: center;
+    text-align: justify;
 }
 
 .testimonios__img{
     grid-area: testimonios__img;
-    align-self: center;
-    width: 100px;
-    padding: 20px;
-    border-radius: 50px;
+    border-radius: 3.1rem;
 }
 
 .testimonios__img:hover{
-    transform: scale(1.5);
+    transform: scale(1.2);
     transition: all 2s;
 }
 
@@ -567,29 +559,25 @@ button:hover{
 
 .testimonios__nombre{
     grid-area: testimonios__nombre;
-    text-align: right;
-    padding-right: 50px;
-    padding-bottom: 20px;
-    padding-top: 20px;
-    color: #A044C6;
+    padding-bottom: 1.25rem;
+    color: #000000;
+    font-size: large;
 }
 
 .testimonios__nombre:hover{
-    color: #41b8f0 ;
+    color: #A044C6 ;
 }
 
 .contactanos{
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-areas: "center center"
-                        "contactanos__form contactanos__container"; 
+    grid-template-areas:"contactanos__form contactanos__container"; 
     align-items: center;
-    margin: 50px;
-    justify-content: center;
+    justify-items: center;
 }
 
 .contactanos__form, .registrate__form{
-    grid: contactanos__form;
+    grid-area: contactanos__form;
     display: flex;
     flex-direction: column;
     gap: 0.63rem;
@@ -597,10 +585,28 @@ button:hover{
 }
 
 .contactanos__container{
-    grid: contactanos__container;
+    grid-area: contactanos__container;
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+.contacto__rosa{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-areas:"img__contacto__rosa contacto__rosa__datos"; 
+    
+    align-items: center;
+    justify-items: center;
+}
+
+.img__contacto__rosa{
+    grid-area: img__contacto__rosa;
+    width: 7vw;
+    border-radius: 1rem;
+}
+
+.contacto__rosa__datos{
+    grid-area: contacto__rosa__datos;
 }
 
 footer .footer__container{
@@ -698,6 +704,7 @@ footer span{
         align-items: center;
         gap: 1rem;
         margin: 2rem;
+
     }
 
     .video__container{
@@ -760,9 +767,6 @@ footer span{
         margin: 1rem;
     }
 
-    .parrafo__inicio{
-        margin: 1rem;
-    }
     .testimonios__persona{
         display: grid;
         grid-template-columns: 1fr;
