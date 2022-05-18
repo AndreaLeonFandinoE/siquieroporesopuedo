@@ -16,37 +16,120 @@
     <!--CSS-->
     <link rel="stylesheet" href="../css/style.css">
     
-    <title><h1>Servicios</h1></title>
+    <title>Servicios</title>
 
 </head>
 
 <body>
+    <!-- bootstrap -->
     <header>
-        <!--logo-->
-        <a class="header__logo" href="../index.html"><img src="../recursos/img/logo/logo-original-sin-fondo.png" alt="Logo de Siquiero.PorEsoPuedo" width="200"></a> 
-        <nav>
-            <ul>
-                <li><a href="../index.html">Inicio</a>
-                    <img src="../recursos/img/icon-logo/flecha.png" alt="flecha" width="8">
-                    <ul>
-                        <li><a href="../paginas/quien-soy.html">¿Quién soy?</a></li>
-                        <li><a href="../paginas/servicios.html">Servicios</a></li>
-                        <li><a href="../paginas/obsequios.html">Obsequios</a></li>
-                        <li><a href="../paginas/recursos.html">Recursos</a></li>
+        <!-- Logo -->
+        <a class="navbar-brand" href="../index.html">
+            <img src="../recursos/img/logo/logo-original-sin-fondo.png" alt="Logo de Siquiero.PorEsoPuedo" height="41">
+        </a>
+
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container-fluid">
+                
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="active" aria-current="page" href="../index.html">Inicio</a>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Academia Online</a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <li><a href="academia-online.html">Cursos</a></li>
+                                <li><a href="academia-online.html">Programas</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="dropdown-toggle" href="servicios.html" id="navbarDropdownMenuLink" role="button" aria-expanded="false">
+                            Servicios
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <li><a href="obsequios.html">Obsequios</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="quien-soy.html">¿Quién soy?</a>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Recursos/Blog
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <li><a href="recursos.html">Blog</a></li>
+                                <li><a href="recursos.html">Podcast</a></li>
+                                <li><a href="recursos.html">videos</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="contacto.html">Contacto</a>
+                        </li>
                     </ul>
-                </li>
-                <li><a href="../paginas/academia-online.html">Academia Online</a></li>
-                <li><a href="../paginas/contacto.html">Contacto</a></li>
-            </ul>
+                </div>
+            </div>
         </nav>
     </header>
     
     <main >
-        <section class="portada" >
-            <div class="portada__inicio"><!--sera class portada__rodante-->
-                <!--imagenes rodantes-->
-                <img class="portada__img" src="" alt=""><!--la img la puse en el css-->
-                <button class="portada__boton">Quiero saber más</button>
+
+<!-- bootstrap -->
+        <section>
+            <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+
+                <div class="carousel-inner">
+
+                    <div class="carousel-item active" data-bs-interval="10000">
+                        <img src="/recursos/img/banner-paginas/banner-obsequios2.jpg" class="d-block w-100" alt="banner-obsequios">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Obsequios</h5>
+                            <a href="/paginas/obsequios.html"><button>Llevate de regalo algunos de mis Ebooks</button></a>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item" data-bs-interval="2000">
+                        <img src="/recursos/img/banner-paginas/banner-revista-reinvencion.png" class="d-block w-100" alt="banner-academia">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Academia Online</h5>
+                            <a href="/paginas/academia-online.html"><button>Accede y forma parte de la comunidad</button></a>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <img src="/recursos/img/banner-paginas/banner-video.jpg" class="d-block w-100" alt="banner-video">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Recursos</h5>
+                            <a href="/paginas/recursos.html"><button>Lee mi Blog o escucho mi Podcast o mira algunos de mis Videos</button></a>
+                        </div>
+                    </div>
+
+                </div>
+
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previsualizar</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Siguiente</span>
+                </button>
             </div>
         </section>
 
@@ -60,45 +143,65 @@
         </section>
 
         <section class="servicios">
+            <h2 class="center">Mira todo lo que tengo para ofrecerte</h2>
             <div class="servicios__container">
-                <div class="servicios__cuadro servicios__uno">
+
+                <article class="servicios__cuadro servicios__uno">
                     <img class="img__cuadros"  src="../recursos/img/academia/curso-potencia-tu-abundancia-ebook.png" alt="icono-academiaOnline">
-                    <p>POTENCIA TU ABUNDANCIA Y SANA TUS FINANZAS</p>
-                    <h5>Curso</h5>
-                    <button>Quiero saber más</button>
-                </div>
-                <div class="servicios__cuadro servicios__dos"> 
+                    <div class="servicios__contenido">
+                        <h4>Potencia tu abundancia y sana tus finanzas personales</h4>
+                        <span>Curso</span>
+                        <button>Quiero saber más</button>
+                    </div>
+                </article>
+
+                <article class="servicios__cuadro servicios__dos">
                     <img class="img__cuadros" src="../recursos/img/academia/curso-crea-tu-infoproducto.png" alt="icono-academiaOnline">
-                    <p>CREA TU INFOPRODUCTO Y SALTA AL INTERNET</p>
-                    <h5>Curso</h5>
-                    <button>Quiero saber más</button>
-                </div>
-                <div class="servicios__cuadro servicios__tres">
+                    <div class="servicios__contenido">
+                        <h4>Crea tu infoproducto y salta al internet</h4>
+                        <span>Curso</span>
+                        <button>Quiero saber más</button>
+                    </div>
+                </article>
+
+                <article class="servicios__cuadro servicios__tres">
                     <img class="img__cuadros" src="../recursos/img/academia/logo-talento-y-emprendimiento.png" alt="icono-academiaOnline">
-                    <p>CÓMO PASAR DE LA IDEA A LA ACCIÓN</p>
-                        <h5>Talento y emprendimiento</h5>
-                    <button>Quiero saber más</button>
-                </div>
-                <div class="servicios__cuadro servicios__cuatro">
+                    <div class="servicios__contenido">
+                        <h4>Cómo pasar de la idea a la acción</h4>
+                        <span>Talento y emprendimiento</span>
+                        <button>Quiero saber más</button>
+                    </div>
+                </article>
+
+                <article class="servicios__cuadro servicios__cuatro">
                     <img class="img__cuadros" src="../recursos/img/academia/programa-encuentra-tu-calma.png" alt="icono-academiaOnline">
-                    <p>ENCUENTRA TU CALMA</p>
-                        <h5>Programa</h5>
-                    <button>Quiero saber más</button>
-                </div>
-                <div class="servicios__cuadro servicios__cinco">
+                    <div class="servicios__contenido">
+                        <h4>Encuentra tu calma</h4>
+                        <span>Programa</span>
+                        <button>Quiero saber más</button>
+                    </div>
+                </article>
+
+                <article class="servicios__cuadro servicios__cinco">
                     <img class="img__cuadros" src="../recursos/img/academia/programa-revista-reinvencion.png" alt="icono-academiaOnline">
-                    <p>REINVÉNTATE QUE LA VIDA ESTÁ LLENA DE MUCHÍSIMAS OPORTUNIDADES</p>
-                        <h5>Programa</h5>
-                    <button>Quiero saber más</button>
-                </div>
-                <div class="servicios__cuadro servicios__seis">
+                    <div class="servicios__contenido">
+                        <h4>Reinvéntate que la vida esta llena de muchísimas oportunidades</h4>
+                        <span>Programa</span>
+                        <button>Quiero saber más</button>
+                    </div>
+                </article>
+
+                <article class="servicios__cuadro servicios__seis">
                     <img class="img__cuadros" src="../recursos/img/academia/logo-negocio-enterprise.png" alt="icono-academiaOnline">
-                    <p>NEGOCIOS ENTERPRISE</p>
-                        <h5>Programa</h5>
-                    <button>Quiero saber más</button>
-                </div>
+                    <div class="servicios__contenido">
+                        <h4>Negocios enterprise</h4>
+                        <span>Programa</span>
+                        <button>Quiero saber más</button>
+                    </div>
+                </article>
+
             </div>
-            <button>Ver más</button>
+            <button class="boton">Ver más</button>
         </section>
 
         <section class="testimonios">

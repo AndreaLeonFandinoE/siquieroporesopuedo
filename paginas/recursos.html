@@ -20,63 +20,110 @@
 </head>
 
 <body>
+    <!-- bootstrap -->
     <header>
-        <!--logo-->
-        <a class="header__logo" href="../index.html"><img src="../recursos/img/logo/logo-original-sin-fondo.png" alt="Logo de Siquiero.PorEsoPuedo" width="200"></a> 
-        <nav>
-            <ul>
-                <li><a href="../index.html">Inicio</a>
-                    <img src="../recursos/img/icon-logo/flecha.png" alt="flecha" width="8">
-                    <ul>
-                        <li><a href="../paginas/quien-soy.html">¿Quién soy?</a></li>
-                        <li><a href="../paginas/servicios.html">Servicios</a></li>
-                        <li><a href="../paginas/obsequios.html">Obsequios</a></li>
-                        <li><a href="../paginas/recursos.html">Recursos</a></li>
+        <!-- Logo -->
+        <a class="navbar-brand" href="../index.html">
+            <img src="../recursos/img/logo/logo-original-sin-fondo.png" alt="Logo de Siquiero.PorEsoPuedo" height="41">
+        </a>
+
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container-fluid">
+                
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="active" aria-current="page" href="../index.html">Inicio</a>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Academia Online</a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <li><a href="academia-online.html">Cursos</a></li>
+                                <li><a href="academia-online.html">Programas</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="dropdown-toggle" href="servicios.html" id="navbarDropdownMenuLink" role="button" aria-expanded="false">
+                            Servicios
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <li><a href="obsequios.html">Obsequios</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="quien-soy.html">¿Quién soy?</a>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Recursos/Blog
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <li><a href="recursos.html">Blog</a></li>
+                                <li><a href="recursos.html">Podcast</a></li>
+                                <li><a href="recursos.html">videos</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="contacto.html">Contacto</a>
+                        </li>
                     </ul>
-                </li>
-                <li><a href="../paginas/academia-online.html">Academia Online</a></li>
-                <li><a href="../paginas/contacto.html">Contacto</a></li>
-            </ul>
+                </div>
+            </div>
         </nav>
     </header>
     
     <main>
         <section >
-            <div class="portada">
-                <!--imagenes rodantes-->
-                <img class="portada__img" src="../recursos/img/banner-paginas/banner-recursos.jpg" alt="banner-recursos"><!--la img la puse en el css-->
-            </div>
+        <img class="portada__img" src="../recursos/img/banner-paginas/banner-recursos.jpg" alt="banner-recursos">
         </section>
 
         <section class="recursos">
-            <a href="recursos.html"><img  class="img__cuadros" src="../recursos/img/banner-paginas/banner-blog.png" alt="imagen-blog"></a>
-            <a href="recursos.html"><img class="img__cuadros" src="../recursos/img/banner-paginas/banner-podcats.png" alt="imagen-podcast"></a>
-            <a href="recursos.html"><img class="img__cuadros" src="../recursos/img/banner-paginas/banner-video.jpg" alt="imagen-video"></a>
+            <a href="recursos.html"><img  class="img__cuadros" src="../recursos/img/recursos/blog.png" alt="imagen-blog"></a>
+            <a href="recursos.html"><img class="img__cuadros" src="../recursos/img/recursos/podcats.png" alt="imagen-podcast"></a>
+            <a href="recursos.html"><img class="img__cuadros" src="../recursos/img/recursos/video.jpg" alt="imagen-video"></a>
         </section>
-
+        
+<!-- bootstrap -->
         <section class="blog">
             <h2 class="center">Blog</h2>
             <div class="blog__container">
-                <div class="blog__cuadro blog__uno">
-                    <img class="img__cuadros" src="../recursos/img/blog/como-vivir-de-tu-talento.jpeg" alt="Blog">
-                    <h4>¿Cómo vivir de tu talento con propósito?</h4>
-                    <p class="fecha">26 de July de 2021</p>
-                    <a href="https://siquieroporesopuedo.com/como-vivir-de-tu-talento-con-proposito/"><button>Leer</button></a>
+
+                <div class="card" style="width: 18rem;">
+                    <img src="../recursos/img/blog/como-vivir-de-tu-talento.jpeg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">¿Cómo vivir de tu talento con propósito?</h5>
+                        <p class="card-text fecha">26 de July de 2021</p>
+                        <a href="https://siquieroporesopuedo.com/como-vivir-de-tu-talento-con-proposito/"><button>Leer</button></a>
+                    </div>
                 </div>
 
-                <div class="blog__cuadro blog__dos">
-                    <img class="img__cuadros" src="../recursos/img/blog/que-son-las-columnas-de-un-emprendimiento.jpeg" alt="Blog">
-                    <h4>¿Qué son las columnas de un emprendimiento?</h4>
-                    <p class="fecha">12 de July de 2021</p>
-                    <a href="https://siquieroporesopuedo.com/que-son-las-columnas-de-un-emprendimiento/"><button>Leer</button></a>
+                <div class="card" style="width: 18rem;">
+                    <img src="../recursos/img/blog/que-son-las-columnas-de-un-emprendimiento.jpeg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">¿Qué son las columnas de un emprendimiento?</h5>
+                        <p class="card-text fecha">12 de July de 2021</p>
+                        <a href="https://siquieroporesopuedo.com/como-vivir-de-tu-talento-con-proposito/"><button>Leer</button></a>
+                    </div>
                 </div>
 
-                <div class="blog__cuadro blog__tres">
-                    <img class="img__cuadros" src="../recursos/img/blog/como-reprogramo-mi-mente-para-el-exito.jpeg" alt="Blog">
-                    <h4>¿Cómo reprogramo mi mente para el éxito?</h4>
-                    <p class="fecha">5 de July de 2021</p>
-                    <a href="https://siquieroporesopuedo.com/como-reprogramo-mi-mente-para-el-exito/"><button>Leer</button></a>
+                <div class="card" style="width: 18rem;">
+                    <img src="../recursos/img/blog/como-reprogramo-mi-mente-para-el-exito.jpeg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">¿Cómo reprogramo mi mente para el éxito?</h5>
+                        <p class="card-text fecha">5 de July de 2021</p>
+                        <a href="https://siquieroporesopuedo.com/como-reprogramo-mi-mente-para-el-exito/"><button>Leer</button></a>
+                    </div>
                 </div>
+
             </div>
             <button class="center">Ver más</button>
         </section>
@@ -84,18 +131,20 @@
         <section class="podcast">
             <h2 class="center">Podcast</h2>
             <div class="podcast__container">
-                <div class="podcast__cuadro podcast__uno">
+                <article class="podcast__cuadro podcast__uno">
                     <img class="img__cuadros" src="../recursos/img/blog/radio-dones-y-talento.jpg" alt="icono-academiaOnline">
-                    <h4>Participación en el programa radial “Aquí y Ahora”</h4>
-                    <p class="fecha">23 de junio de 2021</p>
+                    <h4>Participación en el</h4>
+                    <h4>programa radial “Aquí y Ahora”</h4>
+                    <span class="fecha">23 de junio de 2021</span>
                     <a href=""><h4>Reproducir</h4></a>
-                </div>
-                <div class="podcast__cuadro podcast__dos">
+                </article>
+
+                <article class="podcast__cuadro podcast__dos">
                     <img class="img__cuadros" src="../recursos/img/blog/como-reprogramo-mi-mente-para-el-exito.jpeg" alt="icono-academiaOnline">
                     <h4>Reprogramate para el éxito</h4>
-                    <p class="fecha"> 1 de julio de 2021</p>
+                    <span class="fecha"> 1 de julio de 2021</span>
                     <a href=""><h4>Reproducir</h4></a>
-                </div>
+                </article>
             </div>
             <button class="center">Escuchar más</button>
         </section>

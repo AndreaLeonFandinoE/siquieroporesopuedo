@@ -20,46 +20,82 @@
 </head>
 
 <body>
-    <header class="header__academia">
-        <!--logo-->
-        <a  href="academia-online.html"><img src="../recursos/img/academia/logoacademiaonline.png" alt="Logo de Siquiero.PorEsoPuedo" width="200"></a> 
-        <nav>
-            <ul>
-                <li><a href="../index.html">Inicio</a>
-                    <img src="../recursos/img/icon-logo/flecha.png" alt="flecha" width="8">
-                    <ul>
-                        <li><a href="quien-soy.html">¿Quién soy?</a></li>
-                        <li><a href="servicios.html">Servicios</a></li>
-                        <li><a href="obsequios.html">Obsequios</a></li>
-                        <li><a href="recursos.html">Recursos</a></li>
+    <!-- bootstrap -->
+    <header>
+        <!-- Logo -->
+        <a class="navbar-brand" href="../index.html">
+            <img src="../recursos/img/logo/logo-original-sin-fondo.png" alt="Logo de Siquiero.PorEsoPuedo" height="41">
+        </a>
+
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container-fluid">
+                
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="active" aria-current="page" href="../index.html">Inicio</a>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Academia Online</a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <li><a href="academia-online.html">Cursos</a></li>
+                                <li><a href="academia-online.html">Programas</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="dropdown-toggle" href="servicios.html" id="navbarDropdownMenuLink" role="button" aria-expanded="false">
+                            Servicios
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <li><a href="obsequios.html">Obsequios</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="quien-soy.html">¿Quién soy?</a>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Recursos/Blog
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <li><a href="recursos.html">Blog</a></li>
+                                <li><a href="recursos.html">Podcast</a></li>
+                                <li><a href="recursos.html">videos</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="contacto.html">Contacto</a>
+                        </li>
                     </ul>
-                </li>
-                <li><a href="academia-online.html">Academia Online</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
-            </ul>
+                </div>
+            </div>
         </nav>
     </header>
     
     <main>
         <section >
-            <div class="portada">
-                <!--imagenes rodantes-->
-                <img class="portada__img" src="../recursos/img/academia/obsequios/112nichos.png" alt="banner-academia">
-            </div>
+            <img class="portada__img" src="../recursos/img/banner-paginas/banner-inicio1.jpg" alt="banner-academia">
         </section>
 
         <section class="logos">
-            <div class="logos__container">
-                <img class="img__cuadros" src="../recursos/img/academia/logo-potencia-tu-abundancia.png" alt="icono-academiaOnline">
-                <img class="img__cuadros" src="../recursos/img/academia/logo-talento-y-emprendimiento.png" alt="icono-academiaOnline">
-                <img class="img__cuadros" src="../recursos/img/academia/logo-crea-tu-infoproducto.png" alt="icono-academiaOnline">
-                <img class="img__cuadros" src="../recursos/img/academia/logo-reinventate.png" alt="icono-academiaOnline">
-                <img class="img__cuadros" src="../recursos/img/academia/logo-negocio-enterprise.png" alt="icono-academiaOnline">
-                <img class="img__cuadros" src="../recursos/img/academia/logo-encuentra-tu-calma.png" alt="icono-academiaOnline">            
-            </div>
+            <img class="img__cards" src="../recursos/img/academia/logo-potencia-tu-abundancia.png" alt="icono-academiaOnline">
+            <img class="img__cards" src="../recursos/img/academia/logo-talento-y-emprendimiento.png" alt="icono-academiaOnline">
+            <img class="img__cards" src="../recursos/img/academia/logo-crea-tu-infoproducto.png" alt="icono-academiaOnline">
+            <img class="img__cards" src="../recursos/img/academia/logo-reinventate.png" alt="icono-academiaOnline">
+            <img class="img__cards" src="../recursos/img/academia/logo-negocio-enterprise.png" alt="icono-academiaOnline">
+            <img class="img__cards" src="../recursos/img/academia/logo-encuentra-tu-calma.png" alt="icono-academiaOnline">
         </section>
 
-        <section class="cursos">
+        <!--Sin Bootstrap <section class="cursos">
             <h2 class="center">Cursos</h2>
             <div class="cursos__container">
                 <div class="cursos__cuadro cursos__uno">
@@ -87,27 +123,28 @@
                     <a href=""><button>Quiero ver los detalles del curso</button></a>
                 </div>
             </div>
-        </section>
+        </section> -->
 
-        <section class="programas">
+        <!-- SIN BOOTSTRAP<section class="programas">
             <h2 class="center">Programas</h2>
             <div class="programas__container">
+
                 <div class="programas__cuadro programas__uno">
-                    <img class="img__cuadros" src="../recursos/img/academia/programa-negocios-enterprise.jpg" alt="icono-academiaOnline">
+                    <img class="img__cards" src="../recursos/img/academia/programa-negocios-enterprise.jpg" alt="icono-academiaOnline">
                     <p>NEGOCIOS ENTERPRISE</p>
                     <p>16 Semanas de duración</p>
                     <a href=""><button>Quiero ver los detalles del programa</button></a>
                 </div>
 
                 <div class="programas__cuadro programas__dos">
-                    <img class="img__cuadros" src="../recursos/img/academia/programa-encuentra-tu-calma (2).png" alt="icono-academiaOnline">
+                    <img class="img__cards" src="../recursos/img/academia/programa-encuentra-tu-calma (2).png" alt="icono-academiaOnline">
                     <p>ENCUENTRA TU CALMA</p>
                     <p>8 semanas de duración</p>
                     <a href=""><button>Quiero ver los detalles del programa</button></a>
                 </div>
 
                 <div class="programas__cuadro programas__tres">
-                    <img class="img__cuadros" src="../recursos/img/academia/programa-reinventate.png" alt="icono-academiaOnline">
+                    <img class="img__cards" src="../recursos/img/academia/programa-reinventate.png" alt="icono-academiaOnline">
                     <p>REINVÉNTATE QUE LA VIDA</p>
                     <p>ESTÁ LLENA DE MUCHÍSIMAS OPORTUNIDADES</p>
                     <p>8 semanas de duración</p>
@@ -115,11 +152,91 @@
                 </div>
 
                 <div class="membresia__cuadro membresia">
-                    <img class="img__cuadros" src="../recursos/img/academia/membresia.jpg" alt="icono-academiaOnline">
+                    <img class="img__cards" src="../recursos/img/academia/membresia.jpg" alt="icono-academiaOnline">
                     <p>MEMBRESíA</p>
                     <p>Mensual hasta que lo desees</p>
                     <a href=""><button>Quiero ver los detalles de la membresía</button></a>
                 </div>
+            </div>
+        </section> -->
+
+<!-- bootstrap -->
+        <section class="cursos">
+            <h2 class="center">Cursos</h2>
+            <div class="cursos__container">
+
+                <div style="width: 18rem;">
+                    <img src="../recursos/img/academia/logo-potencia-tu-abundancia.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Potencia tu abundancia y sana tus finanzas personales</h5>
+                        <p class="card-text">USD 120</p>
+                        <a href=""><button>Quiero ver los detalles del curso</button></a>
+                    </div>
+                </div>
+
+                <div style="width: 18rem;">
+                    <img src="../recursos/img/academia/logo-talento-y-emprendimiento.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Como pasar de la idea a la acción</h5>
+                        <p class="card-text">Talendo y emprendimiento</p>
+                        <p class="card-text">USD 197</p>
+                        <a href=""><button>Quiero ver los detalles del curso</button></a>
+                    </div>
+                </div>
+
+                <div style="width: 18rem;">
+                    <img src="../recursos/img/academia/logo-crea-tu-infoproducto.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Crea tu infoproducto</h5>
+                        <p class="card-text">Taller en vivo</p>
+                        <p class="card-text">USD 297</p>
+                        <a href=""><button>Quiero ver los detalles del curso</button></a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+<!-- bootstrap -->
+        <section class="programas">
+            <h2 class="center">Programas</h2>
+            <div class="programas__container">
+
+                <div style="width: 18rem;">
+                    <img src="../recursos/img/academia/programa-negocios-enterprise.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">NEGOCIOS ENTERPRISE</h5>
+                        <p class="card-text">16 Semanas de duración</p>
+                        <a href=""><button>Quiero ver los detalles</button></a>
+                    </div>
+                </div>
+
+                <div style="width: 18rem;">
+                    <img src="../recursos/img/academia/programa-encuentra-tu-calma (2).png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">ENCUENTRA TU CALMA</h5>
+                        <p class="card-text">8 semanas de duración</p>
+                        <a href=""><button>Quiero ver los detalles</button></a>
+                    </div>
+                </div>
+
+                <div style="width: 18rem;">
+                    <img src="../recursos/img/academia/programa-reinventate.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">REINVÉNTATE QUE LA VIDA</h5>
+                        <p class="card-text">8 semanas de duración</p>
+                        <a href=""><button>Quiero ver los detalles</button></a>
+                    </div>
+                </div>
+
+                <div style="width: 18rem;">
+                    <img src="../recursos/img/academia/membresia.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">MEMBRESíA</h5>
+                        <p class="card-text">Mensual hasta que lo desees</p>
+                        <a href=""><button>Quiero ver los detalles</button></a>
+                    </div>
+                </div>
+
             </div>
         </section>
     </main>

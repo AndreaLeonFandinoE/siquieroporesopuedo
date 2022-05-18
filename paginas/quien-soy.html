@@ -15,35 +15,75 @@
     <!--CSS-->
     <link rel="stylesheet" href="../css/style.css">
     
-    <title><h1>¿Quién soy?</h1></title>
+    <title>¿Quién soy?</title>
 
 </head>
 
 <body>
+    <!-- bootstrap -->
     <header>
-        <!--logo-->
-        <a class="header__logo" href="../index.html"><img src="../recursos/img/logo/logo-original-sin-fondo.png" alt="Logo de Siquiero.PorEsoPuedo" width="200"></a> 
-        <nav>
-            <ul>
-                <li><a href="../index.html">Inicio</a>
-                    <img src="../recursos/img/icon-logo/flecha.png" alt="flecha" width="8">
-                    <ul>
-                        <li><a href="quien-soy.html">¿Quién soy?</a></li>
-                        <li><a href="servicios.html">Servicios</a></li>
-                        <li><a href="obsequios.html">Obsequios</a></li>
-                        <li><a href="recursos.html">Recursos</a></li>
+        <!-- Logo -->
+        <a class="navbar-brand" href="../index.html">
+            <img src="../recursos/img/logo/logo-original-sin-fondo.png" alt="Logo de Siquiero.PorEsoPuedo" height="41">
+        </a>
+
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container-fluid">
+                
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="active" aria-current="page" href="../index.html">Inicio</a>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Academia Online</a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <li><a href="academia-online.html">Cursos</a></li>
+                                <li><a href="academia-online.html">Programas</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="dropdown-toggle" href="servicios.html" id="navbarDropdownMenuLink" role="button" aria-expanded="false">
+                            Servicios
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <li><a href="obsequios.html">Obsequios</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="quien-soy.html">¿Quién soy?</a>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Recursos/Blog
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <li><a href="recursos.html">Blog</a></li>
+                                <li><a href="recursos.html">Podcast</a></li>
+                                <li><a href="recursos.html">videos</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="contacto.html">Contacto</a>
+                        </li>
                     </ul>
-                </li>
-                <li><a href="academia-online.html">Academia Online</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
-            </ul>
+                </div>
+            </div>
         </nav>
     </header>
     
     <main>
         <section >
-            <!--imagenes rodantes-->
-            <img class="portada__img" src="../recursos/img/banner-paginas/banner-inicio.png" alt="banner-quien-soy"> 
+            <img class="portada__img" src="../recursos/img/banner-paginas/banner-quiensoy.png" alt="banner-quien-soy"> 
         </section>
 
         <section class="section">
@@ -69,7 +109,9 @@
 
                 <div class="presentacion__contacto">
                     <iframe class="presentacion__iframe" height="220" width="400" src="https://www.youtube.com/embed/yScKc5F-RHk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    <button class="presentacion__boton"><a href="contacto.html">Contáctame</a></button>
+                    <a href="contacto.html" class="presentacion__boton">
+                        <button>Contáctame</button>
+                    </a>
                 </div>
             </div>
         </section>
@@ -77,12 +119,12 @@
         <section class="descargable">
             <div class="descargable__container">
                 <h2 class="descargable__titulo">Primer descargable gratis</h2>
-                <img class="descargable__img" src="../recursos/img/ebook-rosa.jpeg" alt="ebook-rosa">
+                <img class="descargable__img" src="../recursos/img/academia/ebook-rosa.jpeg" alt="ebook-rosa">
                 <button class="descargable__boton">Descargar</button>
             </div>
         </section>
 
-        <section class=" section">
+        <!-- <section class="section"> collage ahora con bootstrap
             <div class="section__container collage">
                 <img class="img__cuadros collage__img" src="../recursos/img/rosa/rosa-office2.jpeg" alt="Rosa">
                 <img class="img__cuadros collage__img"  src="../recursos/img/rosa/rosa-sba.jpeg" alt="Rosa">
@@ -93,9 +135,46 @@
                 <img class="img__cuadros collage__img"  src="../recursos/img/rosa/rosa-ingles.jpeg" alt="Rosa">
                 <img class="img__cuadros collage__img"  src="../recursos/img/rosa/rosa-office.jpeg" alt="Rosa">
                 <img class="img__cuadros collage__img"  src="../recursos/img/rosa/rosa-viaje.jpeg" alt="Rosa">
-            
             </div>
-            </section>
+        </section> -->
+
+        <!-- bootstrap -->
+        <section class="galeria">
+            <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+
+                    <div class="carousel-item active">
+                        <img src="../recursos/img/rosa/rosa-office2.jpeg" height="400" alt="...">
+                        <img src="../recursos/img/rosa/rosa-sba.jpeg" height="400" alt="...">
+                        <img src="../recursos/img/rosa/rosa-profesional.jpeg" height="400" alt="...">
+                    </div>
+
+                    <div class="carousel-item">
+                        <img height="400"  src="../recursos/img/rosa/rosa-fiesta.jpeg" alt="Rosa">
+                        <img height="400"  src="../recursos/img/rosa/rosa-bodaRoss.jpeg" alt="Rosa">
+                        <img height="400"  src="../recursos/img/rosa/rosa-paisaje.jpeg" alt="Rosa">
+                    </div>
+
+                    <div class="carousel-item">
+                        <img height="400"  src="../recursos/img/rosa/rosa-viaje.jpeg" alt="Rosa">
+                        <img height="400"  src="../recursos/img/rosa/rosa-office.jpeg" alt="Rosa">
+                    </div>
+
+                    <div class="carousel-item">
+                        <img height="400"  src="../recursos/img/rosa/rosa-ingles.jpeg" alt="Rosa">
+                    </div>
+
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </section>
 
         <section class="testimonios">
             <div class="testimonios__persona section__container">

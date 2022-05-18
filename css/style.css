@@ -14,19 +14,16 @@ body{
     
 }
 
-/* main{ como hagoooo
-    padding-right: 2.5rem;
-    padding-left: 2.5rem;
-} */
 
 header{
     display: flex;
     flex-wrap: wrap;
-    position: sticky;
     top: 0px;
     align-items: center;
     justify-content: space-between;
-    background-color: #000000bf;
+    /* background-color: #000000bf; */
+    background-color: white;
+    
 }
 
 header a{
@@ -65,6 +62,7 @@ ul ul li{
 ul li:hover ul{
     display: block;
     background-color: #000000cf;
+    text-align: center;
 }
 
 a{
@@ -82,11 +80,9 @@ button, button a{
     font-weight: bold;
     border: 5px;
     border-radius: 7px;
-    padding: 10px;
-    margin: 10px;
     text-align: center;
     background-image: linear-gradient(to bottom, #a044c6, #9f44c6b6);
-    
+    padding: 0.5rem;
 }
 
 button:hover, button a:hover{
@@ -116,10 +112,15 @@ button:hover, button a:hover{
 }
 
 .img__cuadros{
-    width: 15vw;
+    width: 20vw;
+    border-radius: 0.50rem;
 }
 
-.portada__inicio{
+.img__cards{
+    height: 20vh;
+}
+
+/* .portada__inicio{
     display: flex;
     flex-wrap: wrap;
     background: linear-gradient(to right, #9f44c62a, #41b9f030), url("../recursos/img/pexels-cottonbro.jpg");
@@ -132,7 +133,7 @@ button:hover, button a:hover{
     height: 60vh;
     width: 100%;
 
-}
+} */
 
 .presentacion{
     display: grid;
@@ -152,9 +153,9 @@ button:hover, button a:hover{
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-areas: "presentacion__iframe presentacion__boton";
-    margin: 1.25rem;
+    
     align-items: center;
-    justify-content: center;
+    justify-items: center;
 }
 
 .presentacion__iframe{
@@ -169,13 +170,21 @@ button:hover, button a:hover{
 .rosa{
     grid-area: rosa;
     align-items: center;
-    width: 20vw;
+    width: 100%;
     justify-self: center;
 }
 
 .rosa__container{
     grid-area: rosa__container;
-    padding-right: 2rem;
+    padding: 2rem;
+}
+
+.servicios, .obsequios, .programas, .cursos, .blog, .podcast{
+    background-color: #b4b4b437;
+    padding: 2rem;
+    gap: 2rem;
+    border-radius: 1rem;
+    
 }
 
 .servicios__container{
@@ -184,20 +193,19 @@ button:hover, button a:hover{
     grid-template-areas:
                         "servicios__uno servicios__dos servicios__tres" 
                         "servicios__cuatro servicios__cinco servicios__seis";
-    align-items: stretch;
-    background-color: #c59fc9;
-    padding: 2rem;
-    gap: 2rem;
+    gap: 1rem;
+    margin-bottom: 2rem;
 }
 
 .servicios__cuadro, .blog__cuadro, .podcast__cuadro, .obsequios__cuadro, .cursos__cuadro, .programas__cuadro, .membresia__cuadro{
     display: flex;
     flex-flow: column wrap ;
     align-items: center;
-    gap: 0.63rem;
-    padding: 1rem;
+    justify-content: center;
+    padding: 0.5rem;
     background-color: white;
-    text-align: center;
+    border-radius: 1rem;
+    gap: 1rem;
 }
 
 .servicios__cuadro:hover, .blog__cuadro:hover, .podcast__cuadro:hover, .obsequios__cuadro:hover, .cursos__cuadro:hover, .programas__cuadro:hover, .membresia__cuadro:hover{
@@ -205,6 +213,14 @@ button:hover, button a:hover{
     transform: scale(1.01);
     transition: all 2s ease-in;
 }
+
+.servicios__contenido{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    gap: 0.30rem;
+}
+
 .servicios__uno{
     grid-area: servicios__uno;
 }
@@ -267,7 +283,13 @@ button:hover, button a:hover{
     grid-area: descargable__boton;
 }
 
-.collage{
+.galeria{
+    display: flex;
+    justify-content: center;
+    margin: 3rem;
+}
+
+/* .collage{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     margin: 2rem;
@@ -275,7 +297,7 @@ button:hover, button a:hover{
     justify-self: center;
     align-items: center;
     gap: 1rem;
-}
+} */
 
 /* .collage__img:hover{
     background: linear-gradient(to left, rgba(0, 0, 0, 0.674), white) ;
@@ -283,10 +305,10 @@ button:hover, button a:hover{
     transition: all 3s ease;
 } */
 
-.collage__img:hover{
+/* .collage__img:hover{
     animation-duration: 2s;
     animation-name: animacion;
-}
+} */
 
 @keyframes animacion{
     0%{
@@ -308,23 +330,17 @@ button:hover, button a:hover{
     }
 }
 
-
-
 .fecha{
     color: #41b8f0;
 }
 
 .obsequios__container{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-areas: "obsequios__uno obsequios__dos obsequios__tres"
-                        "obsequios__cuatro obsequios__cinco obsequios__seis"
-                        "obsequios__siete obsequios__ocho obsequios__nueve";
-    align-items: stretch;
-    background-color: #c59fc9;
-    padding: 2rem;
-    gap: 2rem;
-    margin-bottom: 2rem;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas: "obsequios__uno obsequios__dos obsequios__tres obsequios__cuatro"
+                        "obsequios__cinco obsequios__seis obsequios__siete obsequios__ocho"
+                        "obsequios__nueve obsequios__nueve obsequios__nueve obsequios__nueve";
+    gap: 1rem;
 }
 
 .obsequios__uno{
@@ -365,12 +381,11 @@ button:hover, button a:hover{
 
 
 
-.blog__container{
+/* .blog__container{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas: "blog__uno blog__dos blog__tres";
-    align-items: stretch;
-    background-color: #c59fc9;
+    
     padding: 2rem;
     gap: 2rem;
     margin-bottom: 2rem;
@@ -387,16 +402,13 @@ button:hover, button a:hover{
 
 .blog__tres{
     grid-area: blog__tres;
-}
+} */
 
 .podcast__container{
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-areas: "podcast__uno podcast__dos";
-    align-items: stretch;
-    background-color: #c59fc9;
-    padding: 2rem;
-    gap: 2rem;
+    gap: 1rem;
     margin-bottom: 2rem;
 }
 
@@ -417,28 +429,28 @@ button:hover, button a:hover{
     margin: 2rem;
 }
 
-.logos__container, .recursos{
+.logos, .recursos{
     display: flex;
     flex-flow: row wrap;
-    align-items: center;
-    align-content: center;
     justify-content: space-around;
-    gap: 1rem;
-    margin: 2rem;
-}
-
-.cursos__container{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-areas: "cursos__uno cursos__dos cursos__tres";
-    align-items: stretch;
-    background-color: #c59fc9;
-    padding: 2rem;
-    gap: 2rem;
+    margin-top: 2rem;
     margin-bottom: 2rem;
 }
 
-.cursos__uno{
+
+
+/* .cursos__container{
+    /* display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: "cursos__uno cursos__dos cursos__tres"; */
+    /* align-items: stretch;
+    
+    padding: 2rem;
+    gap: 2rem;
+    margin-bottom: 2rem; 
+} */
+
+/* .cursos__uno{
     grid-area: cursos__uno;
 }
 
@@ -448,10 +460,10 @@ button:hover, button a:hover{
 
 .cursos__tres{
     grid-area: cursos__tres;
-}
+} */
 
-.programas__container{
-    display: grid;
+.programas__container, .cursos__container, .blog__container{
+    /* display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-areas: "programas__uno programas__dos programas__tres membresia"
                         ;
@@ -459,10 +471,16 @@ button:hover, button a:hover{
     background-color: #c59fc9;
     padding: 2rem;
     gap: 2rem;
-    margin-bottom: 2rem;
+    margin-bottom: 2rem; */
+    
+    display: flex;
+    flex-flow: row wrap ;
+    justify-content: space-around;
+    padding: 2rem;
+    height: 100%;
 }
 
-.programas__uno{
+/* .programas__uno{
     grid-area: programas__uno;
 }
 
@@ -476,7 +494,7 @@ button:hover, button a:hover{
 
 .membresia{
     grid-area: membresia;
-}
+} */
 
 .contenedor{
     display: flex;
@@ -488,6 +506,7 @@ button:hover, button a:hover{
     padding: 2rem;
     margin: 2rem;
     text-align: center;
+    gap: 2rem;
 }
 
 .contenedor__cuadro{
@@ -495,7 +514,6 @@ button:hover, button a:hover{
     height: 400px;
     width: 350px;
     background-color: white;
-    border: 10px solid #c59fc9;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -574,14 +592,18 @@ button:hover, button a:hover{
     grid-template-areas:"contactanos__form contactanos__container"; 
     align-items: center;
     justify-items: center;
+    margin: 3rem;
 }
 
-.contactanos__form, .registrate__form{
+.contactanos__form, .registrate__form, .ingreso__form{
     grid-area: contactanos__form;
     display: flex;
     flex-direction: column;
     gap: 0.63rem;
-    align-items: center;
+    width: 100%;
+    padding: 1rem;
+    border-radius: 7px;
+    background-image: linear-gradient(to left, #41b9f0a0, #9f44c676);
 }
 
 .contactanos__container{
@@ -589,12 +611,13 @@ button:hover, button a:hover{
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin: 2rem;
 }
 .contacto__rosa{
     display: grid;
     grid-template-columns: 1fr 2fr;
     grid-template-areas:"img__contacto__rosa contacto__rosa__datos"; 
-    
+    text-align: center;
     align-items: center;
     justify-items: center;
 }

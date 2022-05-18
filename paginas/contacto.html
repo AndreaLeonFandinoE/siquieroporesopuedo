@@ -15,48 +15,90 @@
     <!--CSS-->
     <link rel="stylesheet" href="../css/style.css">
     
-    <title><h1>Contacto</h1></title>
+    <title>Contacto</title>
 
 </head>
 
 <body>
+    <!-- bootstrap -->
     <header>
-        <!--logo-->
-        <a class="header__logo" href="../index.html"><img src="../recursos/img/logo/logo-original-sin-fondo.png" alt="Logo de Siquiero.PorEsoPuedo" width="200"></a> 
-        <nav>
-            <ul>
-                <li><a href="../index.html">Inicio</a>
-                    <img src="../recursos/img/icon-logo/flecha.png" alt="flecha" width="8">
-                    <ul>
-                        <li><a href="quien-soy.html">¿Quién soy?</a></li>
-                        <li><a href="servicios.html">Servicios</a></li>
-                        <li><a href="obsequios.html">Obsequios</a></li>
-                        <li><a href="recursos.html">Recursos</a></li>
+        <!-- Logo -->
+        <a class="navbar-brand" href="../index.html">
+            <img src="../recursos/img/logo/logo-original-sin-fondo.png" alt="Logo de Siquiero.PorEsoPuedo" height="41">
+        </a>
+
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container-fluid">
+                
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="active" aria-current="page" href="../index.html">Inicio</a>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Academia Online</a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <li><a href="academia-online.html">Cursos</a></li>
+                                <li><a href="academia-online.html">Programas</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="dropdown-toggle" href="servicios.html" id="navbarDropdownMenuLink" role="button" aria-expanded="false">
+                            Servicios
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <li><a href="obsequios.html">Obsequios</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="quien-soy.html">¿Quién soy?</a>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Recursos/Blog
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <li><a href="recursos.html">Blog</a></li>
+                                <li><a href="recursos.html">Podcast</a></li>
+                                <li><a href="recursos.html">videos</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="contacto.html">Contacto</a>
+                        </li>
                     </ul>
-                </li>
-                <li><a href="academia-online.html">Academia Online</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
-            </ul>
+                </div>
+            </div>
         </nav>
     </header>
     
     <main>
-        <section class="portada">
+        <section>
             <img class="portada__img" src="../recursos/img/banner-paginas/banner-contacto.jpg" alt="banner-contactanos">
         </section>
 
-        <section class=" section">
-            <div class="section__container">
+        <section>
                 <h2 class="center">Contáctanos</h2>
                 <div class="contactanos">
-                    <form class="contactanos__form" action="">
-                        <input type="text" placeholder="Nombre">
-                        <input type="text" placeholder="Apellido">
-                        <input type="tel" placeholder="Celular">
-                        <input type="email" placeholder="Correo">
-                        <input type="text" placeholder="Titulo">
-                        <input type="text" placeholder="Mensaje">
-                        <input type="button" name="" value="Enviar">
+                    
+                    <form class="contactanos__form" action="" >
+                        <input class="form-control" type="text" placeholder="Nombre">
+                        <input class="form-control" type="text" placeholder="Apellido">
+                        <input class="form-control" type="tel" placeholder="Celular">
+                        <input class="form-control" type="email" placeholder="Correo">
+                        <input class="form-control" type="text" placeholder="Titulo">
+                        <!-- bootstrap -->
+                        <textarea class="form-control" placeholder="Escribe tu mensaje aqui" id="floatingTextarea"></textarea>
+                        <button type="submit" class="btn btn-primary form-control">Enviar</button>
                     </form>
                 
                     <div class="contactanos__container">
@@ -70,33 +112,57 @@
                             </div>
                         </div>
                     </div>
+                    
                 </div>
-                
-            </div>
-            
         </section>
 
-        <section class="registrate">
-            <h2 class="center">Regístrate</h2>
-            <form class="registrate__form" method="post">
-                <label for="">Nombre de usuario</label>
-                <input type="text" placeholder="Escriba su nombre" name="Nombre">
-                
-                <label for="">Apellido de usuario</label>
-                <input type="text" placeholder="Escriba su apellido" name="Apellido">
-                
-                <label for="">Dirección de correo electrónico</label>
-                <input type="email"placeholder="Cual es su email?" name="Email">
-                
-                <label for="">Celular</label>
-                <input type="tel" placeholder="Cual es su numero?" name="Telefono">
-                
-                <label for="">Contraseña</label>
-                <input type="password" placeholder="Crea contrasena?" name="Password">
-                
-                <input type="submit" name="register" value="Crear usuario">
-            </form>
+        <section class="section">
+            <div class="section__container">
+                <h2 class="center">Regístrate</h2>
+                <form class="registrate__form" method="post">
+                    <label for="">Nombre de usuario</label>
+                    <input class="form-control" type="text" placeholder="Escriba su nombre" name="Nombre">
+                    
+                    <label for="">Apellido de usuario</label>
+                    <input class="form-control" type="text" placeholder="Escriba su apellido" name="Apellido">
+                    
+                    <label for="">Dirección de correo electrónico</label>
+                    <input class="form-control" type="email"placeholder="Cual es su email?" name="Email">
+                    
+                    <label for="">Celular</label>
+                    <input class="form-control" type="tel" placeholder="Cual es su numero?" name="Telefono">
+                    
+                    <label for="">Contraseña</label>
+                    <input class="form-control" type="password" placeholder="Crea contrasena?" name="Password">
+                    
+                    <button type="submit" class="btn btn-primary form-control">Crear usuario</button>
+                </form>
+            </div>
         </section>
+
+        <!-- bootstrap -->
+        <section class="section">
+            <div class="section__container">
+                <h2 class="center">Ingresar</h2>
+                <form class="ingreso__form">
+                    <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">Correo electrónico</label>
+                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                        <div id="emailHelp" class="form-text">No compartiremos tu email con nadie más.</div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputPassword1" class="form-label">Contraseña</label>
+                        <input type="password" class="form-control" id="exampleInputPassword1">
+                    </div>
+                    <div class="mb-3 form-check">
+                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                        <label class="form-check-label" for="exampleCheck1">Recordarme</label>
+                    </div>
+                    <button type="submit" class="btn btn-primary form-control">Ingresar</button>
+                </form>
+            </div>
+        </section>
+        
 
         <section class="testimonios">
             <div class="testimonios__persona section__container">

@@ -15,40 +15,131 @@
     <!--CSS-->
     <link rel="stylesheet" href="./css/style.css">
     
-    <title><h1>SiQuiero.PorEsoPuedo</h1></title>
+    <title>SiQuiero.PorEsoPuedo</title>
 
 </head>
 
 <body>
+    <!-- bootstrap -->
     <header>
-        <!--logo-->
-        <a class="header__logo" href="index.html"><img src="./recursos/img/logo/logo-original-sin-fondo.png" alt="Logo de Siquiero.PorEsoPuedo" width="200"></a> 
-        <nav>
-            <ul>
-                <li><a href="index.html">Inicio</a>
-                    <img src="./recursos/img/icon-logo/flecha.png" alt="flecha" width="8">
-                    <ul>
-                        <li><a href="./paginas/quien-soy.html">¿Quién soy?</a></li>
-                        <li><a href="./paginas/servicios.html">Servicios</a></li>
-                        <li><a href="./paginas/obsequios.html">Obsequios</a></li>
-                        <li><a href="./paginas/recursos.html">Recursos</a></li>
+        <!-- Logo -->
+        <a class="navbar-brand" href="index.html">
+            <img src="./recursos/img/logo/logo-original-sin-fondo.png" alt="Logo de Siquiero.PorEsoPuedo" height="41">
+        </a>
+
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container-fluid">
+                
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="active" aria-current="page" href="index.html">Inicio</a>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Academia Online</a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <li><a href="./paginas/academia-online.html">Cursos</a></li>
+                                <li><a href="./paginas/academia-online.html">Programas</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="dropdown-toggle" href="./paginas/servicios.html" id="navbarDropdownMenuLink" role="button" aria-expanded="false">
+                            Servicios
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <li><a href="./paginas/obsequios.html">Obsequios</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="./paginas/quien-soy.html">¿Quién soy?</a>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Recursos/Blog
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <li><a href="./paginas/recursos.html">Blog</a></li>
+                                <li><a href="./paginas/recursos.html">Podcast</a></li>
+                                <li><a href="./paginas/recursos.html">videos</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="./paginas/contacto.html">Contacto</a>
+                        </li>
                     </ul>
-                </li>
-                <li><a href="./paginas/academia-online.html">Academia Online</a></li>
-                <li><a href="./paginas/contacto.html">Contacto</a></li>
-            </ul>
+                </div>
+            </div>
         </nav>
     </header>
-    
+
     <main>
-        <section >
-            <div class="portada__inicio">
-                <!--imagenes rodantes-->
-                <img class="portada__img" src="" alt=""><!--la img la puse en el css-->
-                <button class="portada__boton">Quiero saber más</button>
+
+<!-- bootstrap -->
+        <section>
+            <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                </div>
+
+                <div class="carousel-inner">
+
+                    <div class="carousel-item active" data-bs-interval="10000">
+                        <img src="/recursos/img/banner-paginas/banner-servicios.jpg" class="d-block w-100" alt="banner-servicios">
+                        <div class="carousel-caption d-none d-md-block">
+                            <a href="/paginas/servicios.html"><button>Mira todo lo que tengo para ofrecerte</button></a>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item" data-bs-interval="2000">
+                        <img src="/recursos/img/banner-paginas/banner-obsequios.jpg" class="d-block w-100" alt="banner-obsequios">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Obsequios</h5>
+                            <a href="/paginas/obsequios.html"><button>Llevate de regalo algunos de mis Ebooks</button></a>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item" data-bs-interval="2000">
+                        <img src="/recursos/img/banner-paginas/banner-inicio.jpg" class="d-block w-100" alt="banner-academia">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Academia Online</h5>
+                            <a href="/paginas/academia-online.html"><button>Accede y forma parte de la comunidad</button></a>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <img src="/recursos/img/banner-paginas/banner-recursos.jpg" class="d-block w-100" alt="banner-recursos">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Recursos</h5>
+                            <p>Lee mi Blog o escucho mi Podcast o mira algunos de mis Videos</p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previsualizar</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Siguiente</span>
+                </button>
             </div>
         </section>
-
+        
         <section class="section">
             <div class="section__container">
                 <h2 class="presentacion__titulo">¡Hola! Soy Rosa León, Agente de Transformación en Desarrollo Personal y Emprendimiento. Especializada en cambios de creencias limitantes, Reinvención y Creación de Negocios</h2>
@@ -63,7 +154,6 @@
                     </div>
                 </div>
             </div>
-            
         </section>
 
         <section class="contenedor">
