@@ -9,11 +9,8 @@ body{
     text-align: justify;
     line-height: 1.5rem;
     letter-spacing: 0.05rem;
-    font-size: 0.93rem;
-    font-weight: 400;
-    
+    font-size: 1em;
 }
-
 
 header{
     display: flex;
@@ -21,13 +18,15 @@ header{
     top: 0px;
     align-items: center;
     justify-content: space-between;
-    /* background-color: #000000bf; */
-    background-color: white;
-    
+    background-color: #000000bf;
 }
 
 header a{
     color: #41b8f0;
+}
+
+header a img{
+    height: 8vh;
 }
 
 header a:hover{
@@ -45,9 +44,9 @@ ul{
 
 li{
     display: inline;
-    padding: 8px;
+    padding: 0.5rem;
     position: relative;
-    font-size: 14px;
+    font-size: 0.87rem;
 }
 
 ul ul{
@@ -69,25 +68,40 @@ a{
     text-decoration: none;
 }
 
-h1, h2, h3{
-    color: #A044C6;
-    font-size: 2em;
+/* enlaces visitados */
+a:visited{
+    color: #95d1ed;
 }
 
-button, button a{
+h1, h2, h3{
+    color: #A044C6;
+}
+
+a::selection, button::selection, img::selection, span::selection, p::selection, h1::selection, h2::selection, h3::selection, h4::selection, h5::selection, h6::selection{
+    background-color: #c59fc9;
+    color: black;
+}
+
+button{
     color: white;
     font-size: medium;
     font-weight: bold;
-    border: 5px;
-    border-radius: 7px;
+    border: 0.31rem;
+    border-radius: 0.43rem;
     text-align: center;
     background-image: linear-gradient(to bottom, #a044c6, #9f44c6b6);
     padding: 0.5rem;
+    margin-top: 0.3rem;
 }
 
 button:hover, button a:hover{
     background-image: linear-gradient(to bottom, #c59fc9ee, #c59fc9);
     color: white;
+}
+
+a button::after{
+    content: " ➭ " ;
+    justify-items: center;
 }
 
 .boton, .center{
@@ -97,43 +111,31 @@ button:hover, button a:hover{
 
 .section{
     display: flex;
-    width: 100%;
     justify-content: center;
     padding-top: 0.31rem;
 }
 
 .section__container{
-    width: 62.5rem;
     margin: 2rem;
 }
 
 .portada__img{
     width: 100%;
+    margin-bottom: 2rem;
 }
 
-.img__cuadros{
+.img__cuadros{ /* .recursos, .podcast, servicios */
     width: 20vw;
     border-radius: 0.50rem;
 }
 
-.img__cards{
-    height: 20vh;
+.img__cards{ /* .logos */
+    height: 14vh;
 }
 
-/* .portada__inicio{
-    display: flex;
-    flex-wrap: wrap;
-    background: linear-gradient(to right, #9f44c62a, #41b9f030), url("../recursos/img/pexels-cottonbro.jpg");
-    background-size:cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    justify-content: center;
-    align-items: center;
-    height: 60vh;
-    width: 100%;
-
-} */
+.fecha{
+    color: #41b8f0;
+}
 
 .presentacion{
     display: grid;
@@ -141,26 +143,23 @@ button:hover, button a:hover{
     grid-template-areas:"rosa rosa__container";
     align-items: center;
     justify-items: center;
-    
 }
 
 .presentacion__titulo{
     text-align: center;
-    margin: 2rem;
+    margin-bottom: 2rem;
 }
 
 .presentacion__contacto{
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-areas: "presentacion__iframe presentacion__boton";
-    
     align-items: center;
     justify-items: center;
 }
 
 .presentacion__iframe{
     grid-area: presentacion__iframe;
-    
 }
 
 .presentacion__boton{
@@ -179,12 +178,13 @@ button:hover, button a:hover{
     padding: 2rem;
 }
 
-.servicios, .obsequios, .programas, .cursos, .blog, .podcast{
+
+
+.servicios, .obsequios, .programas, .cursos, .blog, .podcast, .video{
     background-color: #b4b4b437;
     padding: 2rem;
     gap: 2rem;
     border-radius: 1rem;
-    
 }
 
 .servicios__container{
@@ -195,23 +195,6 @@ button:hover, button a:hover{
                         "servicios__cuatro servicios__cinco servicios__seis";
     gap: 1rem;
     margin-bottom: 2rem;
-}
-
-.servicios__cuadro, .blog__cuadro, .podcast__cuadro, .obsequios__cuadro, .cursos__cuadro, .programas__cuadro, .membresia__cuadro{
-    display: flex;
-    flex-flow: column wrap ;
-    align-items: center;
-    justify-content: center;
-    padding: 0.5rem;
-    background-color: white;
-    border-radius: 1rem;
-    gap: 1rem;
-}
-
-.servicios__cuadro:hover, .blog__cuadro:hover, .podcast__cuadro:hover, .obsequios__cuadro:hover, .cursos__cuadro:hover, .programas__cuadro:hover, .membresia__cuadro:hover{
-    background: linear-gradient(to left, rgba(0, 0, 0, 0.075), white) ;
-    transform: scale(1.01);
-    transition: all 2s ease-in;
 }
 
 .servicios__contenido{
@@ -243,95 +226,6 @@ button:hover, button a:hover{
 
 .servicios__seis{
     grid-area: servicios__seis;
-}
-
-.descargable{
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    background: linear-gradient(to right, #9f44c62a, #41b9f030), url("../recursos/img/rosa/rosa-office24.jpeg");
-    background-size:cover;
-    background-position: top;
-    background-repeat: no-repeat;
-    
-}
-
-.descargable__container{
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-areas: "descargable__titulo"
-                        "descargable__img"
-                        "descargable__boton";
-    padding: 1rem;
-    justify-content: center;
-}
-
-.descargable__titulo{
-    grid-area: descargable__titulo;
-    background-color: #A044C6;
-    color: white;
-    margin-bottom: 1rem;
-    text-align: center;
-}
-
-.descargable__img{
-    grid-area: descargable__img;
-    margin-left: 2rem;
-}
-
-.descargable__boton{
-    grid-area: descargable__boton;
-}
-
-.galeria{
-    display: flex;
-    justify-content: center;
-    margin: 3rem;
-}
-
-/* .collage{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    margin: 2rem;
-    justify-items: center;
-    justify-self: center;
-    align-items: center;
-    gap: 1rem;
-} */
-
-/* .collage__img:hover{
-    background: linear-gradient(to left, rgba(0, 0, 0, 0.674), white) ;
-    transform: scale(1.1);
-    transition: all 3s ease;
-} */
-
-/* .collage__img:hover{
-    animation-duration: 2s;
-    animation-name: animacion;
-} */
-
-@keyframes animacion{
-    0%{
-        background: linear-gradient(to left, rgba(0, 0, 0, 0.674), white) ;
-        transform: scale(1);
-        transition: all 2s ease;
-    }
-
-    50%{
-    background: linear-gradient(to left, rgba(0, 0, 0, 0.674), white) ;
-    transform: scale(1.1);
-    transition: all 2s ease-in;
-    }
-
-    100%{
-        background: linear-gradient(to left, rgba(0, 0, 0, 0.674), white) ;
-        transform: scale(1);
-        transition: all 2s ease-in-out;
-    }
-}
-
-.fecha{
-    color: #41b8f0;
 }
 
 .obsequios__container{
@@ -379,30 +273,88 @@ button:hover, button a:hover{
     grid-area: obsequios__nueve;
 }
 
+.cuadro{
+    display: flex;
+    flex-flow: column wrap ;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem;
+    background-color: white;
+    border-radius: 1rem;
+    margin: 1rem;
+}
 
+.cuadro:hover, .testimonios__img:hover{
+    animation-duration: 2s;
+    animation-name: animacion;
+} 
 
-/* .blog__container{
+@keyframes animacion{
+    0%{
+        background: linear-gradient(to left, #41b9f037, white) ;
+        transform: scale(1);
+        transition: all 2s ease;
+    }
+
+    50%{
+        background: linear-gradient(to left, rgba(0, 0, 0, 0.075), white) ; ;
+        transform: scale(1.03);
+        transition: all 2s ease-in;
+    }
+
+    100%{
+        background: linear-gradient(to left, #41b9f052, white) ;
+        transform: scale(1);
+        transition: all 2s ease-in-out;
+    }
+}
+
+.descargable{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    background: linear-gradient(to right, #9f44c62a, #41b9f030), url("../recursos/img/rosa/rosa-office24.jpeg");
+    background-size:cover;
+    background-position: top;
+    background-repeat: no-repeat;
+}
+
+.descargable__container{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-areas: "blog__uno blog__dos blog__tres";
-    
-    padding: 2rem;
-    gap: 2rem;
-    margin-bottom: 2rem;
-
+    grid-template-columns: 1fr;
+    grid-template-areas: "descargable__titulo"
+                        "descargable__img"
+                        "descargable__boton";
+    padding: 1rem;
+    justify-content: center;
 }
 
-.blog__uno{
-    grid-area: blog__uno;
+.descargable__titulo{
+    grid-area: descargable__titulo;
+    color: black;
+    margin-bottom: 1rem;
+    text-align: center;
 }
 
-.blog__dos{
-    grid-area: blog__dos;
+.descargable__img{
+    grid-area: descargable__img;
+    margin-left: 2rem;
 }
 
-.blog__tres{
-    grid-area: blog__tres;
-} */
+.descargable__boton{
+    grid-area: descargable__boton;
+    margin: 2rem;
+}
+
+.galeria{
+    display: flex;
+    justify-content: center;
+    margin-top: 3rem;
+}
+
+.galeria__rosa{
+    height: 100vh;
+}
 
 .podcast__container{
     display: grid;
@@ -418,6 +370,10 @@ button:hover, button a:hover{
 
 .podcast__dos{
     grid-area: podcast__dos;
+}
+
+.podcast__reproducir::before{
+    content: " ◀️ ▶️ " ;
 }
 
 .video__container{
@@ -437,64 +393,12 @@ button:hover, button a:hover{
     margin-bottom: 2rem;
 }
 
-
-
-/* .cursos__container{
-    /* display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-areas: "cursos__uno cursos__dos cursos__tres"; */
-    /* align-items: stretch;
-    
-    padding: 2rem;
-    gap: 2rem;
-    margin-bottom: 2rem; 
-} */
-
-/* .cursos__uno{
-    grid-area: cursos__uno;
-}
-
-.cursos__dos{
-    grid-area: cursos__dos;
-}
-
-.cursos__tres{
-    grid-area: cursos__tres;
-} */
-
 .programas__container, .cursos__container, .blog__container{
-    /* display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-areas: "programas__uno programas__dos programas__tres membresia"
-                        ;
-    align-items: stretch;
-    background-color: #c59fc9;
-    padding: 2rem;
-    gap: 2rem;
-    margin-bottom: 2rem; */
-    
     display: flex;
     flex-flow: row wrap ;
     justify-content: space-around;
     padding: 2rem;
-    height: 100%;
 }
-
-/* .programas__uno{
-    grid-area: programas__uno;
-}
-
-.programas__dos{
-    grid-area: programas__dos;
-}
-
-.programas__tres{
-    grid-area: programas__tres;
-}
-
-.membresia{
-    grid-area: membresia;
-} */
 
 .contenedor{
     display: flex;
@@ -510,9 +414,9 @@ button:hover, button a:hover{
 }
 
 .contenedor__cuadro{
-    padding: 10px;
-    height: 400px;
-    width: 350px;
+    padding: 0.62rem;
+    height: 25rem;
+    width: 21.87rem;
     background-color: white;
     display: flex;
     flex-direction: column;
@@ -522,17 +426,14 @@ button:hover, button a:hover{
 
 .contenedor__mision{
     color: #A044C6;
-    
 }
 
 .contenedor__vision{
     color: #41b8f0;
-    
 }
 
 .contenedor__valores{
     color: #A044C6;
-    
 }
 
 .testimonios{
@@ -566,13 +467,12 @@ button:hover, button a:hover{
     border-radius: 3.1rem;
 }
 
-.testimonios__img:hover{
-    transform: scale(1.2);
-    transition: all 2s;
-}
-
 .testimonios__parrafo{
     grid-area: testimonios__parrafo;
+}
+
+.testimonios__parrafo::first-line{
+    background-color: #c59fc9;
 }
 
 .testimonios__nombre{
@@ -591,7 +491,7 @@ button:hover, button a:hover{
     grid-template-columns: 1fr 1fr;
     grid-template-areas:"contactanos__form contactanos__container"; 
     align-items: center;
-    justify-items: center;
+    gap: 1rem;
     margin: 3rem;
 }
 
@@ -600,9 +500,8 @@ button:hover, button a:hover{
     display: flex;
     flex-direction: column;
     gap: 0.63rem;
-    width: 100%;
     padding: 1rem;
-    border-radius: 7px;
+    border-radius: 0.43rem;
     background-image: linear-gradient(to left, #41b9f0a0, #9f44c676);
 }
 
@@ -611,8 +510,26 @@ button:hover, button a:hover{
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 2rem;
+    padding: 1rem;
 }
+
+.registrate__ingresar{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:"registrate ingresar"; 
+    gap: 1rem;
+    align-items: center;
+    margin-top: 5rem;
+}
+
+registrate{
+    grid-area: resgistrate;
+}
+
+ingresar{
+    grid-area: ingresar;
+}
+
 .contacto__rosa{
     display: grid;
     grid-template-columns: 1fr 2fr;
@@ -624,7 +541,7 @@ button:hover, button a:hover{
 
 .img__contacto__rosa{
     grid-area: img__contacto__rosa;
-    width: 7vw;
+    height: 20vh;
     border-radius: 1rem;
 }
 
@@ -639,52 +556,68 @@ footer .footer__container{
     background-color: black;
     align-items: center;
     color: #41b8f0;
-    
 }
 
 footer span{
     display: flex;
     flex-flow: column wrap ;
-    text-align: center;
-    padding: 1rem;
+    text-align: left;
+    align-items: flex-start;
+    padding: 0.3rem;
 }
+
 .footer__redes{
     padding: 1rem;
 }
 
 .chat{
     position: fixed;
-    bottom: 10px;
-    right: 20px;
+    bottom: 0.62rem;
+    right: 1.25rem;
 }
 
 /* TABLET */
-@media (min-width:541px) and (max-width:720px){
+@media (min-width:541px) and (max-width:720px) and (orientacion: landscape){
+    header a img{
+        height: 10vh;
+    }
+
     .presentacion{
         display: grid;
         grid-template-columns: 1fr;
         grid-template-areas: "presentacion__titulo"
                             "rosa" 
                             "rosa__container";
-        align-items: center;
-        margin: 1rem;
     }
-    
-    .presentacion__contacto{
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-areas: "presentacion__iframe" 
-                            "presentacion__boton";
-        
+
+    .rosa__container{
+        padding: 0%;
+        padding-top: 2rem;
     }
-    
-    .collage{
+
+    .contenedor__cuadro{
+        height: 15rem;
+        width: 40rem;
+    }
+
+    .testimonios__persona{
         display: grid;
         grid-template-columns: 1fr 1fr;
-        margin: 20px;
-        justify-content: center;
-        align-items: center;
-        gap: 1rem;
+        grid-template-areas:"testimonios__titulo testimonios__titulo"
+                            "testimonios__parrafo testimonios__parrafo" 
+                            "testimonios__nombre testimonios__img";
+    }
+    
+    .testimonios__img{
+        height: 15vh;
+    }
+
+    .img__cards{ /* .logos */
+        height: 5vh;
+    }
+
+    .img__cuadros{ /* .recursos, .podcast, servicios */
+        width: 30vw;
     }
 
     .servicios__container{
@@ -694,112 +627,16 @@ footer span{
                             "servicios__uno servicios__dos" 
                             "servicios__tres servicios__cuatro " 
                             "servicios__cinco servicios__seis";
-        justify-content: center;
-        align-items: center;
-        margin: 1rem;
-        gap: 1rem;
     }
 
     .obsequios__container{
         display: grid;
-        grid-template-columns: 1fr;
-        grid-template-areas: "obsequios__uno" 
-                            "obsequios__dos"
-                            "obsequios__tres" 
-                            "obsequios__cuatro"
-                            "obsequios__cinco"
-                            "obsequios__seis"
-                            "obsequios__siete"
-                            "obsequios__ocho"
-                            "obsequios__nueve";
-        justify-content: center;
-        align-items: center;
-        margin: 1rem;
-        gap:1rem;
-    }
-
-    .blog__container{
-        display: grid;
         grid-template-columns: 1fr 1fr;
-        grid-template-areas: "blog__uno blog__dos"
-                            "blog__tres blog__tres";
-        justify-content: center;
-        align-items: center;
-        gap: 1rem;
-        margin: 2rem;
-
-    }
-
-    .video__container{
-        display: grid;
-        grid-template-columns: 1fr;
-        align-items: center;
-        justify-content: center;
-        gap: 1rem;
-        margin: 2rem;
-    }
-    
-    .cursos__container{
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-areas: "cursos__uno cursos__dos"
-                            "cursos__tres cursos__tres";
-        gap: 1rem;
-        margin: 2rem;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .programas__container{
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-areas: "programas__uno programas__dos"
-                            "programas__tres membresia ";
-        gap: 1rem;
-        margin: 2rem;
-        justify-content: center;
-        align-items: center;
-    }
-}
-
-/* celular */
-@media (min-width:320px) and (max-width:540px){
-    header{
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-        position: initial;
-        top: 0px;
-        align-items: center;
-        justify-content: center;
-    }
-
-    header a{
-        display: flex;
-        flex-direction: column;
-    }
-    
-
-    .presentacion{
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-areas: "presentacion__titulo"
-                            "rosa" 
-                            "rosa__container";
-        align-items: center;
-        margin: 1rem;
-    }
-
-    .testimonios__persona{
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-areas:"testimonios__parrafo" 
-                            "testimonios__img"
-                            "testimonios__nombre";
-        align-items: center;
-        justify-content: center;
-        align-content: center;
-        
+        grid-template-areas: "obsequios__uno obsequios__dos"
+                            "obsequios__tres obsequios__cuatro"
+                            "obsequios__cinco obsequios__seis"
+                            "obsequios__siete obsequios__ocho"
+                            "obsequios__nueve obsequios__nueve";
     }
 
     .presentacion__contacto{
@@ -808,30 +645,128 @@ footer span{
         grid-template-areas: "presentacion__iframe" 
                             "presentacion__boton";
     }
-    
-    iframe{
-        width: 90vw;
-        height: 30vh;
-    }
 
     .descargable{
-        display: flex;
-        flex-wrap: wrap;
-        background-image: url("../recursos/img/pexels-cottonbro.jpg");
-        background-position: top;
-        background-repeat: no-repeat;
-        background-size: cover;
-        align-items: center;
+        background: linear-gradient(to right, #9f44c62a, #41b9f030);
+        justify-content: center;
     }
-    
-    .collage{
+
+    .descargable__img{
+        height: 35vh;
+    }
+
+    .galeria__rosa{
+        height: 40vh;
+    } 
+
+    .video__container{
         display: grid;
         grid-template-columns: 1fr;
-        margin: 3rem;
-        justify-content: center;
-        align-items: center;
+    }
+
+    .contactanos{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas:"contactanos__form" 
+                            "contactanos__container"; 
+        margin: 1rem;
+    }
+
+    .img__contacto__rosa{
+        height: 10vh;
+    }
+
+    .registrate__ingresar{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas:"ingresar"
+                            "registrate";
+        margin: 1rem;
+    } 
+}
+
+
+/* celular */
+@media (min-width:320px) and (max-width:540px){
+    header a img{
+        height: 10vh;
+    }
+
+    footer .footer__container{
+        font-size: small;
+        margin: 0%;
+        padding: 0%;
+    }
+
+    .footer__redes{
+        padding: 0.3rem;
+    }
+
+    .chat{
+        bottom: 1.72rem;
+        right: 0.6rem;
+    }
+
+    .presentacion{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas: "presentacion__titulo"
+                            "rosa" 
+                            "rosa__container";
+    }
+
+    .rosa__container{
+        padding: 0%;
+        padding-top: 2rem;
+    }
+
+    .contenedor{
+        padding: 1rem;
+        margin: 0rem;
         gap: 1rem;
-        align-content: center;
+    }
+
+    .contenedor__cuadro{
+        height: 18rem;
+    }
+
+    .testimonios__persona{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:"testimonios__titulo testimonios__titulo"
+                            "testimonios__parrafo testimonios__parrafo" 
+                            "testimonios__nombre testimonios__img";
+    }
+    
+    .testimonios__img{
+        height: 10vh;
+    }
+
+    .testimonios__nombre{
+        padding-top: 3rem;
+        font-size: small;
+        align-items: flex-end;
+    }
+
+    .img__cards{ /* .logos */
+        height: 5vh;
+    }
+
+    .img__cuadros{ /* .recursos, .podcast, servicios */
+        width: 80vw;
+    }
+
+    .recursos, .logos{
+        display: none
+    }
+
+    .programas__container, .cursos__container, .blog__container{
+        justify-content: center;
+        padding: 0;
+    }
+
+    .servicios, .obsequios, .programas, .cursos, .blog, .podcast, .video{
+        padding: 0.5rem;
     }
 
     .servicios__container{
@@ -844,10 +779,7 @@ footer span{
                             "servicios__cuatro " 
                             "servicios__cinco"
                             "servicios__seis";
-        justify-content: center;
-        align-items: center;
-        margin: 2rem;
-        gap: 1rem;
+        margin: 0rem;
     }
 
     .obsequios__container{
@@ -862,77 +794,68 @@ footer span{
                             "obsequios__siete"
                             "obsequios__ocho"
                             "obsequios__nueve";
-        justify-content: center;
-        align-items: center;
-        margin: 3rem;
-        gap:1rem;
     }
 
-    .blog__container{
+    .presentacion__contacto{
         display: grid;
         grid-template-columns: 1fr;
-        grid-template-areas: "blog__uno"
-                            "blog__dos"
-                            "blog__tres";
-        justify-content: center;
-        align-items: center;
-        gap: 1rem;
-        margin: 2rem;
+        grid-template-areas: "presentacion__iframe" 
+                            "presentacion__boton";
     }
 
+    iframe{
+        width: 90vw;
+        height: 30vh;
+    }
+
+    .descargable{
+        background: linear-gradient(to right, #9f44c62a, #41b9f030);
+    }
+
+    .descargable__img{
+        height: 60vh;
+    }
+
+    .galeria__rosa{
+        height: 40vh;
+    } 
+    
     .podcast__container{
         display: grid;
         grid-template-columns: 1fr;
         grid-template-areas: "podcast__uno"
                             "podcast__dos";
-        justify-content: center;
-        align-items: center;
-        gap: 1rem;
-        margin: 2rem;
     }
 
     .video__container{
         display: grid;
         grid-template-columns: 1fr;
-        align-items: center;
-        justify-content: center;
-        gap: 1rem;
-        margin: 2rem;
     }
     
-    .cursos__container{
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-areas: "cursos__uno"
-                            "cursos__dos"
-                            "cursos__tres";
-        gap: 1rem;
-        margin: 2rem;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .programas__container{
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-areas: "programas__uno"
-                            "programas__dos"
-                            "programas__tres"
-                            "membresia";
-        gap: 1rem;
-        margin: 2rem;
-        justify-content: center;
-        align-items: center;
-    }
-
     .contactanos{
         display: grid;
         grid-template-columns: 1fr;
-        grid-template-areas: "center"
-                            "contactanos__form"
+        grid-template-areas:"contactanos__form" 
                             "contactanos__container"; 
-        align-items: center;
-        margin: 2rem;
-        justify-content: center;
+        margin: 1rem;
+    }
+
+    .img__contacto__rosa{
+        height: 7vh;
+    }
+
+    .registrate__ingresar{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas:"ingresar"
+                            "registrate";
+        margin: 1rem;
+    } 
+}
+
+@media print {
+    p, h1, h2, h3, h4, h5, h6{
+        color: black;
+        background-color: white;
     }
 }
