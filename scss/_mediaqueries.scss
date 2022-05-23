@@ -1,0 +1,297 @@
+/* TABLET */
+@media (min-width:541px) and (max-width:720px) and (orientacion: landscape){
+    header a img{
+        height: 10vh;
+    }
+
+    .presentacion{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas: "presentacion__titulo"
+                            "rosa" 
+                            "rosa__container";
+        .rosa__container{
+            padding: 0%;
+            padding-top: 2rem;
+        }
+        &__contacto{
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-areas: "presentacion__iframe" 
+                                "presentacion__boton";
+        }
+    }
+
+    .contenedor__cuadro{
+        height: 15rem;
+        width: 40rem;
+    }
+
+    .testimonios__persona{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:"testimonios__titulo testimonios__titulo"
+                            "testimonios__parrafo testimonios__parrafo" 
+                            "testimonios__nombre testimonios__img";
+        .testimonios__img{
+            height: 15vh;
+        }
+    }
+    
+    .img__cards{ /* .logos */
+        height: 5vh;
+    }
+
+    .img__cuadros{ /* .recursos, .podcast, servicios */
+        width: 30vw;
+    }
+
+    .servicios__container{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+                            "servicios__uno servicios__dos" 
+                            "servicios__tres servicios__cuatro " 
+                            "servicios__cinco servicios__seis";
+    }
+
+    .obsequios__container{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: "obsequios__uno obsequios__dos"
+                            "obsequios__tres obsequios__cuatro"
+                            "obsequios__cinco obsequios__seis"
+                            "obsequios__siete obsequios__ocho"
+                            "obsequios__nueve obsequios__nueve";
+    }
+
+    .descargable{
+        background: $background-form;
+        justify-content: center;
+        &__img{
+            height: 35vh;
+        }
+    }
+
+    .galeria__rosa{
+        height: 40vh;
+    } 
+
+    .video__container{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .contactanos{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas:"contactanos__form" 
+                            "contactanos__container"; 
+        margin: 1rem;
+        .img__contacto__rosa{
+            height: 10vh;
+        }
+    }
+
+    .registrate__ingresar{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas:"ingresar"
+                            "registrate";
+        margin: 1rem;
+    } 
+}
+
+
+/* celular */
+@media (min-width:320px) and (max-width:540px){
+    header a img{
+        height: 10vh;
+    }
+
+    footer .footer__container{
+        font-size: small;
+        margin: 0%;
+        padding: 0%;
+        .footer__redes{
+            padding: 0.3rem;
+        }    
+    }
+
+    .chat{
+        bottom: 1.72rem;
+        right: 0.6rem;
+    }
+
+    .presentacion{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas: "presentacion__titulo"
+                            "rosa" 
+                            "rosa__container";
+        .rosa__container{
+            padding: 0%;
+            padding-top: 2rem;
+        }
+        &__contacto{
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-areas: "presentacion__iframe" 
+                                "presentacion__boton";
+        }
+    }
+
+    .contenedor{
+        padding: 1rem;
+        margin: 0rem;
+        gap: 1rem;
+        &__cuadro{
+            height: 18rem;
+        }
+    }
+
+    .testimonios__persona{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:"testimonios__titulo testimonios__titulo"
+                            "testimonios__parrafo testimonios__parrafo" 
+                            "testimonios__nombre testimonios__img";
+        .testimonios__img{
+            height: 12vh;
+        }
+        .testimonios__nombre{
+            padding-top: 3rem;
+            font-size: small;
+            align-items: flex-end;
+        }
+    }
+    
+    .img__cards{ /* .logos */
+        height: 5vh;
+    }
+
+    .img__cuadros{ /* .recursos, .podcast, servicios */
+        width: 80vw;
+    }
+
+    .recursos, .logos{
+        display: none
+    }
+
+    .servicios{
+        padding: 0.5rem;
+        &__container{
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-areas:
+                                "servicios__uno"
+                                "servicios__dos" 
+                                "servicios__tres"
+                                "servicios__cuatro " 
+                                "servicios__cinco"
+                                "servicios__seis";
+            margin: 0rem;
+        }
+    }
+
+    .obsequios{
+        padding: 0.5rem;
+        &__container{
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-areas: "obsequios__uno" 
+                                "obsequios__dos"
+                                "obsequios__tres" 
+                                "obsequios__cuatro"
+                                "obsequios__cinco"
+                                "obsequios__seis"
+                                "obsequios__siete"
+                                "obsequios__ocho"
+                                "obsequios__nueve";
+        }
+    }
+
+    .programas{
+        padding: 0.5rem;
+        &__container{
+            justify-content: center;
+            padding: 0;
+        }
+    }
+
+    .cursos{
+        padding: 0.5rem;
+        &__container{
+            justify-content: center;
+            padding: 0;
+        }
+    }
+    
+    .blog{
+        padding: 0.5rem;
+        &__container{
+            justify-content: center;
+            padding: 0;
+        }
+    }
+
+    .podcast{
+        padding: 0.5rem;
+        &__container{
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-areas: "podcast__uno"
+                                "podcast__dos";
+        }
+    }
+
+    .video{
+        padding: 0.5rem;
+        &__container{
+            display: grid;
+            grid-template-columns: 1fr;
+        }
+    }
+
+    iframe{
+        width: 90vw;
+        height: 30vh;
+    }
+
+    .descargable{
+        background: $background-form;
+        &__img{
+            height: 60vh;
+        }
+    }
+
+    .galeria__rosa{
+        height: 40vh;
+    } 
+    
+    .contactanos{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas:"contactanos__form" 
+                            "contactanos__container"; 
+        margin: 1rem;
+        .img__contacto__rosa{
+            height: 7vh;
+        }
+    }
+
+    .registrate__ingresar{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas:"ingresar"
+                            "registrate";
+        margin: 1rem;
+    } 
+}
+
+@media print {
+    p, h1, h2, h3, h4, h5, h6{
+        color: black;
+        background-color: white;
+    }
+}

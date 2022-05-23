@@ -1,0 +1,50 @@
+header{
+    display: flex;
+    flex-wrap: wrap;
+    top: 0px;
+    align-items: center;
+    justify-content: space-between;
+    background-color: $background-header;
+    a{
+        color: $color-principal-azul;
+        img{
+            height: 8vh;
+        }
+        &:hover{
+            color: $color-principal-lila;
+        }
+    }
+    ul{
+        list-style: none;
+        font-size: 0;
+        & li:hover ul{
+            display: block;
+            background-color: $background-header;
+            text-align: center;
+        }
+        & ul{
+            position: absolute;
+            display: none;
+            & li{
+                display: block;
+            }
+        }
+    }
+}
+
+.header__academia{
+    background-color: $background-header-academia;
+    a{
+        color: $color-principal-lila;
+        &:hover{
+            color: $color-principal-azul;
+        }
+    }
+}
+
+li{
+    display: inline;
+    padding: 0.5rem;
+    position: relative;
+    font-size: 0.87rem;
+}

@@ -1,0 +1,24 @@
+footer .footer__container{
+    display: flex;
+    flex-flow: row wrap ;
+    justify-content: space-around;
+    background-color: black;
+    align-items: center;
+    color: $color-principal-azul;
+    & span{
+        display: flex;
+        flex-flow: column wrap ;
+        text-align: left;
+        align-items: flex-start;
+        padding: 0.3rem;
+    }
+    .footer__redes{
+        padding: 1rem;
+    }
+}
+
+.chat{
+    position: fixed;
+    bottom: 0.62rem;
+    right: 1.25rem;
+}

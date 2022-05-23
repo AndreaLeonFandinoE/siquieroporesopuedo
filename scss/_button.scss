@@ -1,0 +1,25 @@
+button{
+    color: white;
+    font-size: medium;
+    font-weight: bold;
+    border: 0.31rem;
+    border-radius: 0.43rem;
+    text-align: center;
+    background-image: $button;
+    padding: 0.5rem;
+    margin-top: 0.3rem;
+    &:hover, & a:hover{
+        background-image: $button-hover;
+        color: white;
+    }
+}
+
+a button::after{
+    content: " ➭ " ;
+    justify-items: center;
+}
+
+.boton, .center{
+    align-items: center;
+    text-align: center;
+}

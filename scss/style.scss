@@ -1,0 +1,410 @@
+@import 'variables';
+@import 'header';
+@import 'footer';
+@import 'mediaqueries';
+@import 'button';
+@import 'testimonios';
+@import 'cards';
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: $font-family;
+    text-align: justify;
+    line-height: 1.5rem;
+    letter-spacing: 0.05rem;
+    font-size: $font-size;
+}
+
+a{
+    text-decoration: none;
+    &:visited{
+        color: $color-secundario-azul;
+    }
+}
+
+h1, h2{
+    color: $color-principal-lila;
+    font-size: x-large;
+}
+
+a::selection, button::selection, img::selection, span::selection, p::selection, h1::selection, h2::selection, h3::selection, h4::selection, h5::selection, h6::selection{
+    background-color: $color-secundario-lila;
+    color: black;
+}
+
+.section{
+    display: flex;
+    justify-content: center;
+    padding-top: 0.31rem;
+    &__container{
+        margin: 2rem;
+    }
+}
+
+.portada__img{
+    width: 100%;
+    margin-bottom: 2rem;
+}
+
+.img__cuadros{ /* .recursos, .podcast, servicios */
+    width: 20vw;
+    border-radius: 0.50rem;
+}
+
+.img__cards{ /* .logos */
+    height: 14vh;
+}
+
+.fecha{
+    color: $color-principal-azul;
+}
+
+.presentacion{
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-areas:"rosa rosa__container";
+    align-items: center;
+    justify-items: center;
+    &__titulo{
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+    &__contacto{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: "presentacion__iframe presentacion__boton";
+        align-items: center;
+        justify-items: center;
+    }
+    &__iframe{
+        grid-area: presentacion__iframe;
+    }
+    
+    &__boton{
+        grid-area: presentacion__boton;
+    }
+    .rosa{
+        grid-area: rosa;
+        align-items: center;
+        width: 70%;
+        justify-self: center;
+    }
+    .rosa__container{
+        grid-area: rosa__container;
+        padding: 2rem;
+    }
+
+}
+
+.servicios{
+    background-color: $background-fondo;
+    padding: 2rem;
+    gap: 2rem;
+    border-radius: 1rem;
+    &__container{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas:
+                            "servicios__uno servicios__dos servicios__tres" 
+                            "servicios__cuatro servicios__cinco servicios__seis";
+        gap: 1rem;
+        margin-bottom: 2rem;
+    }
+    &__contenido{
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        gap: 0.30rem;
+    }
+    &__uno{
+        grid-area: servicios__uno;
+    }
+    &__dos{
+        grid-area: servicios__dos;
+    }
+    &__tres{
+        grid-area: servicios__tres;
+    }
+    &__cuatro{
+        grid-area: servicios__cuatro;
+    }
+    &__cinco{
+        grid-area: servicios__cinco;
+    }
+    &__seis{
+        grid-area: servicios__seis;
+    }
+}
+
+.obsequios{
+    background-color: $background-fondo;
+    padding: 2rem;
+    gap: 2rem;
+    border-radius: 1rem;
+    &__container{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas: "obsequios__uno obsequios__dos obsequios__tres"
+                            "obsequios__cuatro obsequios__cinco obsequios__seis"
+                            " obsequios__siete obsequios__ocho obsequios__nueve";
+        gap: 1rem;
+    }
+    &__uno{
+        grid-area: obsequios__uno;
+    }
+    &__dos{
+        grid-area: obsequios__dos;
+    }
+    &__tres{
+        grid-area: obsequios__tres;
+    }
+    &__cuatro{
+        grid-area: obsequios__cuatro;
+    }
+    &__cinco{
+        grid-area: obsequios__cinco;
+    }
+    &__seis{
+        grid-area: obsequios__seis;
+    }
+    &__siete{
+        grid-area: obsequios__siete;
+    }
+    &__ocho{
+        grid-area: obsequios__ocho;
+    }
+    &__nueve{
+        grid-area: obsequios__nueve;
+    }
+}
+
+.descargable{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    background: linear-gradient(to right, #9f44c62a, #41b9f030), url("../recursos/img/rosa/rosa-office24.jpeg");
+    background-size:cover;
+    background-position: top;
+    background-repeat: no-repeat;
+    &__container{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas: "descargable__titulo"
+                            "descargable__img"
+                            "descargable__boton";
+        padding: 1rem;
+        justify-content: center;
+    }
+    &__titulo{
+        grid-area: descargable__titulo;
+        color: black;
+        margin-bottom: 1rem;
+        text-align: center;
+    }
+    &__img{
+        grid-area: descargable__img;
+        margin-left: 2rem;
+    }
+    &__boton{
+        grid-area: descargable__boton;
+        margin: 2rem;
+    }
+}
+
+.galeria{
+    display: flex;
+    justify-content: center;
+    margin-top: 3rem;
+    &__rosa{
+        height: 100vh;
+    }
+}
+
+.podcast{
+    background-color: $background-fondo;
+    padding: 2rem;
+    gap: 2rem;
+    border-radius: 1rem;
+    &__container{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: "podcast__uno podcast__dos";
+        gap: 1rem;
+        margin-bottom: 2rem;
+    }
+    &__uno{
+        grid-area: podcast__uno;
+    }
+    &__dos{
+        grid-area: podcast__dos;
+    }
+    &__reproducir::before{
+        content: " ◀️ ▶️ " ;
+    }
+
+}
+
+.video{
+    background-color: $background-fondo;
+    padding: 2rem;
+    gap: 2rem;
+    border-radius: 1rem;
+    &__container{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+        margin: 2rem;
+    }
+}
+
+.logos, .recursos{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.programas{
+    background-color: $background-fondo;
+    padding: 2rem;
+    gap: 2rem;
+    border-radius: 1rem;
+    &__container{
+        display: flex;
+        flex-flow: row wrap ;
+        justify-content: space-around;
+        padding: 2rem;
+    }
+}
+
+.cursos{
+    background-color: $background-fondo;
+    padding: 2rem;
+    gap: 2rem;
+    border-radius: 1rem;
+    &__container{
+        display: flex;
+        flex-flow: row wrap ;
+        justify-content: space-around;
+        padding: 2rem;
+    }
+}
+
+.blog{
+    background-color: $background-fondo;
+    padding: 2rem;
+    gap: 2rem;
+    border-radius: 1rem;
+    &__container{
+        display: flex;
+        flex-flow: row wrap ;
+        justify-content: space-around;
+        padding: 2rem;
+    }
+}
+
+.contenedor{
+    display: flex;
+    flex-flow: row wrap ;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+    background-color: $color-secundario-lila;
+    padding: 2rem;
+    margin: 2rem;
+    text-align: center;
+    gap: 2rem;
+    &__cuadro{
+        padding: 0.62rem;
+        height: 15rem;
+        width: 21.87rem;
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    &__mision{
+        color: $color-secundario-lila;
+    }
+    &__vision{
+        color: $color-terciario-azul;
+    }
+    &__valores{
+        color: $color-terciario-lila
+    }
+}
+
+.contactanos{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:"contactanos__form contactanos__container"; 
+    align-items: center;
+    gap: 1rem;
+    margin: 3rem;
+    &__form{
+        grid-area: contactanos__form;
+        display: flex;
+        flex-direction: column;
+        gap: 0.63rem;
+        padding: 1rem;
+        border-radius: 0.43rem;
+        background-image: $background-form;
+    }
+    &__container{
+        grid-area: contactanos__container;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem;
+        .contacto__rosa{
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            grid-template-areas:"img__contacto__rosa contacto__rosa__datos"; 
+            text-align: center;
+            align-items: center;
+            justify-items: center;
+        }
+        .img__contacto__rosa{
+            grid-area: img__contacto__rosa;
+            height: 20vh;
+            border-radius: 1rem;
+        }
+        .contacto__rosa__datos{
+            grid-area: contacto__rosa__datos;
+        }
+    }
+}
+
+.registrate__ingresar{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:"registrate ingresar"; 
+    gap: 1rem;
+    align-items: center;
+    margin-top: 5rem;
+    .registrate{
+        grid-area: registrate;
+    }
+    .ingresar{
+        grid-area: ingresar;
+    }
+    .registrate__form, .ingreso__form{
+        grid-area: contactanos__form;
+        display: flex;
+        flex-direction: column;
+        gap: 0.63rem;
+        padding: 1rem;
+        border-radius: 0.43rem;
+        background-image: $background-form;
+    }
+    
+}

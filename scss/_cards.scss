@@ -1,0 +1,34 @@
+.cuadro{
+    display: flex;
+    flex-flow: column wrap ;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem;
+    background-color: white;
+    border-radius: 1rem;
+    margin: 1rem;
+    &:hover{
+        animation-duration: 2s;
+        animation-name: animacion;
+        @keyframes animacion{
+            0%{
+                background: linear-gradient(to left, #41b9f037, white) ;
+                transform: scale(1);
+                transition: all 2s ease;
+            }
+        
+            50%{
+                background: linear-gradient(to left, rgba(0, 0, 0, 0.075), white) ; ;
+                transform: scale(1.03);
+                transition: all 2s ease-in;
+            }
+        
+            100%{
+                background: linear-gradient(to left, #41b9f052, white) ;
+                transform: scale(1);
+                transition: all 2s ease-in-out;
+            }
+        }
+    }
+    
+}

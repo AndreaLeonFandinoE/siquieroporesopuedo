@@ -1,0 +1,65 @@
+.testimonios{
+    display: flex;
+    flex-flow: column wrap ;
+    align-content: center;
+    margin-top:  1.25rem;
+    margin-bottom: 1.25rem;
+    background: $background-testimonios;
+    gap: 0.63rem;
+    &__titulo{
+        grid-area: testimonios__titulo;
+        padding-top: 2rem;
+    }
+    &__persona{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:"testimonios__titulo testimonios__img"
+                            "testimonios__parrafo testimonios__img" 
+                            "testimonios__nombre testimonios__img ";
+        align-items: center;
+        justify-items: center;
+        text-align: justify;
+    }
+    &__img{
+        grid-area: testimonios__img;
+        border-radius: 3.1rem;
+        &:hover{
+            animation-duration: 2s;
+            animation-name: animacion;
+            @keyframes animacion{
+                0%{
+                    background: linear-gradient(to left, #41b9f037, white) ;
+                    transform: scale(1);
+                    transition: all 2s ease;
+                }
+            
+                50%{
+                    background: linear-gradient(to left, rgba(0, 0, 0, 0.075), white) ; ;
+                    transform: scale(1.03);
+                    transition: all 2s ease-in;
+                }
+            
+                100%{
+                    background: linear-gradient(to left, #41b9f052, white) ;
+                    transform: scale(1);
+                    transition: all 2s ease-in-out;
+                }
+            }
+        } 
+    }
+    &__parrafo{
+        grid-area: testimonios__parrafo;
+        &::first-line{
+            background-color: $color-secundario-lila;
+        }
+    }
+    &__nombre{
+        grid-area: testimonios__nombre;
+        padding-bottom: 1.25rem;
+        color: $color-terciario-azul;
+        font-size: large;
+        &:hover{
+            color: $color-terciario-lila;
+        }
+    }
+}
