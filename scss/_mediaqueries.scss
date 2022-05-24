@@ -10,16 +10,18 @@
         grid-template-areas: "presentacion__titulo"
                             "rosa" 
                             "rosa__container";
-        .rosa__container{
-            padding: 0%;
-            padding-top: 2rem;
-        }
-        &__contacto{
-            display: grid;
-            grid-template-columns: 1fr;
-            grid-template-areas: "presentacion__iframe" 
-                                "presentacion__boton";
-        }
+    }
+
+    .rosa__container{
+        padding: 0%;
+        padding-top: 2rem;
+    }
+
+    .presentacion__contacto{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas: "presentacion__iframe" 
+                            "presentacion__boton";
     }
 
     .contenedor__cuadro{

@@ -59,6 +59,105 @@ footer .footer__container {
   bottom: 0.62rem;
   right: 1.25rem; }
 
+button {
+  color: white;
+  font-size: medium;
+  font-weight: bold;
+  border: 0.31rem;
+  border-radius: 0.43rem;
+  text-align: center;
+  background-image: linear-gradient(to bottom, #a044c6, #9f44c6b6);
+  padding: 0.5rem;
+  margin-top: 0.3rem; }
+  button:hover, button a:hover {
+    background-image: linear-gradient(to bottom, #c59fc9ee, #c59fc9);
+    color: white; }
+
+a button::after {
+  content: " ➭ ";
+  justify-items: center; }
+
+.boton, .center {
+  align-items: center;
+  text-align: center; }
+
+.testimonios {
+  display: flex;
+  flex-flow: column wrap;
+  align-content: center;
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+  background: linear-gradient(to right, #41b9f03e, #41b9f040);
+  gap: 0.63rem; }
+  .testimonios__titulo {
+    grid-area: testimonios__titulo;
+    padding-top: 2rem; }
+  .testimonios__persona {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "testimonios__titulo testimonios__img" "testimonios__parrafo testimonios__img"  "testimonios__nombre testimonios__img ";
+    align-items: center;
+    justify-items: center;
+    text-align: justify; }
+  .testimonios__img {
+    grid-area: testimonios__img;
+    border-radius: 3.1rem; }
+    .testimonios__img:hover {
+      animation-duration: 2s;
+      animation-name: animacion; }
+
+@keyframes animacion {
+  0% {
+    background: linear-gradient(to left, #41b9f037, white);
+    transform: scale(1);
+    transition: all 2s ease; }
+  50% {
+    background: linear-gradient(to left, rgba(0, 0, 0, 0.075), white);
+    transform: scale(1.03);
+    transition: all 2s ease-in; }
+  100% {
+    background: linear-gradient(to left, #41b9f052, white);
+    transform: scale(1);
+    transition: all 2s ease-in-out; } }
+  .testimonios__parrafo {
+    grid-area: testimonios__parrafo; }
+    .testimonios__parrafo::first-line {
+      background-color: #c59fc9; }
+  .testimonios__nombre {
+    grid-area: testimonios__nombre;
+    padding-bottom: 1.25rem;
+    color: #4ae4e4;
+    font-size: large; }
+    .testimonios__nombre:hover {
+      color: #cfbae1; }
+
+.cuadro {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem;
+  background-color: white;
+  border-radius: 1rem;
+  margin: 1rem; }
+  .cuadro:hover {
+    animation-duration: 2s;
+    animation-name: animacion; }
+
+@keyframes animacion {
+  0% {
+    background: linear-gradient(to left, #41b9f037, white);
+    transform: scale(1);
+    transition: all 2s ease; }
+  50% {
+    background: linear-gradient(to left, rgba(0, 0, 0, 0.075), white);
+    transform: scale(1.03);
+    transition: all 2s ease-in; }
+  100% {
+    background: linear-gradient(to left, #41b9f052, white);
+    transform: scale(1);
+    transition: all 2s ease-in-out; } }
+
 /* TABLET */
 @media (min-width: 541px) and (max-width: 720px) and (orientacion: landscape) {
   header a img {
@@ -67,13 +166,13 @@ footer .footer__container {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-areas: "presentacion__titulo" "rosa"  "rosa__container"; }
-    .presentacion .rosa__container {
-      padding: 0%;
-      padding-top: 2rem; }
-    .presentacion__contacto {
-      display: grid;
-      grid-template-columns: 1fr;
-      grid-template-areas: "presentacion__iframe"  "presentacion__boton"; }
+  .rosa__container {
+    padding: 0%;
+    padding-top: 2rem; }
+  .presentacion__contacto {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: "presentacion__iframe"  "presentacion__boton"; }
   .contenedor__cuadro {
     height: 15rem;
     width: 40rem; }
@@ -233,105 +332,6 @@ footer .footer__container {
   p, h1, h2, h3, h4, h5, h6 {
     color: black;
     background-color: white; } }
-
-button {
-  color: white;
-  font-size: medium;
-  font-weight: bold;
-  border: 0.31rem;
-  border-radius: 0.43rem;
-  text-align: center;
-  background-image: linear-gradient(to bottom, #a044c6, #9f44c6b6);
-  padding: 0.5rem;
-  margin-top: 0.3rem; }
-  button:hover, button a:hover {
-    background-image: linear-gradient(to bottom, #c59fc9ee, #c59fc9);
-    color: white; }
-
-a button::after {
-  content: " ➭ ";
-  justify-items: center; }
-
-.boton, .center {
-  align-items: center;
-  text-align: center; }
-
-.testimonios {
-  display: flex;
-  flex-flow: column wrap;
-  align-content: center;
-  margin-top: 1.25rem;
-  margin-bottom: 1.25rem;
-  background: linear-gradient(to right, #41b9f03e, #41b9f040);
-  gap: 0.63rem; }
-  .testimonios__titulo {
-    grid-area: testimonios__titulo;
-    padding-top: 2rem; }
-  .testimonios__persona {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-areas: "testimonios__titulo testimonios__img" "testimonios__parrafo testimonios__img"  "testimonios__nombre testimonios__img ";
-    align-items: center;
-    justify-items: center;
-    text-align: justify; }
-  .testimonios__img {
-    grid-area: testimonios__img;
-    border-radius: 3.1rem; }
-    .testimonios__img:hover {
-      animation-duration: 2s;
-      animation-name: animacion; }
-
-@keyframes animacion {
-  0% {
-    background: linear-gradient(to left, #41b9f037, white);
-    transform: scale(1);
-    transition: all 2s ease; }
-  50% {
-    background: linear-gradient(to left, rgba(0, 0, 0, 0.075), white);
-    transform: scale(1.03);
-    transition: all 2s ease-in; }
-  100% {
-    background: linear-gradient(to left, #41b9f052, white);
-    transform: scale(1);
-    transition: all 2s ease-in-out; } }
-  .testimonios__parrafo {
-    grid-area: testimonios__parrafo; }
-    .testimonios__parrafo::first-line {
-      background-color: #c59fc9; }
-  .testimonios__nombre {
-    grid-area: testimonios__nombre;
-    padding-bottom: 1.25rem;
-    color: #4ae4e4;
-    font-size: large; }
-    .testimonios__nombre:hover {
-      color: #cfbae1; }
-
-.cuadro {
-  display: flex;
-  flex-flow: column wrap;
-  align-items: center;
-  justify-content: center;
-  padding: 0.5rem;
-  background-color: white;
-  border-radius: 1rem;
-  margin: 1rem; }
-  .cuadro:hover {
-    animation-duration: 2s;
-    animation-name: animacion; }
-
-@keyframes animacion {
-  0% {
-    background: linear-gradient(to left, #41b9f037, white);
-    transform: scale(1);
-    transition: all 2s ease; }
-  50% {
-    background: linear-gradient(to left, rgba(0, 0, 0, 0.075), white);
-    transform: scale(1.03);
-    transition: all 2s ease-in; }
-  100% {
-    background: linear-gradient(to left, #41b9f052, white);
-    transform: scale(1);
-    transition: all 2s ease-in-out; } }
 
 * {
   margin: 0px;
