@@ -15,12 +15,12 @@
     <!--CSS-->
     <link rel="stylesheet" href="../css/style.css">
     
-    <title>Contacto</title>
+    <title>Registro</title>
 
 </head>
 
 <body>
-    <!-- bootstrap 5.2 -->
+    <!-- bootstrap 5.2-->
     <header>
         <!-- Logo -->
         <a class="navbar-brand" href="../index.html">
@@ -81,37 +81,55 @@
     
     <main>
         <section>
-            <img class="portada__contacto">
+            <img class="portada__registro">
         </section>
 
         <section>
-                <h1 class="center">Contáctanos</h1>
-                <div class="contactanos">
-                    
-                    <form class="contactanos__form" action="" >
-                        <input class="form-control" type="text" placeholder="Nombre">
-                        <input class="form-control" type="text" placeholder="Apellido">
-                        <input class="form-control" type="tel" placeholder="Celular">
-                        <input class="form-control" type="email" placeholder="Correo">
-                        <input class="form-control" type="text" placeholder="Titulo">
-                        <!-- bootstrap -->
-                        <textarea class="form-control" placeholder="Escribe tu mensaje aqui" id="floatingTextarea"></textarea>
-                        <button type="submit" class="btn btn-primary form-control">Enviar</button>
+            <div class="section__container registrate__ingresar">
+
+                <div class="registrate">
+                    <h1 class="center">Regístrate</h1>
+                    <form class="registrate__form" method="post">
+                        <label for="">Nombre de usuario</label>
+                        <input class="form-control" type="text" placeholder="Escriba su nombre" name="Nombre">
+                        
+                        <label for="">Apellido de usuario</label>
+                        <input class="form-control" type="text" placeholder="Escriba su apellido" name="Apellido">
+                        
+                        <label for="">Dirección de correo electrónico</label>
+                        <input class="form-control" type="email"placeholder="Cual es su email?" name="Email">
+                        
+                        <label for="">Celular</label>
+                        <input class="form-control" type="tel" placeholder="Cual es su numero?" name="Telefono">
+                        
+                        <label for="">Contraseña</label>
+                        <input class="form-control" type="password" placeholder="Crea contrasena?" name="Password">
+                        
+                        <button type="submit" class="btn btn-primary form-control">Crear usuario</button>
                     </form>
-                
-                    <div class="contactanos__container">
-                        <h5>Soy Rosa León, Agente de Transformación en Desarrollo Personal y Emprendimiento. Consultora e Instructura de Negocios.</h5>
-                        <p>Por favor contáctame para más información, pregunta o sugerencia. Gracias, Gracias, Gracias</p>
-                        <div class="contacto__rosa">
-                            <img class="img__contacto__rosa" src="../recursos/img/rosa/rosa-logo.jpeg" alt="icono-rosa">
-                            <div class="contacto__rosa__datos">
-                                <h4>Rosa León</h4>
-                                <p>rosaleon@siquiero.poresopuedo</p>
-                            </div>
-                        </div>
-                    </div>
-                    
                 </div>
+
+        <!-- bootstrap -->
+                <div class="ingresar">
+                    <h2 class="center">Ingresar</h2>
+                    <form class="ingreso__form">
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Correo electrónico</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                            <div id="emailHelp" class="form-text">No compartiremos tu email con nadie más.</div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">Contraseña</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1">
+                        </div>
+                        <div class="mb-3 form-check">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                            <label class="form-check-label" for="exampleCheck1">Recordarme</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary form-control">Ingresar</button>
+                    </form>
+                </div>
+            </div>
         </section>
 
         <section class="testimonios">

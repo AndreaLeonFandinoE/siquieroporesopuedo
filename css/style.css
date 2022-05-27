@@ -61,7 +61,7 @@ footer .footer__container {
 
 button {
   color: white;
-  font-size: medium;
+  font-size: 1rem;
   font-weight: bold;
   border: 0.31rem;
   border-radius: 0.43rem;
@@ -121,8 +121,6 @@ a button::after {
     transition: all 2s ease-in-out; } }
   .testimonios__parrafo {
     grid-area: testimonios__parrafo; }
-    .testimonios__parrafo::first-line {
-      background-color: #c59fc9; }
   .testimonios__nombre {
     grid-area: testimonios__nombre;
     padding-bottom: 1.25rem;
@@ -136,8 +134,8 @@ a button::after {
   flex-flow: column wrap;
   align-items: center;
   justify-content: center;
-  padding: 0.5rem;
   background-color: white;
+  padding: 0.5rem;
   border-radius: 1rem;
   margin: 1rem; }
   .cuadro:hover {
@@ -158,6 +156,12 @@ a button::after {
     transform: scale(1);
     transition: all 2s ease-in-out; } }
 
+.cuadro__fondos, .servicios, .obsequios, .podcast, .video, .programas, .cursos, .blog {
+  background-color: #b4b4b437;
+  padding: 2rem;
+  gap: 2rem;
+  border-radius: 1rem; }
+
 * {
   margin: 0px;
   padding: 0px;
@@ -172,8 +176,6 @@ body {
 
 a {
   text-decoration: none; }
-  a:visited {
-    color: #c1e0f7; }
 
 h1, h2 {
   color: #a044c6;
@@ -189,10 +191,6 @@ a::selection, button::selection, img::selection, span::selection, p::selection, 
   padding-top: 0.31rem; }
   .section__container {
     margin: 2rem; }
-
-.portada__img {
-  width: 100%;
-  margin-bottom: 2rem; }
 
 .img__cuadros {
   /* .recursos, .podcast, servicios */
@@ -234,63 +232,69 @@ a::selection, button::selection, img::selection, span::selection, p::selection, 
     grid-area: rosa__container;
     padding: 2rem; }
 
-.servicios {
-  background-color: #b4b4b437;
-  padding: 2rem;
-  gap: 2rem;
-  border-radius: 1rem; }
-  .servicios__container {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-areas: "servicios__uno servicios__dos servicios__tres"  "servicios__cuatro servicios__cinco servicios__seis";
-    gap: 1rem;
-    margin-bottom: 2rem; }
-  .servicios__contenido {
-    display: flex;
-    flex-direction: column;
-    text-align: left;
-    gap: 0.30rem; }
-  .servicios__uno {
-    grid-area: servicios__uno; }
-  .servicios__dos {
-    grid-area: servicios__dos; }
-  .servicios__tres {
-    grid-area: servicios__tres; }
-  .servicios__cuatro {
-    grid-area: servicios__cuatro; }
-  .servicios__cinco {
-    grid-area: servicios__cinco; }
-  .servicios__seis {
-    grid-area: servicios__seis; }
+.servicios__container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas: "servicios__uno servicios__dos servicios__tres"  "servicios__cuatro servicios__cinco servicios__seis";
+  gap: 1rem;
+  margin-bottom: 2rem; }
 
-.obsequios {
-  background-color: #b4b4b437;
-  padding: 2rem;
-  gap: 2rem;
-  border-radius: 1rem; }
-  .obsequios__container {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-areas: "obsequios__uno obsequios__dos obsequios__tres" "obsequios__cuatro obsequios__cinco obsequios__seis" " obsequios__siete obsequios__ocho obsequios__nueve";
-    gap: 1rem; }
-  .obsequios__uno {
-    grid-area: obsequios__uno; }
-  .obsequios__dos {
-    grid-area: obsequios__dos; }
-  .obsequios__tres {
-    grid-area: obsequios__tres; }
-  .obsequios__cuatro {
-    grid-area: obsequios__cuatro; }
-  .obsequios__cinco {
-    grid-area: obsequios__cinco; }
-  .obsequios__seis {
-    grid-area: obsequios__seis; }
-  .obsequios__siete {
-    grid-area: obsequios__siete; }
-  .obsequios__ocho {
-    grid-area: obsequios__ocho; }
-  .obsequios__nueve {
-    grid-area: obsequios__nueve; }
+.servicios__contenido {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  gap: 0.30rem; }
+
+.servicios__uno {
+  grid-area: servicios__uno; }
+
+.servicios__dos {
+  grid-area: servicios__dos; }
+
+.servicios__tres {
+  grid-area: servicios__tres; }
+
+.servicios__cuatro {
+  grid-area: servicios__cuatro; }
+
+.servicios__cinco {
+  grid-area: servicios__cinco; }
+
+.servicios__seis {
+  grid-area: servicios__seis; }
+
+.obsequios__container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas: "obsequios__uno obsequios__dos obsequios__tres" "obsequios__cuatro obsequios__cinco obsequios__seis" " obsequios__siete obsequios__ocho obsequios__nueve";
+  gap: 1rem; }
+
+.obsequios__uno {
+  grid-area: obsequios__uno; }
+
+.obsequios__dos {
+  grid-area: obsequios__dos; }
+
+.obsequios__tres {
+  grid-area: obsequios__tres; }
+
+.obsequios__cuatro {
+  grid-area: obsequios__cuatro; }
+
+.obsequios__cinco {
+  grid-area: obsequios__cinco; }
+
+.obsequios__seis {
+  grid-area: obsequios__seis; }
+
+.obsequios__siete {
+  grid-area: obsequios__siete; }
+
+.obsequios__ocho {
+  grid-area: obsequios__ocho; }
+
+.obsequios__nueve {
+  grid-area: obsequios__nueve; }
 
 .descargable {
   display: flex;
@@ -325,36 +329,29 @@ a::selection, button::selection, img::selection, span::selection, p::selection, 
   .galeria__rosa {
     height: 100vh; }
 
-.podcast {
-  background-color: #b4b4b437;
-  padding: 2rem;
-  gap: 2rem;
-  border-radius: 1rem; }
-  .podcast__container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-areas: "podcast__uno podcast__dos";
-    gap: 1rem;
-    margin-bottom: 2rem; }
-  .podcast__uno {
-    grid-area: podcast__uno; }
-  .podcast__dos {
-    grid-area: podcast__dos; }
-  .podcast__reproducir::before {
-    content: " ◀️ ▶️ "; }
+.podcast__container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "podcast__uno podcast__dos";
+  gap: 1rem;
+  margin-bottom: 2rem; }
 
-.video {
-  background-color: #b4b4b437;
-  padding: 2rem;
-  gap: 2rem;
-  border-radius: 1rem; }
-  .video__container {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    align-items: center;
-    justify-content: center;
-    gap: 1rem;
-    margin: 2rem; }
+.podcast__uno {
+  grid-area: podcast__uno; }
+
+.podcast__dos {
+  grid-area: podcast__dos; }
+
+.podcast__reproducir::before {
+  content: " ◀️ ▶️ "; }
+
+.video__container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin: 2rem; }
 
 .logos, .recursos {
   display: flex;
@@ -363,38 +360,60 @@ a::selection, button::selection, img::selection, span::selection, p::selection, 
   margin-top: 2rem;
   margin-bottom: 2rem; }
 
-.programas {
-  background-color: #b4b4b437;
-  padding: 2rem;
-  gap: 2rem;
-  border-radius: 1rem; }
-  .programas__container {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-around;
-    padding: 2rem; }
+.programas__container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas: "programas__uno programas__dos programas__tres"  "membresia membresia membresia";
+  gap: 1rem;
+  margin-bottom: 2rem;
+  align-items: center;
+  justify-content: center; }
 
-.cursos {
-  background-color: #b4b4b437;
-  padding: 2rem;
-  gap: 2rem;
-  border-radius: 1rem; }
-  .cursos__container {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-around;
-    padding: 2rem; }
+.programas__contenido {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  gap: 0.30rem; }
 
-.blog {
-  background-color: #b4b4b437;
-  padding: 2rem;
-  gap: 2rem;
-  border-radius: 1rem; }
-  .blog__container {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-around;
-    padding: 2rem; }
+.programas__uno {
+  grid-area: programas__uno; }
+
+.programas__dos {
+  grid-area: programas__dos; }
+
+.programas__tres {
+  grid-area: programas__tres; }
+
+.programas .membresia {
+  grid-area: membresia; }
+
+.cursos__container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas: "cursos__uno cursos__dos cursos__tres";
+  gap: 1rem;
+  margin-bottom: 2rem; }
+
+.cursos__contenido {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  gap: 0.30rem; }
+
+.cursos__uno {
+  grid-area: cursos__uno; }
+
+.cursos__dos {
+  grid-area: cursos__dos; }
+
+.cursos__tres {
+  grid-area: cursos__tres; }
+
+.blog__container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  padding: 2rem; }
 
 .contenedor {
   display: flex;
@@ -460,9 +479,9 @@ a::selection, button::selection, img::selection, span::selection, p::selection, 
 
 .registrate__ingresar {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-areas: "registrate ingresar";
-  gap: 1rem;
+  grid-template-columns: 1fr;
+  grid-template-areas: "ingresar" "registrate";
+  gap: 10rem;
   align-items: center;
   margin-top: 5rem; }
   .registrate__ingresar .registrate {
@@ -478,10 +497,110 @@ a::selection, button::selection, img::selection, span::selection, p::selection, 
     border-radius: 0.43rem;
     background-image: linear-gradient(to left, #41b9f0a0, #9f44c676); }
 
+.curso1 {
+  background-image: url("../recursos/img/academia/curso-potencia-tu-abundancia.png");
+  background-size: cover;
+  width: 15rem;
+  height: 10rem; }
+
+.curso2 {
+  background-image: url("../recursos/img/academia/logo-talento-y-emprendimiento.png");
+  background-size: cover;
+  width: 15rem;
+  height: 10rem;
+  width: 12rem;
+  height: 7rem; }
+
+.curso3 {
+  background-image: url("../recursos/img/academia/curso-crea-tu-infoproducto.png");
+  background-size: cover;
+  width: 15rem;
+  height: 10rem; }
+
+.portada__academia {
+  background: linear-gradient(to top, rgba(255, 255, 255, 0.356), rgba(0, 0, 255, 0.155)), url("../recursos/img/banner-paginas/banner-inicio1.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  justify-self: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: 22rem;
+  margin-bottom: 2rem; }
+
+.portada__obsequios {
+  background: linear-gradient(to top, rgba(255, 255, 255, 0.356), rgba(0, 0, 255, 0.155)), url("../recursos/img/banner-paginas/banner-obsequios1.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  justify-self: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: 22rem;
+  margin-bottom: 2rem; }
+
+.portada__quien-soy {
+  background: linear-gradient(to top, rgba(255, 255, 255, 0.356), rgba(0, 0, 255, 0.155)), url("../recursos/img/banner-paginas/banner-quiensoy.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  justify-self: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: 22rem;
+  margin-bottom: 2rem; }
+
+.portada__recursos {
+  background: linear-gradient(to top, rgba(255, 255, 255, 0.356), rgba(0, 0, 255, 0.155)), url("../recursos/img/banner-paginas/banner-recursos.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  justify-self: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: 22rem;
+  margin-bottom: 2rem; }
+
+.portada__contacto {
+  background: linear-gradient(to top, rgba(255, 255, 255, 0.356), rgba(0, 0, 255, 0.155)), url("../recursos/img/banner-paginas/banner-contacto.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  justify-self: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: 22rem;
+  margin-bottom: 2rem; }
+
+.portada__registro {
+  background: linear-gradient(to top, rgba(255, 255, 255, 0.356), rgba(0, 0, 255, 0.155)), url("../recursos/img/banner-paginas/banner-contacto2.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  justify-self: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: 22rem;
+  margin-bottom: 2rem; }
+
 /* TABLET */
-@media (min-width: 541px) and (max-width: 720px) and (orientacion: landscape) {
+@media (min-width: 541px) and (max-width: 720px) {
   header a img {
     height: 10vh; }
+  h1, h2, h3, h4, h5, h6 {
+    font-size: medium; }
   .presentacion {
     display: grid;
     grid-template-columns: 1fr;
@@ -494,8 +613,7 @@ a::selection, button::selection, img::selection, span::selection, p::selection, 
     grid-template-columns: 1fr;
     grid-template-areas: "presentacion__iframe"  "presentacion__boton"; }
   .contenedor__cuadro {
-    height: 15rem;
-    width: 40rem; }
+    width: 43.74rem; }
   .testimonios__persona {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -503,11 +621,11 @@ a::selection, button::selection, img::selection, span::selection, p::selection, 
     .testimonios__persona .testimonios__img {
       height: 15vh; }
   .img__cards {
-    /* .logos */
-    height: 5vh; }
+    /* .logos 5vh*/
+    height: 3.33333rem; }
   .img__cuadros {
-    /* .recursos, .podcast, servicios */
-    width: 30vw; }
+    /* .recursos, .podcast, servicios 30vw*/
+    width: 20rem; }
   .servicios__container {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -516,6 +634,14 @@ a::selection, button::selection, img::selection, span::selection, p::selection, 
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-areas: "obsequios__uno obsequios__dos" "obsequios__tres obsequios__cuatro" "obsequios__cinco obsequios__seis" "obsequios__siete obsequios__ocho" "obsequios__nueve obsequios__nueve"; }
+  .programas__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "programas__uno programas__dos"  "programas__tres membresia"; }
+  .cursos__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "cursos__uno cursos__dos" "cursos__tres cursos__tres"; }
   .descargable {
     background: linear-gradient(to left, #41b9f0a0, #9f44c676);
     justify-content: center; }
@@ -552,6 +678,8 @@ a::selection, button::selection, img::selection, span::selection, p::selection, 
   .chat {
     bottom: 1.72rem;
     right: 0.6rem; }
+  h1, h2, h3, h4, h5, h6 {
+    font-size: small; }
   .presentacion {
     display: grid;
     grid-template-columns: 1fr;
@@ -579,12 +707,9 @@ a::selection, button::selection, img::selection, span::selection, p::selection, 
       padding-top: 3rem;
       font-size: small;
       align-items: flex-end; }
-  .img__cards {
-    /* .logos */
-    height: 5vh; }
   .img__cuadros {
-    /* .recursos, .podcast, servicios */
-    width: 80vw; }
+    /* .recursos, .podcast, servicios 80vw*/
+    width: 10rem; }
   .recursos, .logos {
     display: none; }
   .servicios {
@@ -600,16 +725,20 @@ a::selection, button::selection, img::selection, span::selection, p::selection, 
       display: grid;
       grid-template-columns: 1fr;
       grid-template-areas: "obsequios__uno"  "obsequios__dos" "obsequios__tres"  "obsequios__cuatro" "obsequios__cinco" "obsequios__seis" "obsequios__siete" "obsequios__ocho" "obsequios__nueve"; }
-  .programas {
-    padding: 0.5rem; }
-    .programas__container {
-      justify-content: center;
-      padding: 0; }
-  .cursos {
-    padding: 0.5rem; }
-    .cursos__container {
-      justify-content: center;
-      padding: 0; }
+  .programas__container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: "programas__uno"  "programas__dos" "programas__tres"  "membresia";
+    gap: 1rem;
+    margin-bottom: 2rem;
+    align-items: center;
+    justify-content: center; }
+  .cursos__container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: "cursos__uno"  "cursos__dos"  "cursos__tres";
+    gap: 1rem;
+    margin-bottom: 2rem; }
   .blog {
     padding: 0.5rem; }
     .blog__container {

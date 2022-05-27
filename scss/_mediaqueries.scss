@@ -1,7 +1,11 @@
 /* TABLET */
-@media (min-width:541px) and (max-width:720px) and (orientacion: landscape){
+@media (min-width:541px) and (max-width:720px){
     header a img{
         height: 10vh;
+    }
+
+    h1,h2,h3,h4,h5,h6{
+        font-size: medium;
     }
 
     .presentacion{
@@ -25,8 +29,7 @@
     }
 
     .contenedor__cuadro{
-        height: 15rem;
-        width: 40rem;
+        width: $ancho*2;
     }
 
     .testimonios__persona{
@@ -40,12 +43,12 @@
         }
     }
     
-    .img__cards{ /* .logos */
-        height: 5vh;
+    .img__cards{ /* .logos 5vh*/
+        height: $img-cards/6;
     }
 
-    .img__cuadros{ /* .recursos, .podcast, servicios */
-        width: 30vw;
+    .img__cuadros{ /* .recursos, .podcast, servicios 30vw*/
+        width: $img-cards;
     }
 
     .servicios__container{
@@ -65,6 +68,22 @@
                             "obsequios__cinco obsequios__seis"
                             "obsequios__siete obsequios__ocho"
                             "obsequios__nueve obsequios__nueve";
+    }
+
+    .programas__container{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+                            "programas__uno programas__dos" 
+                            "programas__tres membresia";
+    }
+    
+    .cursos__container{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+                            "cursos__uno cursos__dos"
+                            "cursos__tres cursos__tres";
     }
 
     .descargable{
@@ -125,6 +144,10 @@
         right: 0.6rem;
     }
 
+    h1,h2,h3,h4,h5,h6{
+        font-size: small;
+    }
+
     .presentacion{
         display: grid;
         grid-template-columns: 1fr;
@@ -167,13 +190,9 @@
             align-items: flex-end;
         }
     }
-    
-    .img__cards{ /* .logos */
-        height: 5vh;
-    }
 
-    .img__cuadros{ /* .recursos, .podcast, servicios */
-        width: 80vw;
+    .img__cuadros{ /* .recursos, .podcast, servicios 80vw*/
+        width: $img-cards/2;
     }
 
     .recursos, .logos{
@@ -213,20 +232,29 @@
         }
     }
 
-    .programas{
-        padding: 0.5rem;
-        &__container{
-            justify-content: center;
-            padding: 0;
-        }
+    .programas__container{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas:
+                            "programas__uno" 
+                            "programas__dos"
+                            "programas__tres" 
+                            "membresia";
+        gap: 1rem;
+        margin-bottom: 2rem;
+        align-items: center;
+        justify-content: center;
     }
-
-    .cursos{
-        padding: 0.5rem;
-        &__container{
-            justify-content: center;
-            padding: 0;
-        }
+    
+    .cursos__container{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas:
+                            "cursos__uno" 
+                            "cursos__dos" 
+                            "cursos__tres";
+        gap: 1rem;
+        margin-bottom: 2rem;
     }
     
     .blog{

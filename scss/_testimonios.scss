@@ -49,9 +49,6 @@
     }
     &__parrafo{
         grid-area: testimonios__parrafo;
-        &::first-line{
-            background-color: $color-secundario-lila;
-        }
     }
     &__nombre{
         grid-area: testimonios__nombre;

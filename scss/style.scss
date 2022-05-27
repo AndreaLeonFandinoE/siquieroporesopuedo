@@ -23,9 +23,6 @@ body{
 
 a{
     text-decoration: none;
-    &:visited{
-        color: $color-secundario-azul;
-    }
 }
 
 h1, h2{
@@ -47,10 +44,7 @@ a::selection, button::selection, img::selection, span::selection, p::selection, 
     }
 }
 
-.portada__img{
-    width: 100%;
-    margin-bottom: 2rem;
-}
+
 
 .img__cuadros{ /* .recursos, .podcast, servicios */
     width: $img-cards;
@@ -103,10 +97,7 @@ a::selection, button::selection, img::selection, span::selection, p::selection, 
 }
 
 .servicios{
-    background-color: $background-fondo;
-    padding: 2rem;
-    gap: 2rem;
-    border-radius: 1rem;
+    @extend .cuadro__fondos;
     &__container{
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
@@ -143,10 +134,7 @@ a::selection, button::selection, img::selection, span::selection, p::selection, 
 }
 
 .obsequios{
-    background-color: $background-fondo;
-    padding: 2rem;
-    gap: 2rem;
-    border-radius: 1rem;
+    @extend .cuadro__fondos;
     &__container{
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
@@ -227,10 +215,7 @@ a::selection, button::selection, img::selection, span::selection, p::selection, 
 }
 
 .podcast{
-    background-color: $background-fondo;
-    padding: 2rem;
-    gap: 2rem;
-    border-radius: 1rem;
+    @extend .cuadro__fondos;
     &__container{
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -251,10 +236,7 @@ a::selection, button::selection, img::selection, span::selection, p::selection, 
 }
 
 .video{
-    background-color: $background-fondo;
-    padding: 2rem;
-    gap: 2rem;
-    border-radius: 1rem;
+    @extend .cuadro__fondos;
     &__container{
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
@@ -274,36 +256,67 @@ a::selection, button::selection, img::selection, span::selection, p::selection, 
 }
 
 .programas{
-    background-color: $background-fondo;
-    padding: 2rem;
-    gap: 2rem;
-    border-radius: 1rem;
+    @extend .cuadro__fondos;
     &__container{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas:
+                            "programas__uno programas__dos programas__tres" 
+                            "membresia membresia membresia";
+        gap: 1rem;
+        margin-bottom: 2rem;
+        align-items: center;
+        justify-content: center;
+    }
+    &__contenido{
         display: flex;
-        flex-flow: row wrap ;
-        justify-content: space-around;
-        padding: 2rem;
+        flex-direction: column;
+        text-align: left;
+        gap: 0.30rem;
+    }
+    &__uno{
+        grid-area: programas__uno;
+    }
+    &__dos{
+        grid-area: programas__dos;
+    }
+    &__tres{
+        grid-area: programas__tres;
+    }
+    .membresia{
+        grid-area: membresia;
     }
 }
 
 .cursos{
-    background-color: $background-fondo;
-    padding: 2rem;
-    gap: 2rem;
-    border-radius: 1rem;
+    @extend .cuadro__fondos;
     &__container{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas:
+                            "cursos__uno cursos__dos cursos__tres";
+        gap: 1rem;
+        margin-bottom: 2rem;
+    }
+    &__contenido{
         display: flex;
-        flex-flow: row wrap ;
-        justify-content: space-around;
-        padding: 2rem;
+        flex-direction: column;
+        text-align: left;
+        gap: 0.30rem;
+    }
+    &__uno{
+        grid-area: cursos__uno;
+    }
+    &__dos{
+        grid-area: cursos__dos;
+    }
+    &__tres{
+        grid-area: cursos__tres;
     }
 }
 
 .blog{
-    background-color: $background-fondo;
-    padding: 2rem;
-    gap: 2rem;
-    border-radius: 1rem;
+    @extend .cuadro__fondos;
     &__container{
         display: flex;
         flex-flow: row wrap ;
@@ -387,9 +400,10 @@ a::selection, button::selection, img::selection, span::selection, p::selection, 
 
 .registrate__ingresar{
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-areas:"registrate ingresar"; 
-    gap: 1rem;
+    grid-template-columns: 1fr;
+    grid-template-areas:"ingresar"
+                        "registrate"; 
+    gap: 10rem;
     align-items: center;
     margin-top: 5rem;
     .registrate{
@@ -410,4 +424,60 @@ a::selection, button::selection, img::selection, span::selection, p::selection, 
     
 }
 
-@import 'mediaqueries'; //siempre de ultimagutgit 
+$cursos: (
+    curso1:curso-potencia-tu-abundancia, 
+    curso2:logo-talento-y-emprendimiento, 
+    curso3:curso-crea-tu-infoproducto);
+
+    @each $curso, $img-curso in $cursos{
+        .#{$curso} {
+            background-image: url('../recursos/img/academia/#{$img-curso}.png');
+            background-size: cover;
+            width: 15rem;
+            height: 10rem;
+            @if ($curso == "curso2") {
+                width: 12rem;
+                height: 7rem;
+            }
+        }
+    }
+
+
+@mixin portada ($url, $width: 100%, $height: 22rem, $margin: 2rem) {
+    background: linear-gradient(to top, rgba(255, 255, 255, 0.356), rgba(0, 0, 255, 0.155)), $url;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    justify-self: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: $width;
+    height: $height;
+    margin-bottom: $margin;
+}
+
+.portada__academia{
+    @include portada(url('../recursos/img/banner-paginas/banner-inicio1.jpg'));
+}
+
+.portada__obsequios{
+    @include portada(url('../recursos/img/banner-paginas/banner-obsequios1.jpg'));
+}
+
+.portada__quien-soy{
+    @include portada(url('../recursos/img/banner-paginas/banner-quiensoy.png'));
+}
+
+.portada__recursos{
+    @include portada(url('../recursos/img/banner-paginas/banner-recursos.jpg'));
+}
+
+.portada__contacto{
+    @include portada(url('../recursos/img/banner-paginas/banner-contacto.jpg'));
+}
+
+.portada__registro{
+    @include portada(url('../recursos/img/banner-paginas/banner-contacto2.jpg'));
+}
+@import 'mediaqueries'; 
