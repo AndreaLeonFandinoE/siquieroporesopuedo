@@ -595,6 +595,9 @@ a::selection, button::selection, img::selection, span::selection, p::selection, 
   height: 22rem;
   margin-bottom: 2rem; }
 
+.disclaimer {
+  display: none !important; }
+
 /* TABLET */
 @media (min-width: 541px) and (max-width: 720px) {
   header a img {

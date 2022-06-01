@@ -44,8 +44,6 @@ a::selection, button::selection, img::selection, span::selection, p::selection, 
     }
 }
 
-
-
 .img__cuadros{ /* .recursos, .podcast, servicios */
     width: $img-cards;
     border-radius: 0.50rem;
@@ -479,5 +477,9 @@ $cursos: (
 
 .portada__registro{
     @include portada(url('../recursos/img/banner-paginas/banner-contacto2.jpg'));
+}
+
+.disclaimer{
+    display: none!important;
 }
 @import 'mediaqueries'; 
