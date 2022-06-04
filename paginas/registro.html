@@ -95,42 +95,38 @@
                     <h1 class="center">Regístrate</h1>
                     <form class="registrate__form" method="post">
                         <label for="">Nombre de usuario</label>
-                        <input class="form-control" type="text" placeholder="Escriba su nombre" name="Nombre">
+                        <input type="text" placeholder="Escriba su nombre" name="Nombre">
                         
                         <label for="">Apellido de usuario</label>
-                        <input class="form-control" type="text" placeholder="Escriba su apellido" name="Apellido">
+                        <input type="text" placeholder="Escriba su apellido" name="Apellido">
                         
                         <label for="">Dirección de correo electrónico</label>
-                        <input class="form-control" type="email"placeholder="Cual es su email?" name="Email">
+                        <input type="email" placeholder="¿Cuál es su email?" name="Email">
                         
                         <label for="">Celular</label>
-                        <input class="form-control" type="tel" placeholder="Cual es su numero?" name="Telefono">
+                        <input type="tel" placeholder="¿Cuál es su número?" name="Telefono">
                         
                         <label for="">Contraseña</label>
-                        <input class="form-control" type="password" placeholder="Crea contrasena?" name="Password">
+                        <input type="password" placeholder="Crea una contraseña" name="Password">
                         
-                        <button type="submit" class="btn btn-primary form-control">Crear usuario</button>
+                        <button type="submit">Crear usuario</button>
                     </form>
                 </div>
 
-        <!-- bootstrap -->
                 <div class="ingresar">
                     <h2 class="center">Ingresar</h2>
-                    <form class="ingreso__form">
-                        <div class="mb-3">
-                            <label for="exampleInputEmail1" class="form-label">Correo electrónico</label>
-                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                            <div id="emailHelp" class="form-text">No compartiremos tu email con nadie más.</div>
-                        </div>
-                        <div class="mb-3">
-                            <label for="exampleInputPassword1" class="form-label">Contraseña</label>
-                            <input type="password" class="form-control" id="exampleInputPassword1">
-                        </div>
-                        <div class="mb-3 form-check">
-                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                            <label class="form-check-label" for="exampleCheck1">Recordarme</label>
-                        </div>
-                        <button type="submit" class="btn btn-primary form-control">Ingresar</button>
+                    <form class="ingreso__form" method="post">
+                            <label for="">Correo electrónico</label>
+                            <input type="email" placeholder="Escriba su correo electrónico" name="correo">
+                            <div class="form-text">No compartiremos tu email con nadie más.</div>
+                        
+                            <label for="">Contraseña</label>
+                            <input type="password" placeholder="Escriba su contraseña" name="Contraseña">
+                        
+                            <input type="checkbox" class="form-check-input">
+                            <label for="">Recordarme</label>
+
+                            <button type="submit">Ingresar</button>
                     </form>
                 </div>
             </div>

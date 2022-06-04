@@ -47,43 +47,72 @@
         height: $img-cards/6;
     }
 
-    .img__cuadros{ /* .recursos, .podcast, servicios 30vw*/
+    .img__cuadros{ /*.podcast, servicios 30vw*/
         width: $img-cards;
     }
 
     .servicios__container{
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr;
         grid-template-areas:
-                            "servicios__uno servicios__dos" 
-                            "servicios__tres servicios__cuatro " 
-                            "servicios__cinco servicios__seis";
+                            "servicios__uno"
+                            "servicios__dos" 
+                            "servicios__tres"
+                            "servicios__cuatro" 
+                            "servicios__cinco"
+                            "servicios__seis";
     }
 
     .obsequios__container{
         display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-areas: "obsequios__uno obsequios__dos"
-                            "obsequios__tres obsequios__cuatro"
-                            "obsequios__cinco obsequios__seis"
-                            "obsequios__siete obsequios__ocho"
-                            "obsequios__nueve obsequios__nueve";
+        grid-template-columns: 1fr;
+        grid-template-areas: "obsequios__uno"
+                            "obsequios__dos"
+                            "obsequios__tres"
+                            "obsequios__cuatro"
+                            "obsequios__cinco"
+                            "obsequios__seis"
+                            "obsequios__siete"
+                            "obsequios__ocho"
+                            "obsequios__nueve";
     }
 
     .programas__container{
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr;
         grid-template-areas:
-                            "programas__uno programas__dos" 
-                            "programas__tres membresia";
+                            "programas__uno"
+                            "programas__dos" 
+                            "programas__tres"
+                            "membresia";
     }
     
     .cursos__container{
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr;
         grid-template-areas:
-                            "cursos__uno cursos__dos"
-                            "cursos__tres cursos__tres";
+                            "cursos__uno"
+                            "cursos__dos"
+                            "cursos__tres";
+    }
+
+    .blog__container{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas:
+                            "blog__uno"
+                            "blog__dos"
+                            "blog__tres";
+    }
+
+    .podcast{
+        padding: 0.5rem;
+        &__container{
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-areas: "podcast__uno"
+                                "podcast__dos";
+        }
     }
 
     .descargable{
@@ -121,6 +150,19 @@
                             "registrate";
         margin: 1rem;
     } 
+
+    .error{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas:"error__404"
+                            "error__img"; 
+        margin: 0 5rem 0 5rem;
+        &__img{
+            grid-area: error__img;
+            height: 20rem;
+            margin-left: 5rem;
+        }
+    }
 }
 
 
@@ -191,11 +233,11 @@
         }
     }
 
-    .img__cuadros{ /* .recursos, .podcast, servicios 80vw*/
+    .img__cuadros{ /*.podcast, servicios 80vw*/
         width: $img-cards/2;
     }
 
-    .recursos, .logos{
+    .logos{
         display: none
     }
 
@@ -257,12 +299,15 @@
         margin-bottom: 2rem;
     }
     
-    .blog{
-        padding: 0.5rem;
-        &__container{
-            justify-content: center;
-            padding: 0;
-        }
+    .blog__container{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas:
+                            "blog__uno"
+                            "blog__dos"
+                            "blog__tres";
+        gap: 1rem;
+        margin-bottom: 2rem;
     }
 
     .podcast{
@@ -317,6 +362,39 @@
                             "registrate";
         margin: 1rem;
     } 
+
+    .error{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas:"error__404"
+                            "error__img"; 
+        margin: 0;
+        &__img{
+            grid-area: error__img;
+            height: 12rem;
+            margin-left: 6rem;
+        }
+    }
+
+    .portada__academia{
+        @include portada(url('../recursos/img/banner/banner-academia.jpg'), 10rem);
+    }
+
+    .portada__obsequios{
+        @include portada(url('../recursos/img/banner/banner-obsequios.jpg'), 10rem);
+    }
+    
+    .portada__quien-soy{
+        @include portada(url('../recursos/img/banner/banner-quien-soy.jpg'), 10rem);
+    }
+    
+    .portada__contacto{
+        @include portada(url('../recursos/img/banner/banner-contacto.jpg'), 10rem);
+    }
+    
+    .portada__registro{
+        @include portada(url('../recursos/img/banner/banner-registro.jpg'), 10rem);
+    }
 }
 
 @media print {

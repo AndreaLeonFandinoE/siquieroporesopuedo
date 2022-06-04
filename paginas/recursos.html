@@ -82,45 +82,85 @@
     </header>
     
     <main>
-        <section >
-        <img class="portada__recursos">
-        </section>
+        <!-- bootstrap 5.2-->
+        <section>
+            <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
 
-        <section class="recursos">
-            <a href="recursos.html"><img  class="img__cuadros" src="../recursos/img/recursos/blog.png" alt="imagen-blog"></a>
-            <a href="recursos.html"><img class="img__cuadros" src="../recursos/img/recursos/podcats.png" alt="imagen-podcast"></a>
-            <a href="recursos.html"><img class="img__cuadros" src="../recursos/img/recursos/video.jpg" alt="imagen-video"></a>
+            <div class="carousel-inner">
+
+                <div class="carousel-item active" data-bs-interval="4000">
+                    <img src="../recursos/img/banner/banner-blog.jpg" srcset="../recursos/img/banner/blog-mob.jpg 576w, ../recursos/img/banner/banner-blog.jpg" class="d-block w-100" alt="banner Blog">
+                    <div class="carousel-caption d-none d-md-block">
+                        <a href="./recursos.html">
+                            <button>Lee algunos de mis escritos</button>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="carousel-item" data-bs-interval="4000">
+                    <img src="../recursos/img/banner/banner-video.jpg" srcset="../recursos/img/banner/video-mob.jpg 576w, ../recursos/img/banner/banner-video.jpg" class="d-block w-100" alt="banner video">
+                    <div class="carousel-caption d-none d-md-block">
+                        <a href="./recursos.html">
+                            <button>Mira algunos de mis videos</button>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="carousel-item" data-bs-interval="4000">
+                    <img src="../recursos/img/banner/banner-podcast.jpg" srcset="../recursos/img/banner/podcast-mob.jpg 576w, ../recursos/img/banner/banner-podcast.jpg" class="d-block w-100" alt="banner podcast">
+                    <div class="carousel-caption d-none d-md-block">
+                        <a href="./recursos.html">
+                            <button>Escucha mi Podcast</button>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Visualizar</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Siguiente</span>
+            </button>
+            </div>
         </section>
         
-<!-- bootstrap -->
         <section class="blog">
             <h1 class="center">Recursos</h1>
             <h2 class="center">Blog</h2>
             <div class="blog__container">
 
-                <div class="card cuadro" style="width: 18rem;">
-                    <img src="../recursos/img/blog/como-vivir-de-tu-talento.jpeg" class="card-img-top" alt="imagen-blog">
-                    <div class="card-body">
-                        <h3 class="card-title">¿Cómo vivir de tu talento con propósito?</h3>
-                        <p class="card-text fecha">26 de July de 2021</p>
+                <div class="cuadro blog__uno">
+                    <img src="../recursos/img/blog/como-vivir-de-tu-talento.jpg"  class="img__cuadros"  alt="imagen-blog">
+                    <div class="blog__contenido">
+                        <h3>¿Cómo vivir de tu talento con propósito?</h3>
+                        <p class="fecha">26 de July de 2021</p>
                         <a href="https://www.linkedin.com/in/rosa-leon-fandi%C3%B1o-90423329/"><button>Leer</button></a>
                     </div>
                 </div>
 
-                <div class="card cuadro" style="width: 18rem;">
-                    <img src="../recursos/img/blog/que-son-las-columnas-de-un-emprendimiento.jpeg" class="card-img-top" alt="imagen-blog">
-                    <div class="card-body">
-                        <h3 class="card-title">¿Qué son las columnas de un emprendimiento?</h3>
-                        <p class="card-text fecha">12 de July de 2021</p>
+                <div class="cuadro blog__dos">
+                    <img src="../recursos/img/blog/que-son-las-columnas-de-un-emprendimiento.jpg"  class="img__cuadros" alt="imagen-blog">
+                    <div class="blog__contenido">
+                        <h3>¿Qué son las columnas de un emprendimiento?</h3>
+                        <p class="fecha">12 de July de 2021</p>
                         <a href="https://www.linkedin.com/in/rosa-leon-fandi%C3%B1o-90423329/"><button>Leer</button></a>
                     </div>
                 </div>
 
-                <div class="card cuadro" style="width: 18rem;">
-                    <img src="../recursos/img/blog/como-reprogramo-mi-mente-para-el-exito.jpeg" class="card-img-top" alt="imagen-blog">
-                    <div class="card-body">
-                        <h3 class="card-title">¿Cómo reprogramo mi mente para el éxito?</h3>
-                        <p class="card-text fecha">5 de July de 2021</p>
+                <div class="cuadro blog__tres">
+                    <img src="../recursos/img/blog/como-reprogramo-mi-mente-para-el-exito.jpg" class="img__cuadros" alt="imagen-blog">
+                    <div class="blog__contenido">
+                        <h3>¿Cómo reprogramo mi mente para el éxito?</h3>
+                        <p class="fecha">5 de July de 2021</p>
                         <a href="https://www.linkedin.com/in/rosa-leon-fandi%C3%B1o-90423329/"><button>Leer</button></a>
                     </div>
                 </div>
@@ -133,7 +173,7 @@
             <div class="podcast__container">
 
                 <article class="cuadro podcast__uno">
-                    <img class="img__cuadros" src="../recursos/img/blog/radio-dones-y-talento.jpg" alt="imagen-podcast">
+                    <img class="img__cuadros" src="../recursos/img/blog/programa-radial.jpg" alt="imagen-podcast">
                     <h3>Participación en el</h3>
                     <h4>programa radial “Aquí y Ahora”</h4>
                     <span class="fecha">23 de junio de 2021</span>
@@ -141,7 +181,7 @@
                 </article>
 
                 <article class="cuadro podcast__dos">
-                    <img class="img__cuadros" src="../recursos/img/blog/como-reprogramo-mi-mente-para-el-exito.jpeg" alt="imagen-podcast">
+                    <img class="img__cuadros" src="../recursos/img/blog/como-reprogramo-mi-mente-para-el-exito.jpg" alt="imagen-podcast">
                     <h3>Reprogramate para el éxito</h3>
                     <span class="fecha"> 1 de julio de 2021</span>
                     <a href="https://www.facebook.com/SiQuiero.PoresoPuedo"><h4 class="podcast__reproducir"></h4></a>

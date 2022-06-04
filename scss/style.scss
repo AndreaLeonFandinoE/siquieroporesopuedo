@@ -44,7 +44,7 @@ a::selection, button::selection, img::selection, span::selection, p::selection, 
     }
 }
 
-.img__cuadros{ /* .recursos, .podcast, servicios */
+.img__cuadros{ /*.podcast, servicios */
     width: $img-cards;
     border-radius: 0.50rem;
 }
@@ -174,7 +174,7 @@ a::selection, button::selection, img::selection, span::selection, p::selection, 
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    background: linear-gradient(to right, #9f44c62a, #41b9f030), url("../recursos/img/rosa/rosa-office24.jpeg");
+    background: linear-gradient(to right, #9f44c62a, #41b9f030), url("../recursos/img/rosa/rosa-fondo.jpg");
     background-size:cover;
     background-position: top;
     background-repeat: no-repeat;
@@ -208,7 +208,7 @@ a::selection, button::selection, img::selection, span::selection, p::selection, 
     justify-content: center;
     margin-top: 3rem;
     &__rosa{
-        height: 100vh;
+        height: 30rem;
     }
 }
 
@@ -245,12 +245,13 @@ a::selection, button::selection, img::selection, span::selection, p::selection, 
     }
 }
 
-.logos, .recursos{
+.logos{
     display: flex;
     flex-flow: row wrap;
     justify-content: space-around;
     margin-top: 2rem;
     margin-bottom: 2rem;
+    gap: 1rem;
 }
 
 .programas{
@@ -316,10 +317,27 @@ a::selection, button::selection, img::selection, span::selection, p::selection, 
 .blog{
     @extend .cuadro__fondos;
     &__container{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas:
+                            "blog__uno blog__dos blog__tres";
+        gap: 1rem;
+        margin-bottom: 2rem;
+    }
+    &__contenido{
         display: flex;
-        flex-flow: row wrap ;
-        justify-content: space-around;
-        padding: 2rem;
+        flex-direction: column;
+        text-align: left;
+        gap: 0.30rem;
+    }
+    &__uno{
+        grid-area: blog__uno;
+    }
+    &__dos{
+        grid-area: blog__dos;
+    }
+    &__tres{
+        grid-area: blog__tres;
     }
 }
 
@@ -398,10 +416,9 @@ a::selection, button::selection, img::selection, span::selection, p::selection, 
 
 .registrate__ingresar{
     display: grid;
-    grid-template-columns: 1fr;
-    grid-template-areas:"ingresar"
-                        "registrate"; 
-    gap: 10rem;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:"ingresar registrate"; 
+    gap: 1rem;
     align-items: center;
     margin-top: 5rem;
     .registrate{
@@ -420,6 +437,27 @@ a::selection, button::selection, img::selection, span::selection, p::selection, 
         background-image: $background-form;
     }
     
+}
+
+.error{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-areas:"error__img error__404"; 
+    align-items: center;
+    margin: 0 10rem 0 10rem;
+    &__404{
+        grid-area: error__404;
+        text-align: center;
+    }
+    &__img{
+        grid-area: error__img;
+        height: 30rem;
+        margin: 2rem;
+    }
+    &__logo{
+        width: 20rem;
+        padding-bottom: 2rem;
+    }
 }
 
 $cursos: (
@@ -441,7 +479,7 @@ $cursos: (
     }
 
 
-@mixin portada ($url, $width: 100%, $height: 22rem, $margin: 2rem) {
+@mixin portada ($url, $height: 22rem, $width: 100%, $margin: 2rem) {
     background: linear-gradient(to top, rgba(255, 255, 255, 0.356), rgba(0, 0, 255, 0.155)), $url;
     background-position: center;
     background-size: cover;
@@ -456,27 +494,23 @@ $cursos: (
 }
 
 .portada__academia{
-    @include portada(url('../recursos/img/banner-paginas/banner-inicio1.jpg'));
+    @include portada(url('../recursos/img/banner/banner-academia.jpg'));
 }
 
 .portada__obsequios{
-    @include portada(url('../recursos/img/banner-paginas/banner-obsequios1.jpg'));
+    @include portada(url('../recursos/img/banner/banner-obsequios.jpg'));
 }
 
 .portada__quien-soy{
-    @include portada(url('../recursos/img/banner-paginas/banner-quiensoy.png'));
-}
-
-.portada__recursos{
-    @include portada(url('../recursos/img/banner-paginas/banner-recursos.jpg'));
+    @include portada(url('../recursos/img/banner/banner-quien-soy.jpg'));
 }
 
 .portada__contacto{
-    @include portada(url('../recursos/img/banner-paginas/banner-contacto.jpg'));
+    @include portada(url('../recursos/img/banner/banner-contacto.jpg'));
 }
 
 .portada__registro{
-    @include portada(url('../recursos/img/banner-paginas/banner-contacto2.jpg'));
+    @include portada(url('../recursos/img/banner/banner-registro.jpg'));
 }
 
 .disclaimer{

@@ -193,7 +193,7 @@ a::selection, button::selection, img::selection, span::selection, p::selection, 
     margin: 2rem; }
 
 .img__cuadros {
-  /* .recursos, .podcast, servicios */
+  /*.podcast, servicios */
   width: 20rem;
   border-radius: 0.50rem; }
 
@@ -300,7 +300,7 @@ a::selection, button::selection, img::selection, span::selection, p::selection, 
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  background: linear-gradient(to right, #9f44c62a, #41b9f030), url("../recursos/img/rosa/rosa-office24.jpeg");
+  background: linear-gradient(to right, #9f44c62a, #41b9f030), url("../recursos/img/rosa/rosa-fondo.jpg");
   background-size: cover;
   background-position: top;
   background-repeat: no-repeat; }
@@ -327,7 +327,7 @@ a::selection, button::selection, img::selection, span::selection, p::selection, 
   justify-content: center;
   margin-top: 3rem; }
   .galeria__rosa {
-    height: 100vh; }
+    height: 30rem; }
 
 .podcast__container {
   display: grid;
@@ -353,12 +353,13 @@ a::selection, button::selection, img::selection, span::selection, p::selection, 
   gap: 1rem;
   margin: 2rem; }
 
-.logos, .recursos {
+.logos {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-around;
   margin-top: 2rem;
-  margin-bottom: 2rem; }
+  margin-bottom: 2rem;
+  gap: 1rem; }
 
 .programas__container {
   display: grid;
@@ -410,10 +411,26 @@ a::selection, button::selection, img::selection, span::selection, p::selection, 
   grid-area: cursos__tres; }
 
 .blog__container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas: "blog__uno blog__dos blog__tres";
+  gap: 1rem;
+  margin-bottom: 2rem; }
+
+.blog__contenido {
   display: flex;
-  flex-flow: row wrap;
-  justify-content: space-around;
-  padding: 2rem; }
+  flex-direction: column;
+  text-align: left;
+  gap: 0.30rem; }
+
+.blog__uno {
+  grid-area: blog__uno; }
+
+.blog__dos {
+  grid-area: blog__dos; }
+
+.blog__tres {
+  grid-area: blog__tres; }
 
 .contenedor {
   display: flex;
@@ -479,9 +496,9 @@ a::selection, button::selection, img::selection, span::selection, p::selection, 
 
 .registrate__ingresar {
   display: grid;
-  grid-template-columns: 1fr;
-  grid-template-areas: "ingresar" "registrate";
-  gap: 10rem;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "ingresar registrate";
+  gap: 1rem;
   align-items: center;
   margin-top: 5rem; }
   .registrate__ingresar .registrate {
@@ -496,6 +513,23 @@ a::selection, button::selection, img::selection, span::selection, p::selection, 
     padding: 1rem;
     border-radius: 0.43rem;
     background-image: linear-gradient(to left, #41b9f0a0, #9f44c676); }
+
+.error {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-areas: "error__img error__404";
+  align-items: center;
+  margin: 0 10rem 0 10rem; }
+  .error__404 {
+    grid-area: error__404;
+    text-align: center; }
+  .error__img {
+    grid-area: error__img;
+    height: 30rem;
+    margin: 2rem; }
+  .error__logo {
+    width: 20rem;
+    padding-bottom: 2rem; }
 
 .curso1 {
   background-image: url("../recursos/img/academia/curso-potencia-tu-abundancia.png");
@@ -518,7 +552,7 @@ a::selection, button::selection, img::selection, span::selection, p::selection, 
   height: 10rem; }
 
 .portada__academia {
-  background: linear-gradient(to top, rgba(255, 255, 255, 0.356), rgba(0, 0, 255, 0.155)), url("../recursos/img/banner-paginas/banner-inicio1.jpg");
+  background: linear-gradient(to top, rgba(255, 255, 255, 0.356), rgba(0, 0, 255, 0.155)), url("../recursos/img/banner/banner-academia.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -531,7 +565,7 @@ a::selection, button::selection, img::selection, span::selection, p::selection, 
   margin-bottom: 2rem; }
 
 .portada__obsequios {
-  background: linear-gradient(to top, rgba(255, 255, 255, 0.356), rgba(0, 0, 255, 0.155)), url("../recursos/img/banner-paginas/banner-obsequios1.jpg");
+  background: linear-gradient(to top, rgba(255, 255, 255, 0.356), rgba(0, 0, 255, 0.155)), url("../recursos/img/banner/banner-obsequios.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -544,20 +578,7 @@ a::selection, button::selection, img::selection, span::selection, p::selection, 
   margin-bottom: 2rem; }
 
 .portada__quien-soy {
-  background: linear-gradient(to top, rgba(255, 255, 255, 0.356), rgba(0, 0, 255, 0.155)), url("../recursos/img/banner-paginas/banner-quiensoy.png");
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  justify-self: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  width: 100%;
-  height: 22rem;
-  margin-bottom: 2rem; }
-
-.portada__recursos {
-  background: linear-gradient(to top, rgba(255, 255, 255, 0.356), rgba(0, 0, 255, 0.155)), url("../recursos/img/banner-paginas/banner-recursos.jpg");
+  background: linear-gradient(to top, rgba(255, 255, 255, 0.356), rgba(0, 0, 255, 0.155)), url("../recursos/img/banner/banner-quien-soy.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -570,7 +591,7 @@ a::selection, button::selection, img::selection, span::selection, p::selection, 
   margin-bottom: 2rem; }
 
 .portada__contacto {
-  background: linear-gradient(to top, rgba(255, 255, 255, 0.356), rgba(0, 0, 255, 0.155)), url("../recursos/img/banner-paginas/banner-contacto.jpg");
+  background: linear-gradient(to top, rgba(255, 255, 255, 0.356), rgba(0, 0, 255, 0.155)), url("../recursos/img/banner/banner-contacto.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -583,7 +604,7 @@ a::selection, button::selection, img::selection, span::selection, p::selection, 
   margin-bottom: 2rem; }
 
 .portada__registro {
-  background: linear-gradient(to top, rgba(255, 255, 255, 0.356), rgba(0, 0, 255, 0.155)), url("../recursos/img/banner-paginas/banner-contacto2.jpg");
+  background: linear-gradient(to top, rgba(255, 255, 255, 0.356), rgba(0, 0, 255, 0.155)), url("../recursos/img/banner/banner-registro.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -627,24 +648,34 @@ a::selection, button::selection, img::selection, span::selection, p::selection, 
     /* .logos 5vh*/
     height: 3.33333rem; }
   .img__cuadros {
-    /* .recursos, .podcast, servicios 30vw*/
+    /*.podcast, servicios 30vw*/
     width: 20rem; }
   .servicios__container {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-areas: "servicios__uno servicios__dos"  "servicios__tres servicios__cuatro "  "servicios__cinco servicios__seis"; }
+    grid-template-columns: 1fr;
+    grid-template-areas: "servicios__uno" "servicios__dos"  "servicios__tres" "servicios__cuatro"  "servicios__cinco" "servicios__seis"; }
   .obsequios__container {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-areas: "obsequios__uno obsequios__dos" "obsequios__tres obsequios__cuatro" "obsequios__cinco obsequios__seis" "obsequios__siete obsequios__ocho" "obsequios__nueve obsequios__nueve"; }
+    grid-template-columns: 1fr;
+    grid-template-areas: "obsequios__uno" "obsequios__dos" "obsequios__tres" "obsequios__cuatro" "obsequios__cinco" "obsequios__seis" "obsequios__siete" "obsequios__ocho" "obsequios__nueve"; }
   .programas__container {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-areas: "programas__uno programas__dos"  "programas__tres membresia"; }
+    grid-template-columns: 1fr;
+    grid-template-areas: "programas__uno" "programas__dos"  "programas__tres" "membresia"; }
   .cursos__container {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-areas: "cursos__uno cursos__dos" "cursos__tres cursos__tres"; }
+    grid-template-columns: 1fr;
+    grid-template-areas: "cursos__uno" "cursos__dos" "cursos__tres"; }
+  .blog__container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: "blog__uno" "blog__dos" "blog__tres"; }
+  .podcast {
+    padding: 0.5rem; }
+    .podcast__container {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-areas: "podcast__uno" "podcast__dos"; }
   .descargable {
     background: linear-gradient(to left, #41b9f0a0, #9f44c676);
     justify-content: center; }
@@ -666,7 +697,16 @@ a::selection, button::selection, img::selection, span::selection, p::selection, 
     display: grid;
     grid-template-columns: 1fr;
     grid-template-areas: "ingresar" "registrate";
-    margin: 1rem; } }
+    margin: 1rem; }
+  .error {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: "error__404" "error__img";
+    margin: 0 5rem 0 5rem; }
+    .error__img {
+      grid-area: error__img;
+      height: 20rem;
+      margin-left: 5rem; } }
 
 /* celular */
 @media (min-width: 320px) and (max-width: 540px) {
@@ -711,9 +751,9 @@ a::selection, button::selection, img::selection, span::selection, p::selection, 
       font-size: small;
       align-items: flex-end; }
   .img__cuadros {
-    /* .recursos, .podcast, servicios 80vw*/
+    /*.podcast, servicios 80vw*/
     width: 10rem; }
-  .recursos, .logos {
+  .logos {
     display: none; }
   .servicios {
     padding: 0.5rem; }
@@ -742,11 +782,12 @@ a::selection, button::selection, img::selection, span::selection, p::selection, 
     grid-template-areas: "cursos__uno"  "cursos__dos"  "cursos__tres";
     gap: 1rem;
     margin-bottom: 2rem; }
-  .blog {
-    padding: 0.5rem; }
-    .blog__container {
-      justify-content: center;
-      padding: 0; }
+  .blog__container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: "blog__uno" "blog__dos" "blog__tres";
+    gap: 1rem;
+    margin-bottom: 2rem; }
   .podcast {
     padding: 0.5rem; }
     .podcast__container {
@@ -778,7 +819,76 @@ a::selection, button::selection, img::selection, span::selection, p::selection, 
     display: grid;
     grid-template-columns: 1fr;
     grid-template-areas: "ingresar" "registrate";
-    margin: 1rem; } }
+    margin: 1rem; }
+  .error {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: "error__404" "error__img";
+    margin: 0; }
+    .error__img {
+      grid-area: error__img;
+      height: 12rem;
+      margin-left: 6rem; }
+  .portada__academia {
+    background: linear-gradient(to top, rgba(255, 255, 255, 0.356), rgba(0, 0, 255, 0.155)), url("../recursos/img/banner/banner-academia.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    justify-self: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 10rem;
+    margin-bottom: 2rem; }
+  .portada__obsequios {
+    background: linear-gradient(to top, rgba(255, 255, 255, 0.356), rgba(0, 0, 255, 0.155)), url("../recursos/img/banner/banner-obsequios.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    justify-self: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 10rem;
+    margin-bottom: 2rem; }
+  .portada__quien-soy {
+    background: linear-gradient(to top, rgba(255, 255, 255, 0.356), rgba(0, 0, 255, 0.155)), url("../recursos/img/banner/banner-quien-soy.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    justify-self: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 10rem;
+    margin-bottom: 2rem; }
+  .portada__contacto {
+    background: linear-gradient(to top, rgba(255, 255, 255, 0.356), rgba(0, 0, 255, 0.155)), url("../recursos/img/banner/banner-contacto.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    justify-self: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 10rem;
+    margin-bottom: 2rem; }
+  .portada__registro {
+    background: linear-gradient(to top, rgba(255, 255, 255, 0.356), rgba(0, 0, 255, 0.155)), url("../recursos/img/banner/banner-registro.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    justify-self: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 10rem;
+    margin-bottom: 2rem; } }
 
 @media print {
   p, h1, h2, h3, h4, h5, h6 {
