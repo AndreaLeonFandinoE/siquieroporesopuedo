@@ -27,7 +27,6 @@ a{
 
 h1, h2{
     color: $color-principal-lila;
-    font-size: x-large;
 }
 
 a::selection, button::selection, img::selection, span::selection, p::selection, h1::selection, h2::selection, h3::selection, h4::selection, h5::selection, h6::selection{
@@ -59,13 +58,15 @@ a::selection, button::selection, img::selection, span::selection, p::selection, 
 
 .presentacion{
     display: grid;
-    grid-template-columns: 1fr 3fr;
-    grid-template-areas:"rosa rosa__container";
+    grid-template-columns: 1fr 2fr;
+    grid-template-areas: "rosa presentacion__titulo"
+                        "rosa rosa__container";
     align-items: center;
     justify-items: center;
     &__titulo{
+        grid-area: presentacion__titulo;
         text-align: center;
-        margin-bottom: 2rem;
+        font-size: xx-large;
     }
     &__contacto{
         display: grid;
@@ -83,9 +84,7 @@ a::selection, button::selection, img::selection, span::selection, p::selection, 
     }
     .rosa{
         grid-area: rosa;
-        align-items: center;
-        width: 70%;
-        justify-self: center;
+        width: 100%;
     }
     .rosa__container{
         grid-area: rosa__container;
@@ -108,7 +107,7 @@ a::selection, button::selection, img::selection, span::selection, p::selection, 
     &__contenido{
         display: flex;
         flex-direction: column;
-        text-align: left;
+        text-align: center;
         gap: 0.30rem;
     }
     &__uno{
@@ -258,10 +257,10 @@ a::selection, button::selection, img::selection, span::selection, p::selection, 
     @extend .cuadro__fondos;
     &__container{
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
         grid-template-areas:
-                            "programas__uno programas__dos programas__tres" 
-                            "membresia membresia membresia";
+                            "programas__uno programas__dos" 
+                            "programas__tres membresia";
         gap: 1rem;
         margin-bottom: 2rem;
         align-items: center;
@@ -270,7 +269,7 @@ a::selection, button::selection, img::selection, span::selection, p::selection, 
     &__contenido{
         display: flex;
         flex-direction: column;
-        text-align: left;
+        text-align: center;
         gap: 0.30rem;
     }
     &__uno{
@@ -300,7 +299,7 @@ a::selection, button::selection, img::selection, span::selection, p::selection, 
     &__contenido{
         display: flex;
         flex-direction: column;
-        text-align: left;
+        text-align: center;
         gap: 0.30rem;
     }
     &__uno{
@@ -327,7 +326,7 @@ a::selection, button::selection, img::selection, span::selection, p::selection, 
     &__contenido{
         display: flex;
         flex-direction: column;
-        text-align: left;
+        text-align: center;
         gap: 0.30rem;
     }
     &__uno{
@@ -460,60 +459,8 @@ a::selection, button::selection, img::selection, span::selection, p::selection, 
     }
 }
 
-$cursos: (
-    curso1:curso-potencia-tu-abundancia, 
-    curso2:logo-talento-y-emprendimiento, 
-    curso3:curso-crea-tu-infoproducto);
-
-    @each $curso, $img-curso in $cursos{
-        .#{$curso} {
-            background-image: url('../recursos/img/academia/#{$img-curso}.png');
-            background-size: cover;
-            width: 15rem;
-            height: 10rem;
-            @if ($curso == "curso2") {
-                width: 12rem;
-                height: 7rem;
-            }
-        }
-    }
-
-
-@mixin portada ($url, $height: 22rem, $width: 100%, $margin: 2rem) {
-    background: linear-gradient(to top, rgba(255, 255, 255, 0.356), rgba(0, 0, 255, 0.155)), $url;
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    justify-self: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: $width;
-    height: $height;
-    margin-bottom: $margin;
-}
-
-.portada__academia{
-    @include portada(url('../recursos/img/banner/banner-academia.jpg'));
-}
-
-.portada__obsequios{
-    @include portada(url('../recursos/img/banner/banner-obsequios.jpg'));
-}
-
-.portada__quien-soy{
-    @include portada(url('../recursos/img/banner/banner-quien-soy.jpg'));
-}
-
-.portada__contacto{
-    @include portada(url('../recursos/img/banner/banner-contacto.jpg'));
-}
-
-.portada__registro{
-    @include portada(url('../recursos/img/banner/banner-registro.jpg'));
-}
-
 .disclaimer{
     display: none!important;
 }
+
 @import 'mediaqueries'; 

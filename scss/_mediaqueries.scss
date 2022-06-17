@@ -4,10 +4,6 @@
         height: 10vh;
     }
 
-    h1,h2,h3,h4,h5,h6{
-        font-size: medium;
-    }
-
     .presentacion{
         display: grid;
         grid-template-columns: 1fr;
@@ -186,10 +182,6 @@
         right: 0.6rem;
     }
 
-    h1,h2,h3,h4,h5,h6{
-        font-size: small;
-    }
-
     .presentacion{
         display: grid;
         grid-template-columns: 1fr;
@@ -349,7 +341,7 @@
         grid-template-columns: 1fr;
         grid-template-areas:"contactanos__form" 
                             "contactanos__container"; 
-        margin: 1rem;
+        margin: 0;
         .img__contacto__rosa{
             height: 7vh;
         }
@@ -376,25 +368,6 @@
         }
     }
 
-    .portada__academia{
-        @include portada(url('../recursos/img/banner/banner-academia.jpg'), 10rem);
-    }
-
-    .portada__obsequios{
-        @include portada(url('../recursos/img/banner/banner-obsequios.jpg'), 10rem);
-    }
-    
-    .portada__quien-soy{
-        @include portada(url('../recursos/img/banner/banner-quien-soy.jpg'), 10rem);
-    }
-    
-    .portada__contacto{
-        @include portada(url('../recursos/img/banner/banner-contacto.jpg'), 10rem);
-    }
-    
-    .portada__registro{
-        @include portada(url('../recursos/img/banner/banner-registro.jpg'), 10rem);
-    }
 }
 
 @media print {

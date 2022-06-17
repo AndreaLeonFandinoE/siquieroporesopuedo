@@ -4,22 +4,24 @@ header{
     top: 0px;
     align-items: center;
     justify-content: space-between;
-    background-color: $background-header;
+    background-color: $fondo-header;
+    position: sticky;
     a{
-        color: $color-principal-azul;
+        color: white;
         img{
-            height: 8vh;
+            height: 10vh;
         }
         &:hover{
-            color: $color-principal-lila;
+            color: $color-principal-azul;
         }
     }
     ul{
         list-style: none;
         font-size: 0;
+        align-items: center;
         & li:hover ul{
             display: block;
-            background-color: $background-header;
+            background-color: $fondo-header;
             text-align: center;
         }
         & ul{
@@ -40,6 +42,9 @@ header{
             color: $color-principal-azul;
         }
     }
+    ul li:hover ul{
+        background-color: $background-header-academia;
+    }
 }
 
 li{
@@ -47,4 +52,26 @@ li{
     padding: 0.5rem;
     position: relative;
     font-size: 0.87rem;
+}
+
+.boton-nav{
+    padding: 0.5rem;
+    font-weight: normal;
+    border-radius: 0.5em;
+    border: 0.063rem solid white;
+    background: $color-principal-lila;
+    &::before{
+        content: " 📚 " ;
+        justify-items: center;
+    }
+    &::after{
+        content: none ;
+    }
+    &:hover{
+        border: 0.063rem solid $color-terciario-azul;
+        background: $color-principal-lila;
+        color: $color-principal-azul;
+        transform: scale(1.05);
+        transition: all 0.3s ease-out;
+    }
 }

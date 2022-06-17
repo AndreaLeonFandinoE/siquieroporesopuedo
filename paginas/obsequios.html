@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Keywords -->
+    <!-- Keywords y description-->
     <meta name="keywords" content="obsequios, obsequios gratis, libros, libros de reinvención, libros gratis, ebooks,  eliminar la mentalidad de escazes, vivir de tu talento, potencia tu mentalidad, energía del dinero, finanzas personales, negocios, crear negocios, encuentra tu calma, desarrollo profesional, desarrollo de vida, desarrollo personal, creencias limitantes, creación de negocios, profesionales insatisfechos, desarrollo de talentos, emprender, emprendimiento con propósito, talleres, consultorías, reinvención profesional, reinvención personal, conultor, instructor de negocios, reinvención, enseñanza, abundancia, tener abundancia, ser abundante, mejorar tu vida, tomar acción, dinero, el dinero no es malo, tener dinero, encontrar la calma, compras online, promociones">
     <meta name="description" content="Sé por experiencia propia que emprender no es fácil, pero es maravilloso. Te acompaño a empoderarte y desplegar la mejor versión de ti mismo/a, adquirir las herramienstas, traer abundancia y desarrollar las destrezas que necesitas, para que puedas lograr tus objetivos de fortalecer tus capacidades y de esta manera alcanzar la vida que te mereces a través de tu emprendimiento con propósito.">
     <!--Icono web-->
@@ -23,7 +23,8 @@
 </head>
 
 <body>
-    <!-- bootstrap 5.2-->
+
+    <!--Header - bootstrap 5.2-->
     <header>
         <!-- Logo -->
         <a class="navbar-brand" href="../index.html">
@@ -43,10 +44,6 @@
                         </li>
 
                         <li class="nav-item">
-                            <a href="academia-online.html">Academia Online</a>
-                        </li>
-
-                        <li class="nav-item">
                             <a href="servicios.html">Servicios</a>
                         </li>
 
@@ -63,9 +60,9 @@
                             Recursos
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                <li><a href="recursos.html">Blog</a></li>
-                                <li><a href="recursos.html">Podcast</a></li>
-                                <li><a href="recursos.html">Videos</a></li>
+                                <li><a href="recursos.html#blog">Blog</a></li>
+                                <li><a href="recursos.html#podcast">Podcast</a></li>
+                                <li><a href="recursos.html#video">Videos</a></li>
                             </ul>
                         </li>
                         
@@ -76,6 +73,12 @@
                         <li class="nav-item">
                             <a href="registro.html">Registro</a>
                         </li>
+
+                        <li class="nav-item">
+                            <a href="academia-online.html">
+                                <button class="boton-nav">Academia Online</button>
+                            </a>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -83,10 +86,13 @@
     </header>
 
     <main>
+
+    <!-- Portada -->
         <section >
-            <img class="portada__obsequios" >
+            <img src="../recursos/img/banner/banner-obsequios.jpg" srcset="../recursos/img/banner/banner-obsequios-mob.jpg 600w, ../recursos/img/banner/banner-obsequios.jpg" class="d-block w-100" alt="banner-obsequios">
         </section>
         
+    <!-- Descripción de los obsequios -->
         <section class="section">
             <div class="section__container">
                 <p>Hay muchos temas de los que quiero conversar, consejos e ideas que quiero compartir y aprendizajes que quiero llevar a otros.</p>
@@ -98,6 +104,7 @@
             </div>
         </section>
 
+    <!-- Todos los obsequios -->
         <section class="obsequios">
             <h1 class="center">Llevate de regalo algunos de mis ebooks</h1>
             <div class="obsequios__container">
@@ -150,6 +157,7 @@
             
         </section>
 
+    <!-- Testimonios -->
         <section class="testimonios">
             <div class="testimonios__persona section__container">
                 <h2 class="testimonios__titulo">¿Qué opinan mis clientes?</h2>
@@ -161,6 +169,7 @@
 
     </main>
 
+    <!-- Footer -->
     <footer>
         <section class="footer__container">
             <!--Slogan-->
@@ -183,7 +192,7 @@
         </section>
         
         <div> <!--Chat-->
-            <a href=""><img class="chat" src="../recursos/img/icon-chat/chat-lila-64.png" alt="Chatea con nosotros"></a>
+            <a href="https://t.me/rosa_leon_siquiero"><img class="chat" src="../recursos/img/icon-chat/chat-lila-64.png" alt="Chatea con nosotros"></a>
         </div>
     </footer>
     <!-- bootstrap 5.2-->

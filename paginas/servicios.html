@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Keywords -->
+    <!-- Keywords y description-->
     <meta name="keywords" content="servicios, servicio, cursos, cursos web, cursos de desarrollo, cursos personales, cursos profesional, programas, programas personales, programas profesionales, emprendimiento, emprendimiento web, emprendimiento online, emprender, eliminar la mentalidad de escazes, vivir de tu talento, potencia tu mentalidad, energía del dinero, finanzas personales, negocios, crear negocios, encuentra tu calma, desarrollo profesional, desarrollo de vida, desarrollo personal, creencias limitantes, creación de negocios, profesionales insatisfechos, desarrollo de talentos, emprender, emprendimiento con propósito, talleres, consultorías, reinvención profesional, reinvención personal, consultor, instructor de negocios, libro, libro de reinvención, reinvención, cursos online, programas online, academia, academia digital, reinvéntate, taller, taller de reinvención, cursos gratis, talleres gratis, reinventarme, emprender, emprender con éxito, emprender con 50 años, membresías, talleres gratis, aprender a emprender, obsequios, obsequios gratis, cursos de regalo, masterclass gratis, masterclass, blog, podcast, videos, enseñanza, clases online, clases gratis, abundancia, tener abundancia, ser abundante, mejorar tu vida, taller en vivo, talento, tomar acción, dinero, el dinero no es malo, tener dinero, encontrar la calma, compras online, promociones">
     <meta name="description" content="Somos una marca de confianza y referencia dentro del mundo del desarrollo personal y del emprendimiento, ofrecemos una gama de servicios creados a la medida de nuestros clientes, para que logren hacer realidad su propia visión como emprendedores con integridad, orientación, dedicación, innovación, atención a los detalles, pasión y compromiso.">
     <!--Icono web-->
@@ -24,7 +24,7 @@
 </head>
 
 <body>
-    <!-- bootstrap 5.2-->
+    <!--Header - bootstrap 5.2-->
     <header>
         <!-- Logo -->
         <a class="navbar-brand" href="../index.html">
@@ -44,10 +44,6 @@
                         </li>
 
                         <li class="nav-item">
-                            <a href="academia-online.html">Academia Online</a>
-                        </li>
-
-                        <li class="nav-item">
                             <a href="servicios.html">Servicios</a>
                         </li>
 
@@ -64,9 +60,9 @@
                             Recursos
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                <li><a href="recursos.html">Blog</a></li>
-                                <li><a href="recursos.html">Podcast</a></li>
-                                <li><a href="recursos.html">Videos</a></li>
+                                <li><a href="recursos.html#blog">Blog</a></li>
+                                <li><a href="recursos.html#podcast">Podcast</a></li>
+                                <li><a href="recursos.html#video">Videos</a></li>
                             </ul>
                         </li>
                         
@@ -77,6 +73,12 @@
                         <li class="nav-item">
                             <a href="registro.html">Registro</a>
                         </li>
+
+                        <li class="nav-item">
+                            <a href="academia-online.html">
+                                <button class="boton-nav">Academia Online</button>
+                            </a>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -85,57 +87,12 @@
     
     <main >
 
-        <!-- bootstrap 5.2-->
-        <section>
-            <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
-            <div class="carousel-indicators">
-                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
-            </div>
-
-            <div class="carousel-inner">
-
-                <div class="carousel-item" data-bs-interval="4000">
-                    <img src="../recursos/img/banner/banner-academia.jpg" srcset="../recursos/img/banner/academia-mob.jpg 576w, ../recursos/img/banner/banner-academia.jpg" class="d-block w-100" alt="banner-academia">
-                    <div class="carousel-caption d-none d-md-block">
-                        <a href="./academia-online.html">
-                            <button>Visita nuesta academia Online</button>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="carousel-item active" data-bs-interval="4000">
-                    <img src="../recursos/img/banner/banner-servicio.jpg" srcset="../recursos/img/banner/servicio-mob.jpg 576w, ../recursos/img/banner/banner-servicio.jpg" class="d-block w-100" alt="banner-servicio">
-                    <div class="carousel-caption d-none d-md-block">
-                        <a href="./servicios.html">
-                            <button>Estas aquí</button>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="carousel-item" data-bs-interval="4000">
-                    <img src="../recursos/img/banner/banner-obsequios.jpg" srcset="../recursos/img/banner/obsequios-mob.jpg 576w, ../recursos/img/banner/banner-obsequios.jpg" class="d-block w-100" alt="banner-obsequios">
-                    <div class="carousel-caption d-none d-md-block">
-                        <a href="./obsequios.html">
-                            <button>Llevate de regalo algunos de nuestros Ebooks</button>
-                        </a>
-                    </div>
-                </div>
-
-            </div>
-
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Visualizar</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Siguiente</span>
-            </button>
-            </div>
+    <!-- Portada -->
+        <section >
+            <img src="../recursos/img/banner/banner-servicios.jpg" srcset="../recursos/img/banner/banner-servicios-mob.jpg 600w, ../recursos/img/banner/banner-servicios.jpg" class="d-block w-100" alt="banner-servicios">
         </section>
 
+    <!-- Descripción de los servicios -->
         <section class="section">
                 <div class="section__container">
                     <p>Durante los últimos años he dedicado parte de mi vida a prepararme como coach, a crecer como empresaria, a prepararme en consultoría internacional y a desarrollar mi interior, para potenciar mis talentos y ponerlos al servicio de los demás.</p>
@@ -145,6 +102,7 @@
                 </div>
         </section>
 
+    <!-- Todos los servicios -->
         <section class="servicios">
             <h1 class="center">Mira todo lo que tengo para ofrecerte</h1>
             <div class="servicios__container">
@@ -206,6 +164,7 @@
             </div>
         </section>
 
+    <!-- Testimonios -->
         <section class="testimonios">
             <div class="testimonios__persona section__container">
                 <h2 class="testimonios__titulo">¿Qué opinan mis clientes?</h2>
@@ -217,6 +176,7 @@
 
     </main>
 
+    <!-- Footer -->
     <footer>
         <section class="footer__container">
             <!--Slogan-->
@@ -239,7 +199,7 @@
         </section>
         
         <div> <!--Chat-->
-            <a href=""><img class="chat" src="../recursos/img/icon-chat/chat-lila-64.png" alt="Chatea con nosotros"></a>
+            <a href="https://t.me/rosa_leon_siquiero"><img class="chat" src="../recursos/img/icon-chat/chat-lila-64.png" alt="Chatea con nosotros"></a>
         </div>
     </footer>
     <!-- bootstrap 5.2-->

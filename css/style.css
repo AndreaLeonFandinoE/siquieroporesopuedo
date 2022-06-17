@@ -1,23 +1,45 @@
 @charset "UTF-8";
+.curso1 {
+  background-image: url("../recursos/img/academia/curso-potencia-tu-abundancia.png");
+  background-size: cover;
+  width: 15rem;
+  height: 10rem; }
+
+.curso2 {
+  background-image: url("../recursos/img/academia/logo-talento-y-emprendimiento.png");
+  background-size: cover;
+  width: 15rem;
+  height: 10rem;
+  width: 12rem;
+  height: 7rem; }
+
+.curso3 {
+  background-image: url("../recursos/img/academia/curso-crea-tu-infoproducto.png");
+  background-size: cover;
+  width: 15rem;
+  height: 10rem; }
+
 header {
   display: flex;
   flex-wrap: wrap;
   top: 0px;
   align-items: center;
   justify-content: space-between;
-  background-color: #000000bf; }
+  background-color: #9f44c6ea;
+  position: sticky; }
   header a {
-    color: #41b8f0; }
+    color: white; }
     header a img {
-      height: 8vh; }
+      height: 10vh; }
     header a:hover {
-      color: #a044c6; }
+      color: #41b8f0; }
   header ul {
     list-style: none;
-    font-size: 0; }
+    font-size: 0;
+    align-items: center; }
     header ul li:hover ul {
       display: block;
-      background-color: #000000bf;
+      background-color: #9f44c6ea;
       text-align: center; }
     header ul ul {
       position: absolute;
@@ -31,12 +53,32 @@ header {
     color: #a044c6; }
     .header__academia a:hover {
       color: #41b8f0; }
+  .header__academia ul li:hover ul {
+    background-color: white; }
 
 li {
   display: inline;
   padding: 0.5rem;
   position: relative;
   font-size: 0.87rem; }
+
+.boton-nav {
+  padding: 0.5rem;
+  font-weight: normal;
+  border-radius: 0.5em;
+  border: 0.063rem solid white;
+  background: #a044c6; }
+  .boton-nav::before {
+    content: " 📚 ";
+    justify-items: center; }
+  .boton-nav::after {
+    content: none; }
+  .boton-nav:hover {
+    border: 0.063rem solid #4ae4e4;
+    background: #a044c6;
+    color: #41b8f0;
+    transform: scale(1.05);
+    transition: all 0.3s ease-out; }
 
 footer .footer__container {
   display: flex;
@@ -124,10 +166,10 @@ a button::after {
   .testimonios__nombre {
     grid-area: testimonios__nombre;
     padding-bottom: 1.25rem;
-    color: #4ae4e4;
-    font-size: large; }
+    color: #a044c6;
+    font-size: x-large; }
     .testimonios__nombre:hover {
-      color: #cfbae1; }
+      color: #c59fc9; }
 
 .cuadro {
   display: flex;
@@ -172,14 +214,13 @@ body {
   text-align: justify;
   line-height: 1.5rem;
   letter-spacing: 0.05rem;
-  font-size: 0.8rem; }
+  font-size: 1rem; }
 
 a {
   text-decoration: none; }
 
 h1, h2 {
-  color: #a044c6;
-  font-size: x-large; }
+  color: #a044c6; }
 
 a::selection, button::selection, img::selection, span::selection, p::selection, h1::selection, h2::selection, h3::selection, h4::selection, h5::selection, h6::selection {
   background-color: #c59fc9;
@@ -206,13 +247,14 @@ a::selection, button::selection, img::selection, span::selection, p::selection, 
 
 .presentacion {
   display: grid;
-  grid-template-columns: 1fr 3fr;
-  grid-template-areas: "rosa rosa__container";
+  grid-template-columns: 1fr 2fr;
+  grid-template-areas: "rosa presentacion__titulo" "rosa rosa__container";
   align-items: center;
   justify-items: center; }
   .presentacion__titulo {
+    grid-area: presentacion__titulo;
     text-align: center;
-    margin-bottom: 2rem; }
+    font-size: xx-large; }
   .presentacion__contacto {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -225,9 +267,7 @@ a::selection, button::selection, img::selection, span::selection, p::selection, 
     grid-area: presentacion__boton; }
   .presentacion .rosa {
     grid-area: rosa;
-    align-items: center;
-    width: 70%;
-    justify-self: center; }
+    width: 100%; }
   .presentacion .rosa__container {
     grid-area: rosa__container;
     padding: 2rem; }
@@ -242,7 +282,7 @@ a::selection, button::selection, img::selection, span::selection, p::selection, 
 .servicios__contenido {
   display: flex;
   flex-direction: column;
-  text-align: left;
+  text-align: center;
   gap: 0.30rem; }
 
 .servicios__uno {
@@ -363,8 +403,8 @@ a::selection, button::selection, img::selection, span::selection, p::selection, 
 
 .programas__container {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-areas: "programas__uno programas__dos programas__tres"  "membresia membresia membresia";
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "programas__uno programas__dos"  "programas__tres membresia";
   gap: 1rem;
   margin-bottom: 2rem;
   align-items: center;
@@ -373,7 +413,7 @@ a::selection, button::selection, img::selection, span::selection, p::selection, 
 .programas__contenido {
   display: flex;
   flex-direction: column;
-  text-align: left;
+  text-align: center;
   gap: 0.30rem; }
 
 .programas__uno {
@@ -398,7 +438,7 @@ a::selection, button::selection, img::selection, span::selection, p::selection, 
 .cursos__contenido {
   display: flex;
   flex-direction: column;
-  text-align: left;
+  text-align: center;
   gap: 0.30rem; }
 
 .cursos__uno {
@@ -420,7 +460,7 @@ a::selection, button::selection, img::selection, span::selection, p::selection, 
 .blog__contenido {
   display: flex;
   flex-direction: column;
-  text-align: left;
+  text-align: center;
   gap: 0.30rem; }
 
 .blog__uno {
@@ -531,91 +571,6 @@ a::selection, button::selection, img::selection, span::selection, p::selection, 
     width: 20rem;
     padding-bottom: 2rem; }
 
-.curso1 {
-  background-image: url("../recursos/img/academia/curso-potencia-tu-abundancia.png");
-  background-size: cover;
-  width: 15rem;
-  height: 10rem; }
-
-.curso2 {
-  background-image: url("../recursos/img/academia/logo-talento-y-emprendimiento.png");
-  background-size: cover;
-  width: 15rem;
-  height: 10rem;
-  width: 12rem;
-  height: 7rem; }
-
-.curso3 {
-  background-image: url("../recursos/img/academia/curso-crea-tu-infoproducto.png");
-  background-size: cover;
-  width: 15rem;
-  height: 10rem; }
-
-.portada__academia {
-  background: linear-gradient(to top, rgba(255, 255, 255, 0.356), rgba(0, 0, 255, 0.155)), url("../recursos/img/banner/banner-academia.jpg");
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  justify-self: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  width: 100%;
-  height: 22rem;
-  margin-bottom: 2rem; }
-
-.portada__obsequios {
-  background: linear-gradient(to top, rgba(255, 255, 255, 0.356), rgba(0, 0, 255, 0.155)), url("../recursos/img/banner/banner-obsequios.jpg");
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  justify-self: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  width: 100%;
-  height: 22rem;
-  margin-bottom: 2rem; }
-
-.portada__quien-soy {
-  background: linear-gradient(to top, rgba(255, 255, 255, 0.356), rgba(0, 0, 255, 0.155)), url("../recursos/img/banner/banner-quien-soy.jpg");
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  justify-self: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  width: 100%;
-  height: 22rem;
-  margin-bottom: 2rem; }
-
-.portada__contacto {
-  background: linear-gradient(to top, rgba(255, 255, 255, 0.356), rgba(0, 0, 255, 0.155)), url("../recursos/img/banner/banner-contacto.jpg");
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  justify-self: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  width: 100%;
-  height: 22rem;
-  margin-bottom: 2rem; }
-
-.portada__registro {
-  background: linear-gradient(to top, rgba(255, 255, 255, 0.356), rgba(0, 0, 255, 0.155)), url("../recursos/img/banner/banner-registro.jpg");
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  justify-self: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  width: 100%;
-  height: 22rem;
-  margin-bottom: 2rem; }
-
 .disclaimer {
   display: none !important; }
 
@@ -623,8 +578,6 @@ a::selection, button::selection, img::selection, span::selection, p::selection, 
 @media (min-width: 541px) and (max-width: 720px) {
   header a img {
     height: 10vh; }
-  h1, h2, h3, h4, h5, h6 {
-    font-size: medium; }
   .presentacion {
     display: grid;
     grid-template-columns: 1fr;
@@ -721,8 +674,6 @@ a::selection, button::selection, img::selection, span::selection, p::selection, 
   .chat {
     bottom: 1.72rem;
     right: 0.6rem; }
-  h1, h2, h3, h4, h5, h6 {
-    font-size: small; }
   .presentacion {
     display: grid;
     grid-template-columns: 1fr;
@@ -812,7 +763,7 @@ a::selection, button::selection, img::selection, span::selection, p::selection, 
     display: grid;
     grid-template-columns: 1fr;
     grid-template-areas: "contactanos__form"  "contactanos__container";
-    margin: 1rem; }
+    margin: 0; }
     .contactanos .img__contacto__rosa {
       height: 7vh; }
   .registrate__ingresar {
@@ -828,67 +779,7 @@ a::selection, button::selection, img::selection, span::selection, p::selection, 
     .error__img {
       grid-area: error__img;
       height: 12rem;
-      margin-left: 6rem; }
-  .portada__academia {
-    background: linear-gradient(to top, rgba(255, 255, 255, 0.356), rgba(0, 0, 255, 0.155)), url("../recursos/img/banner/banner-academia.jpg");
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    justify-self: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 100%;
-    height: 10rem;
-    margin-bottom: 2rem; }
-  .portada__obsequios {
-    background: linear-gradient(to top, rgba(255, 255, 255, 0.356), rgba(0, 0, 255, 0.155)), url("../recursos/img/banner/banner-obsequios.jpg");
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    justify-self: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 100%;
-    height: 10rem;
-    margin-bottom: 2rem; }
-  .portada__quien-soy {
-    background: linear-gradient(to top, rgba(255, 255, 255, 0.356), rgba(0, 0, 255, 0.155)), url("../recursos/img/banner/banner-quien-soy.jpg");
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    justify-self: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 100%;
-    height: 10rem;
-    margin-bottom: 2rem; }
-  .portada__contacto {
-    background: linear-gradient(to top, rgba(255, 255, 255, 0.356), rgba(0, 0, 255, 0.155)), url("../recursos/img/banner/banner-contacto.jpg");
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    justify-self: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 100%;
-    height: 10rem;
-    margin-bottom: 2rem; }
-  .portada__registro {
-    background: linear-gradient(to top, rgba(255, 255, 255, 0.356), rgba(0, 0, 255, 0.155)), url("../recursos/img/banner/banner-registro.jpg");
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    justify-self: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 100%;
-    height: 10rem;
-    margin-bottom: 2rem; } }
+      margin-left: 6rem; } }
 
 @media print {
   p, h1, h2, h3, h4, h5, h6 {

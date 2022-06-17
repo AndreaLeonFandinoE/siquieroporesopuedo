@@ -1,0 +1,17 @@
+$cursos: (
+    curso1:curso-potencia-tu-abundancia, 
+    curso2:logo-talento-y-emprendimiento, 
+    curso3:curso-crea-tu-infoproducto);
+
+    @each $curso, $img-curso in $cursos{
+        .#{$curso} {
+            background-image: url('../recursos/img/academia/#{$img-curso}.png');
+            background-size: cover;
+            width: 15rem;
+            height: 10rem;
+            @if ($curso == "curso2") {
+                width: 12rem;
+                height: 7rem;
+            }
+        }
+    }

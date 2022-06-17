@@ -4,10 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Keywords -->
+    <!-- Keywords y description-->
     <meta name="keywords" content="registro, registrarme, ingresa, ingresar, siquieroporesopuedo, coach, coaching,  consultorías, consultor, membresías">
     <meta name="description" content="Te acompaño a empoderarte y desplegar la mejor versión de ti mismo, de modo que puedas lograr tus objetivos, y con ellos alcanzar la vida plena que te mereces emprendiendo con propósito. A través de cursos, talleres, programas y consultorías, puedo ayudarte a hacer de tu emprendimiento una realidad con mayor porcentaje de éxito.">
-    
     <!--Icono web-->
     <link rel="shortcut icon" href="../recursos/img/icon-logo/favicon-16x16.png" type="image/x-icon">
     <!--TIPOGRAFIA-->
@@ -18,13 +17,13 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <!--CSS-->
     <link rel="stylesheet" href="../css/style.css">
-    
+
     <title>Registro - SiQuiero.PorEsoPuedo</title>
 
 </head>
 
 <body>
-    <!-- bootstrap 5.2-->
+    <!--Header - bootstrap 5.2-->
     <header>
         <!-- Logo -->
         <a class="navbar-brand" href="../index.html">
@@ -44,10 +43,6 @@
                         </li>
 
                         <li class="nav-item">
-                            <a href="academia-online.html">Academia Online</a>
-                        </li>
-
-                        <li class="nav-item">
                             <a href="servicios.html">Servicios</a>
                         </li>
 
@@ -64,9 +59,9 @@
                             Recursos
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                <li><a href="recursos.html">Blog</a></li>
-                                <li><a href="recursos.html">Podcast</a></li>
-                                <li><a href="recursos.html">Videos</a></li>
+                                <li><a href="recursos.html#blog">Blog</a></li>
+                                <li><a href="recursos.html#podcast">Podcast</a></li>
+                                <li><a href="recursos.html#video">Videos</a></li>
                             </ul>
                         </li>
                         
@@ -77,17 +72,25 @@
                         <li class="nav-item">
                             <a href="registro.html">Registro</a>
                         </li>
+
+                        <li class="nav-item">
+                            <a href="academia-online.html">
+                                <button class="boton-nav">Academia Online</button>
+                            </a>
+                        </li>
                     </ul>
                 </div>
             </div>
         </nav>
     </header>
-    
+
     <main>
-        <section>
-            <img class="portada__registro">
+    <!-- Portada -->
+        <section >
+            <img src="../recursos/img/banner/banner-registro.jpg" srcset="../recursos/img/banner/banner-registro-mob.jpg 600w, ../recursos/img/banner/banner-registro.jpg" class="d-block w-100" alt="banner-registro">
         </section>
 
+    <!-- Formulario de registro y de ingreso -->
         <section>
             <div class="section__container registrate__ingresar">
 
@@ -96,19 +99,19 @@
                     <form class="registrate__form" method="post">
                         <label for="">Nombre de usuario</label>
                         <input type="text" placeholder="Escriba su nombre" name="Nombre">
-                        
+
                         <label for="">Apellido de usuario</label>
                         <input type="text" placeholder="Escriba su apellido" name="Apellido">
-                        
+
                         <label for="">Dirección de correo electrónico</label>
                         <input type="email" placeholder="¿Cuál es su email?" name="Email">
-                        
+
                         <label for="">Celular</label>
                         <input type="tel" placeholder="¿Cuál es su número?" name="Telefono">
-                        
+
                         <label for="">Contraseña</label>
                         <input type="password" placeholder="Crea una contraseña" name="Password">
-                        
+
                         <button type="submit">Crear usuario</button>
                     </form>
                 </div>
@@ -119,10 +122,10 @@
                             <label for="">Correo electrónico</label>
                             <input type="email" placeholder="Escriba su correo electrónico" name="correo">
                             <div class="form-text">No compartiremos tu email con nadie más.</div>
-                        
+
                             <label for="">Contraseña</label>
                             <input type="password" placeholder="Escriba su contraseña" name="Contraseña">
-                        
+
                             <input type="checkbox" class="form-check-input">
                             <label for="">Recordarme</label>
 
@@ -132,6 +135,7 @@
             </div>
         </section>
 
+    <!-- Testimonios -->
         <section class="testimonios">
             <div class="testimonios__persona section__container">
                 <h2 class="testimonios__titulo">¿Qué opinan mis clientes?</h2>
@@ -142,7 +146,8 @@
         </section>
 
     </main>
-
+    
+    <!-- Footer -->
     <footer>
         <section class="footer__container">
             <!--Slogan-->
@@ -151,7 +156,7 @@
             </span>
             <span>Copyright 2020 - SiQuiero.PorEsoPuedo
                 <span>Todos los derechos reservados.</span>
-            </span> 
+            </span>
             <div>
                 <ul >
                     <li class="footer__redes"><a href="https://www.instagram.com/siquiero.poresopuedo/"><img src="../recursos/img/icon-redes/instagram.png" alt="instagram" ></a></li>
@@ -163,9 +168,9 @@
                 </ul>
             </div>
         </section>
-        
+
         <div> <!--Chat-->
-            <a href=""><img class="chat" src="../recursos/img/icon-chat/chat-lila-64.png" alt="Chatea con nosotros"></a>
+            <a href="https://t.me/rosa_leon_siquiero"><img class="chat" src="../recursos/img/icon-chat/chat-lila-64.png" alt="Chatea con nosotros"></a>
         </div>
     </footer>
     <!-- bootstrap 5.2-->

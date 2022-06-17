@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- keywords y description -->
     <meta name="keywords" content="rosa león, consultorías, consultor, abundancia, tener abundancia, ser abundante, mejorar tu vida, talento, tomar acción, dinero, el dinero no es malo, tener dinero, encontrar la calma, compras online, promociones, eliminar la mentalidad de escazes, vivir de tu talento, potencia tu mentalidad, energía del dinero, finanzas personales, negocios, crear negocios, instructor de negocios, encuentra tu calma, creencias limitantes, creación de negocios, profesionales insatisfechos, enseñanza, libro, libro de reinvención, emprendimiento, emprendimiento web, emprendimiento online, emprender, emprendimiento con propósito, emprender con éxito, emprender con 50 años, aprender a emprender, desarrollo profesional, desarrollo de vida, desarrollo personal, desarrollo de talentos, reinvención, reinvención profesional, reinvención personal, reinvéntate, reinventarme">
     <meta name="description" content="Soy Rosa León, Agente de Transformación en Desarrollo Personal, Emprendimiento y Negocios, especializada en cambio de creencias limitantes y creación de negocios, y soy la CEO de la marca Si Quiero. Por eso Puedo. Tengo un doctorado en historia, un máster en metodología, uno en español como segunda lengua y especializaciones en diversas áreas como en coaching, Mindfulness coaching y negocios. Soy Consultora internacional bilingüe de Negocios.">
     <!--Icono web-->
@@ -22,7 +23,8 @@
 </head>
 
 <body>
-    <!-- bootstrap 5.2-->
+
+    <!--Header - bootstrap 5.2-->
     <header>
         <!-- Logo -->
         <a class="navbar-brand" href="../index.html">
@@ -42,10 +44,6 @@
                         </li>
 
                         <li class="nav-item">
-                            <a href="academia-online.html">Academia Online</a>
-                        </li>
-
-                        <li class="nav-item">
                             <a href="servicios.html">Servicios</a>
                         </li>
 
@@ -62,9 +60,9 @@
                             Recursos
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                <li><a href="recursos.html">Blog</a></li>
-                                <li><a href="recursos.html">Podcast</a></li>
-                                <li><a href="recursos.html">Videos</a></li>
+                                <li><a href="recursos.html#blog">Blog</a></li>
+                                <li><a href="recursos.html#podcast">Podcast</a></li>
+                                <li><a href="recursos.html#video">Videos</a></li>
                             </ul>
                         </li>
                         
@@ -75,6 +73,12 @@
                         <li class="nav-item">
                             <a href="registro.html">Registro</a>
                         </li>
+
+                        <li class="nav-item">
+                            <a href="academia-online.html">
+                                <button class="boton-nav">Academia Online</button>
+                            </a>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -82,10 +86,13 @@
     </header>
     
     <main>
+
+    <!-- Portada -->
         <section >
-            <img class="portada__quien-soy"> 
+            <img src="../recursos/img/banner/banner-quien-soy.jpg" srcset="../recursos/img/banner/banner-quien-soy-mob.jpg 600w, ../recursos/img/banner/banner-quien-soy.jpg" class="d-block w-100" alt="banner-quien-soy">
         </section>
 
+    <!-- Presentación de Rosa -->
         <section class="section">
             <div class="section__container">
                 <div class="presentacion__titulo">
@@ -116,6 +123,7 @@
             </div>
         </section>
 
+    <!-- Ebook gratuito  -->
         <section class="descargable">
             <div class="descargable__container">
                 <h2 class="descargable__titulo">Primer descargable gratis</h2>
@@ -124,7 +132,7 @@
             </div>
         </section>
         
-<!-- bootstrap 5.2 -->
+    <!--Carrusel de galeria de fotos - bootstrap 5.2 -->
         <section class="galeria">
             <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
                 <div class="carousel-inner">
@@ -158,6 +166,7 @@
             </div>
         </section>
 
+    <!-- Testimonios -->
         <section class="testimonios">
             <div class="testimonios__persona section__container">
                 <h2 class="testimonios__titulo">¿Qué opinan mis clientes?</h2>
@@ -168,7 +177,8 @@
         </section>
 
     </main>
-
+    
+    <!-- Footer -->
     <footer>
         <section class="footer__container">
             <!--Slogan-->
@@ -191,7 +201,7 @@
         </section>
         
         <div> <!--Chat-->
-            <a href=""><img class="chat" src="../recursos/img/icon-chat/chat-lila-64.png" alt="Chatea con nosotros"></a>
+            <a href="https://t.me/rosa_leon_siquiero"><img class="chat" src="../recursos/img/icon-chat/chat-lila-64.png" alt="Chatea con nosotros"></a>
         </div>
     </footer>
     <!-- bootstrap 5.2-->

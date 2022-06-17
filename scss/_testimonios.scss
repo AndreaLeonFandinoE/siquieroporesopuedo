@@ -53,10 +53,10 @@
     &__nombre{
         grid-area: testimonios__nombre;
         padding-bottom: 1.25rem;
-        color: $color-terciario-azul;
-        font-size: large;
+        color: $color-principal-lila;
+        font-size: x-large;
         &:hover{
-            color: $color-terciario-lila;
+            color: $color-secundario-lila;
         }
     }
 }

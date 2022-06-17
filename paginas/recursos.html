@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Keywords y description -->
     <meta name="keywords" content="blog, podcast, videos, recursos, desarrollo profesional, desarrollo de vida, desarrollo personal, creencias limitantes, creación de negocios, profesionales insatisfechos, desarrollo de talentos, emprender, emprendimiento con propósito, reinvención profesional, reinvención personal, reinvención, reinvéntate, reinventarme, emprender, emprender con éxito, emprender con 50 años, enseñanza, abundancia, tener abundancia, ser abundante, mejorar tu vida, talento, emprendimiento, tomar acción, dinero, el dinero no es malo, tener dinero, encontrar la calma">
     <meta name="description" content="Hay muchos temas de los que quiero conversar, consejos e ideas que quiero compartir y aprendizajes que quiero llevar a otros. Algunos de estos temas los voy a ir colocando en el blog, en mis videos, y por supuesto en Podcats donde lo que he aprendido para desarrollarme internamente. Espero que a través de ellos puedan encontrar herramientas que les ayude a potenciar su desarrollo personal, y su crecimiento interior.">
     <!--Icono web-->
@@ -22,7 +23,8 @@
 </head>
 
 <body>
-    <!-- bootstrap 5.2-->
+
+    <!--Header - bootstrap 5.2-->
     <header>
         <!-- Logo -->
         <a class="navbar-brand" href="../index.html">
@@ -42,10 +44,6 @@
                         </li>
 
                         <li class="nav-item">
-                            <a href="academia-online.html">Academia Online</a>
-                        </li>
-
-                        <li class="nav-item">
                             <a href="servicios.html">Servicios</a>
                         </li>
 
@@ -62,9 +60,9 @@
                             Recursos
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                <li><a href="recursos.html">Blog</a></li>
-                                <li><a href="recursos.html">Podcast</a></li>
-                                <li><a href="recursos.html">Videos</a></li>
+                                <li><a href="recursos.html#blog">Blog</a></li>
+                                <li><a href="recursos.html#podcast">Podcast</a></li>
+                                <li><a href="recursos.html#video">Videos</a></li>
                             </ul>
                         </li>
                         
@@ -75,6 +73,12 @@
                         <li class="nav-item">
                             <a href="registro.html">Registro</a>
                         </li>
+
+                        <li class="nav-item">
+                            <a href="academia-online.html">
+                                <button class="boton-nav">Academia Online</button>
+                            </a>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -82,7 +86,8 @@
     </header>
     
     <main>
-        <!-- bootstrap 5.2-->
+
+    <!-- Carrusel portada - bootstrap 5.2-->
         <section>
             <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
             <div class="carousel-indicators">
@@ -94,7 +99,7 @@
             <div class="carousel-inner">
 
                 <div class="carousel-item active" data-bs-interval="4000">
-                    <img src="../recursos/img/banner/banner-blog.jpg" srcset="../recursos/img/banner/blog-mob.jpg 576w, ../recursos/img/banner/banner-blog.jpg" class="d-block w-100" alt="banner Blog">
+                    <img src="../recursos/img/banner/banner-blog.jpg" srcset="../recursos/img/banner/banner-blog-mob.jpg 600w, ../recursos/img/banner/banner-blog.jpg" class="d-block w-100" alt="banner Blog">
                     <div class="carousel-caption d-none d-md-block">
                         <a href="./recursos.html">
                             <button>Lee algunos de mis escritos</button>
@@ -103,7 +108,7 @@
                 </div>
 
                 <div class="carousel-item" data-bs-interval="4000">
-                    <img src="../recursos/img/banner/banner-video.jpg" srcset="../recursos/img/banner/video-mob.jpg 576w, ../recursos/img/banner/banner-video.jpg" class="d-block w-100" alt="banner video">
+                    <img src="../recursos/img/banner/banner-videos.jpg" srcset="../recursos/img/banner/banner-videos-mob.jpg 600w, ../recursos/img/banner/banner-videos.jpg" class="d-block w-100" alt="banner video">
                     <div class="carousel-caption d-none d-md-block">
                         <a href="./recursos.html">
                             <button>Mira algunos de mis videos</button>
@@ -112,7 +117,7 @@
                 </div>
 
                 <div class="carousel-item" data-bs-interval="4000">
-                    <img src="../recursos/img/banner/banner-podcast.jpg" srcset="../recursos/img/banner/podcast-mob.jpg 576w, ../recursos/img/banner/banner-podcast.jpg" class="d-block w-100" alt="banner podcast">
+                    <img src="../recursos/img/banner/banner-podcast.jpg" srcset="../recursos/img/banner/banner-podcast-mob.jpg 600w, ../recursos/img/banner/banner-podcast.jpg" class="d-block w-100" alt="banner podcast">
                     <div class="carousel-caption d-none d-md-block">
                         <a href="./recursos.html">
                             <button>Escucha mi Podcast</button>
@@ -132,10 +137,11 @@
             </button>
             </div>
         </section>
-        
+
+    <!-- Blogs -->
         <section class="blog">
             <h1 class="center">Recursos</h1>
-            <h2 class="center">Blog</h2>
+            <h2 class="center" id="blog">Blog</h2>
             <div class="blog__container">
 
                 <div class="cuadro blog__uno">
@@ -168,7 +174,8 @@
             <a href="https://www.linkedin.com/in/rosa-leon-fandi%C3%B1o-90423329/">Leer más</a>
         </section>
 
-        <section class="podcast">
+    <!-- Podcasts -->
+        <section class="podcast" id="podcast">
             <h2 class="center">Podcast</h2>
             <div class="podcast__container">
 
@@ -190,7 +197,8 @@
             <a href="https://www.facebook.com/SiQuiero.PoresoPuedo">Escuchar más</a>
         </section>
 
-        <section class="video">
+    <!-- Videos -->
+        <section class="video" id="video">
             <h2 class="center">Videos</h2>
             <div class="video__container">
                 <iframe height="220" width="400" src="https://www.youtube.com/embed/OnpwnYNPkDU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -201,6 +209,7 @@
         </section>
     </main>
 
+    <!-- Footer -->
     <footer>
         <section class="footer__container">
             <!--Slogan-->
@@ -223,7 +232,7 @@
         </section>
         
         <div> <!--Chat-->
-            <a href=""><img class="chat" src="../recursos/img/icon-chat/chat-lila-64.png" alt="Chatea con nosotros"></a>
+            <a href="https://t.me/rosa_leon_siquiero"><img class="chat" src="../recursos/img/icon-chat/chat-lila-64.png" alt="Chatea con nosotros"></a>
         </div>
     </footer>
     <!-- bootstrap 5.2-->
