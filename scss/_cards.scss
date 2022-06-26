@@ -17,19 +17,16 @@
         @keyframes animacion{
             0%{
                 background: linear-gradient(to left, #41b9f037, white) ;
-                transform: scale(1);
                 transition: all 2s ease;
             }
         
             50%{
-                background: linear-gradient(to left, rgba(0, 0, 0, 0.075), white) ; ;
-                transform: scale(1.03);
+                background: linear-gradient(to left, rgba(0, 0, 0, 0.075), white) ;
                 transition: all 2s ease-in;
             }
         
             100%{
                 background: linear-gradient(to left, #41b9f052, white) ;
-                transform: scale(1);
                 transition: all 2s ease-in-out;
             }
         }

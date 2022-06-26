@@ -87,61 +87,21 @@
     
     <main>
 
-    <!-- Carrusel portada - bootstrap 5.2-->
-        <section>
-            <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
-            <div class="carousel-indicators">
-                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
-            </div>
-
-            <div class="carousel-inner">
-
-                <div class="carousel-item active" data-bs-interval="4000">
-                    <img src="../recursos/img/banner/banner-blog.jpg" srcset="../recursos/img/banner/banner-blog-mob.jpg 600w, ../recursos/img/banner/banner-blog.jpg" class="d-block w-100" alt="banner Blog">
-                    <div class="carousel-caption d-none d-md-block">
-                        <a href="./recursos.html">
-                            <button>Lee algunos de mis escritos</button>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="carousel-item" data-bs-interval="4000">
-                    <img src="../recursos/img/banner/banner-videos.jpg" srcset="../recursos/img/banner/banner-videos-mob.jpg 600w, ../recursos/img/banner/banner-videos.jpg" class="d-block w-100" alt="banner video">
-                    <div class="carousel-caption d-none d-md-block">
-                        <a href="./recursos.html">
-                            <button>Mira algunos de mis videos</button>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="carousel-item" data-bs-interval="4000">
-                    <img src="../recursos/img/banner/banner-podcast.jpg" srcset="../recursos/img/banner/banner-podcast-mob.jpg 600w, ../recursos/img/banner/banner-podcast.jpg" class="d-block w-100" alt="banner podcast">
-                    <div class="carousel-caption d-none d-md-block">
-                        <a href="./recursos.html">
-                            <button>Escucha mi Podcast</button>
-                        </a>
-                    </div>
-                </div>
-
-            </div>
-
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Visualizar</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Siguiente</span>
-            </button>
+    <!-- Section principal-->
+        <section class="section">
+            <div class="section__container">
+                <h1 class="center">Recursos</h1>
+                <h2 class="center">Blog/Podcast/Videos</h2>
             </div>
         </section>
 
+    <!-- Portada Blog -->
+        <section >
+            <img src="../recursos/img/banner/banner-blog.jpg" srcset="../recursos/img/banner/banner-blog-mob.jpg 600w, ../recursos/img/banner/banner-blog.jpg" class="d-block w-100" alt="banner Blog">
+        </section>
+
     <!-- Blogs -->
-        <section class="blog">
-            <h1 class="center">Recursos</h1>
-            <h2 class="center" id="blog">Blog</h2>
+        <section class="blog" id="blog">
             <div class="blog__container">
 
                 <div class="cuadro blog__uno">
@@ -174,9 +134,13 @@
             <a href="https://www.linkedin.com/in/rosa-leon-fandi%C3%B1o-90423329/">Leer más</a>
         </section>
 
+    <!-- Portada Podcast -->
+        <section >
+            <img src="../recursos/img/banner/banner-podcast.jpg" srcset="../recursos/img/banner/banner-podcast-mob.jpg 600w, ../recursos/img/banner/banner-podcast.jpg" class="d-block w-100" alt="banner podcast">
+        </section>
+
     <!-- Podcasts -->
         <section class="podcast" id="podcast">
-            <h2 class="center">Podcast</h2>
             <div class="podcast__container">
 
                 <article class="cuadro podcast__uno">
@@ -197,9 +161,13 @@
             <a href="https://www.facebook.com/SiQuiero.PoresoPuedo">Escuchar más</a>
         </section>
 
+    <!-- Portada Video -->
+        <section >
+            <img src="../recursos/img/banner/banner-videos.jpg" srcset="../recursos/img/banner/banner-videos-mob.jpg 600w, ../recursos/img/banner/banner-videos.jpg" class="d-block w-100" alt="banner video">
+        </section>
+
     <!-- Videos -->
         <section class="video" id="video">
-            <h2 class="center">Videos</h2>
             <div class="video__container">
                 <iframe height="220" width="400" src="https://www.youtube.com/embed/OnpwnYNPkDU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 <iframe height="220" width="400" src="https://www.youtube.com/embed/BLrInER-VmY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

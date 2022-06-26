@@ -187,15 +187,12 @@ a button::after {
 @keyframes animacion {
   0% {
     background: linear-gradient(to left, #41b9f037, white);
-    transform: scale(1);
     transition: all 2s ease; }
   50% {
     background: linear-gradient(to left, rgba(0, 0, 0, 0.075), white);
-    transform: scale(1.03);
     transition: all 2s ease-in; }
   100% {
     background: linear-gradient(to left, #41b9f052, white);
-    transform: scale(1);
     transition: all 2s ease-in-out; } }
 
 .cuadro__fondos, .servicios, .obsequios, .podcast, .video, .programas, .cursos, .blog {
@@ -501,7 +498,7 @@ a::selection, button::selection, img::selection, span::selection, p::selection, 
 
 .contactanos {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 2fr;
   grid-template-areas: "contactanos__form contactanos__container";
   align-items: center;
   gap: 1rem;
@@ -558,14 +555,14 @@ a::selection, button::selection, img::selection, span::selection, p::selection, 
   display: grid;
   grid-template-columns: 1fr 2fr;
   grid-template-areas: "error__img error__404";
-  align-items: center;
-  margin: 0 10rem 0 10rem; }
+  margin: 0 10rem 0 10rem;
+  justify-items: center; }
   .error__404 {
     grid-area: error__404;
     text-align: center; }
   .error__img {
     grid-area: error__img;
-    height: 30rem;
+    height: 20rem;
     margin: 2rem; }
   .error__logo {
     width: 20rem;

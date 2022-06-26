@@ -374,7 +374,7 @@ a::selection, button::selection, img::selection, span::selection, p::selection, 
 
 .contactanos{
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 2fr;
     grid-template-areas:"contactanos__form contactanos__container"; 
     align-items: center;
     gap: 1rem;
@@ -442,15 +442,15 @@ a::selection, button::selection, img::selection, span::selection, p::selection, 
     display: grid;
     grid-template-columns: 1fr 2fr;
     grid-template-areas:"error__img error__404"; 
-    align-items: center;
     margin: 0 10rem 0 10rem;
+    justify-items: center;
     &__404{
         grid-area: error__404;
         text-align: center;
     }
     &__img{
         grid-area: error__img;
-        height: 30rem;
+        height: 20rem;
         margin: 2rem;
     }
     &__logo{

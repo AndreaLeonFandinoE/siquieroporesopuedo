@@ -97,19 +97,14 @@
                 <div class="registrate">
                     <h1 class="center">Regístrate</h1>
                     <form class="registrate__form" method="post">
-                        <label for="">Nombre de usuario</label>
                         <input type="text" placeholder="Escriba su nombre" name="Nombre">
 
-                        <label for="">Apellido de usuario</label>
                         <input type="text" placeholder="Escriba su apellido" name="Apellido">
 
-                        <label for="">Dirección de correo electrónico</label>
                         <input type="email" placeholder="¿Cuál es su email?" name="Email">
 
-                        <label for="">Celular</label>
                         <input type="tel" placeholder="¿Cuál es su número?" name="Telefono">
 
-                        <label for="">Contraseña</label>
                         <input type="password" placeholder="Crea una contraseña" name="Password">
 
                         <button type="submit">Crear usuario</button>
@@ -120,15 +115,16 @@
                     <h2 class="center">Ingresar</h2>
                     <form class="ingreso__form" method="post">
                             <label for="">Correo electrónico</label>
-                            <input type="email" placeholder="Escriba su correo electrónico" name="correo">
-                            <div class="form-text">No compartiremos tu email con nadie más.</div>
+                            <input type="email" placeholder="Escriba su correo electrónico (Es confidencial)" name="correo">
 
                             <label for="">Contraseña</label>
                             <input type="password" placeholder="Escriba su contraseña" name="Contraseña">
 
-                            <input type="checkbox" class="form-check-input">
-                            <label for="">Recordarme</label>
-
+                            <div>
+                                <input type="checkbox" class="form-check-input">
+                                <label for="">Recordarme</label>
+                            </div>
+                            
                             <button type="submit">Ingresar</button>
                     </form>
                 </div>
