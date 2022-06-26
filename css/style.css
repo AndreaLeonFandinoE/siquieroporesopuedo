@@ -337,7 +337,7 @@ a::selection, button::selection, img::selection, span::selection, p::selection, 
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  background: linear-gradient(to right, #9f44c62a, #41b9f030), url("../recursos/img/rosa/rosa-fondo.jpg");
+  background: linear-gradient(to right, #9f44c62a, #41b9f030), url("../recursos/img/rosa/rosa-fondo.jpeg");
   background-size: cover;
   background-position: top;
   background-repeat: no-repeat; }
@@ -360,11 +360,9 @@ a::selection, button::selection, img::selection, span::selection, p::selection, 
     margin: 2rem; }
 
 .galeria {
-  display: flex;
-  justify-content: center;
-  margin-top: 3rem; }
-  .galeria__rosa {
-    height: 30rem; }
+  margin-top: 3rem;
+  margin-left: 2rem;
+  margin-right: 2rem; }
 
 .podcast__container {
   display: grid;
@@ -631,8 +629,6 @@ a::selection, button::selection, img::selection, span::selection, p::selection, 
     justify-content: center; }
     .descargable__img {
       height: 35vh; }
-  .galeria__rosa {
-    height: 40vh; }
   .video__container {
     display: grid;
     grid-template-columns: 1fr; }
@@ -687,7 +683,7 @@ a::selection, button::selection, img::selection, span::selection, p::selection, 
     margin: 0rem;
     gap: 1rem; }
     .contenedor__cuadro {
-      height: 18rem; }
+      height: 20rem; }
   .testimonios__persona {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -729,7 +725,9 @@ a::selection, button::selection, img::selection, span::selection, p::selection, 
     grid-template-columns: 1fr;
     grid-template-areas: "cursos__uno"  "cursos__dos"  "cursos__tres";
     gap: 1rem;
-    margin-bottom: 2rem; }
+    margin-bottom: 2rem;
+    align-items: center;
+    justify-content: center; }
   .blog__container {
     display: grid;
     grid-template-columns: 1fr;
@@ -754,8 +752,6 @@ a::selection, button::selection, img::selection, span::selection, p::selection, 
     background: linear-gradient(to left, #41b9f0a0, #9f44c676); }
     .descargable__img {
       height: 60vh; }
-  .galeria__rosa {
-    height: 40vh; }
   .contactanos {
     display: grid;
     grid-template-columns: 1fr;

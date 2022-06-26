@@ -119,10 +119,6 @@
         }
     }
 
-    .galeria__rosa{
-        height: 40vh;
-    } 
-
     .video__container{
         display: grid;
         grid-template-columns: 1fr;
@@ -205,7 +201,7 @@
         margin: 0rem;
         gap: 1rem;
         &__cuadro{
-            height: 18rem;
+            height: 20rem;
         }
     }
 
@@ -289,6 +285,8 @@
                             "cursos__tres";
         gap: 1rem;
         margin-bottom: 2rem;
+        align-items: center;
+        justify-content: center;
     }
     
     .blog__container{
@@ -331,10 +329,6 @@
             height: 60vh;
         }
     }
-
-    .galeria__rosa{
-        height: 40vh;
-    } 
     
     .contactanos{
         display: grid;

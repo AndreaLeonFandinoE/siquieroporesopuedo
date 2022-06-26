@@ -173,7 +173,7 @@ a::selection, button::selection, img::selection, span::selection, p::selection, 
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    background: linear-gradient(to right, #9f44c62a, #41b9f030), url("../recursos/img/rosa/rosa-fondo.jpg");
+    background: linear-gradient(to right, #9f44c62a, #41b9f030), url("../recursos/img/rosa/rosa-fondo.jpeg");
     background-size:cover;
     background-position: top;
     background-repeat: no-repeat;
@@ -203,12 +203,9 @@ a::selection, button::selection, img::selection, span::selection, p::selection, 
 }
 
 .galeria{
-    display: flex;
-    justify-content: center;
     margin-top: 3rem;
-    &__rosa{
-        height: 30rem;
-    }
+    margin-left: 2rem;
+    margin-right: 2rem;
 }
 
 .podcast{
